@@ -1,0 +1,698 @@
+Rc files read:
+  /etc/LatexMk
+Latexmk: This is Latexmk, John Collins, 31 Jan. 2024. Version 4.83.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.tex
+Category 'changed_user':
+  main.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder -output-directory="compilacion"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hang/hang.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
+) (./datos_estudiante.tex) (./opciones_adicionales.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/babelbib/babelbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/bigints/bigints.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/overpic/overpic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty)
+(./paquetes_y_comandos_usuario.tex) (compilacion/main.aux)
+(compilacion/main.out) (compilacion/main.out)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty)))
+babelbib: Use citation-dependent languages in bibliography
+babelbib: Set bibliography fall-back language to spanish
+babelbib: spanish.bdf loaded because language spanish defined.
+(/usr/share/texlive/texmf-dist/tex/latex/babelbib/spanish.bdf
+babelbib extension \bibsspanish added to \extrasspanish
+babelbib extension \btxifchangecaseoff added to \extrasspanish
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plantilla/portadacit.j
+pg> <./plantilla/fondologo_grande.png> <./plantilla/logoUVGblanco-eps-converted
+-to.pdf>] [2] [1 <./plantilla/escudoUVGcolores-eps-converted-to.pdf>] [2]
+
+Package tesis Warning: Hoja firmada pendiente de incorporar on input line 253.
+
+[1] (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd) (./prefacio.tex)
+[2]
+No file main.toc.
+[3]
+No file main.lof.
+[4]
+No file main.lot.
+[5] (./resumen.tex (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd))
+Underfull \hbox (badness 10000) in paragraph at lines 1--330
+
+[6]
+Cap\'{\i }tulo 1.
+(./introduccion.tex) [1]
+Cap\'{\i }tulo 2.
+(./objetivos.tex) [2]
+Cap\'{\i }tulo 3.
+(./justificacion.tex [3]) [4]
+Cap\'{\i }tulo 4.
+(./marco_teorico.tex
+
+Package natbib Warning: Citation `Hon2020' on page 5 undefined on input line 5.
+
+
+
+Package natbib Warning: Citation `Hon2020' on page 5 undefined on input line 7.
+
+
+
+Package natbib Warning: Citation `Hon2020' on page 5 undefined on input line 9.
+
+
+
+Package natbib Warning: Citation `Fumeron2020' on page 5 undefined on input lin
+e 11.
+
+[5]
+
+Package natbib Warning: Citation `Griffiths2017' on page 6 undefined on input l
+ine 20.
+
+[6]
+
+Package natbib Warning: Citation `Taflove2005' on page 7 undefined on input lin
+e 57.
+
+[7]
+
+Package natbib Warning: Citation `Teixeira2023' on page 8 undefined on input li
+ne 77.
+
+[8] [9]
+
+Package natbib Warning: Citation `Yee1966' on page 10 undefined on input line 1
+40.
+
+
+Package natbib Warning: Citation `Taflove2005' on page 10 undefined on input li
+ne 140.
+
+[10]
+
+Package natbib Warning: Citation `Teixeira2023' on page 11 undefined on input l
+ine 175.
+
+
+Package natbib Warning: Citation `Hon2020' on page 11 undefined on input line 2
+16.
+
+[11]
+
+Package natbib Warning: Citation `Yee1966' on page 12 undefined on input line 2
+21.
+
+
+Package natbib Warning: Citation `Teixeira2023' on page 12 undefined on input l
+ine 221.
+
+[12]
+
+Package natbib Warning: Citation `ITU2025' on page 13 undefined on input line 2
+59.
+
+
+Package natbib Warning: Citation `ITU2025' on page 13 undefined on input line 2
+72.
+
+[13]
+
+Package natbib Warning: Citation `ITU2025' on page 14 undefined on input line 2
+97.
+
+
+Package natbib Warning: Citation `ITU2025' on page 14 undefined on input line 2
+99.
+
+
+Package natbib Warning: Citation `ITU2025' on page 14 undefined on input line 3
+05.
+
+[14]
+
+Package natbib Warning: Citation `Mohammadkhani2023' on page 15 undefined on in
+put line 322.
+
+[15]
+
+Package natbib Warning: Citation `Philbin2011' on page 16 undefined on input li
+ne 334.
+
+
+Overfull \hbox (20.07582pt too wide) in paragraph at lines 340--342
+\T1/cmr/m/n/10 cuyas uni-da-des fue-ron W/m\TS1/cmr/m/n/10 �\T1/cmr/m/n/10 . Pa
+-ra la on-da pla-na sin p�r-di-das des-cri-ta an-te-rior-men-te, $[] \OT1/cmr/m
+/n/10 = \OML/cmm/m/it/10 E[]H[] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 kz \OMS/c
+msy/m/n/10 ^^@
+[16]
+
+Package natbib Warning: Citation `Poynting1884' on page 17 undefined on input l
+ine 357.
+
+
+Package natbib Warning: Citation `Moree2022' on page 17 undefined on input line
+ 359.
+
+[17] [18]
+
+Package natbib Warning: Citation `Balanis2016' on page 19 undefined on input li
+ne 426.
+
+
+Package natbib Warning: Citation `Jackson1998' on page 19 undefined on input li
+ne 426.
+
+[19]
+
+Package natbib Warning: Citation `Moree2022' on page 20 undefined on input line
+ 440.
+
+[20]
+
+Package natbib Warning: Citation `Diao2023' on page 21 undefined on input line 
+468.
+
+[21]
+
+Package natbib Warning: Citation `Bhosale2024' on page 22 undefined on input li
+ne 477.
+
+
+Package natbib Warning: Citation `Roy2021' on page 22 undefined on input line 4
+77.
+
+[22]
+
+Package natbib Warning: Citation `Oskooi2010' on page 23 undefined on input lin
+e 485.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+
+Package natbib Warning: Citation `MeepUI' on page 23 undefined on input line 48
+5.
+
+
+Package natbib Warning: Citation `MeepBasics' on page 23 undefined on input lin
+e 487.
+
+
+Package natbib Warning: Citation `MeepBasics' on page 23 undefined on input lin
+e 489.
+
+
+Package natbib Warning: Citation `MeepIssue1276' on page 23 undefined on input 
+line 489.
+
+
+Package natbib Warning: Citation `MeepBasics' on page 23 undefined on input lin
+e 489.
+
+[23] [24]
+
+Package natbib Warning: Citation `Yee1966' on page 25 undefined on input line 5
+19.
+
+
+Package natbib Warning: Citation `Schneider2025' on page 25 undefined on input 
+line 521.
+
+
+Package natbib Warning: Citation `Yee1966' on page 25 undefined on input line 5
+45.
+
+[25] [26] [27]
+
+Package natbib Warning: Citation `Taflove2005' on page 28 undefined on input li
+ne 591.
+
+
+Package natbib Warning: Citation `Schneider2025' on page 28 undefined on input 
+line 591.
+
+[28]
+
+Package natbib Warning: Citation `Taflove2005' on page 29 undefined on input li
+ne 603.
+
+
+Package natbib Warning: Citation `KolarPozun2025' on page 29 undefined on input
+ line 603.
+
+
+Package natbib Warning: Citation `Berenger1994' on page 29 undefined on input l
+ine 608.
+
+
+Package natbib Warning: Citation `Roden2000' on page 29 undefined on input line
+ 616.
+
+[29]
+
+Package natbib Warning: Citation `Yee1966' on page 30 undefined on input line 6
+25.
+
+
+Package natbib Warning: Citation `KolarPozun2025' on page 30 undefined on input
+ line 625.
+
+[30]
+
+Package natbib Warning: Citation `Oskooi2010' on page 31 undefined on input lin
+e 639.
+
+
+Package natbib Warning: Citation `Oskooi2010' on page 31 undefined on input lin
+e 642.
+
+
+Package natbib Warning: Citation `Oskooi2010' on page 31 undefined on input lin
+e 642.
+
+[31]
+
+Package natbib Warning: Citation `Oskooi2010' on page 32 undefined on input lin
+e 645.
+
+[32]
+
+Package natbib Warning: Citation `MeepMaterials' on page 33 undefined on input 
+line 660.
+
+
+Package natbib Warning: Citation `MeepFAQ' on page 33 undefined on input line 6
+62.
+
+
+Package natbib Warning: Citation `MeepFAQ' on page 33 undefined on input line 6
+65.
+
+[33] [34]
+Overfull \hbox (2.8023pt too wide) in paragraph at lines 677--678
+\T1/cmr/m/n/10 ma-to bi-na-rio je-r�r-qui-co es-t�n-dar en compu-taci�n cien-t�
+-fi-ca, me-dian-te fun-cio-nes co-mo \T1/cmtt/m/n/10 output_efield\T1/cmr/m/n/1
+0 ,
+
+Package natbib Warning: Citation `MeepCylindrical' on page 35 undefined on inpu
+t line 680.
+
+
+Package natbib Warning: Citation `MeepCylindrical' on page 35 undefined on inpu
+t line 680.
+
+
+Package natbib Warning: Citation `MeepSymmetry' on page 35 undefined on input l
+ine 682.
+
+
+Package natbib Warning: Citation `MeepSymmetry' on page 35 undefined on input l
+ine 684.
+
+
+Package natbib Warning: Citation `MeepCylindrical' on page 35 undefined on inpu
+t line 684.
+
+[35]
+
+Package natbib Warning: Citation `MeepParallel' on page 36 undefined on input l
+ine 687.
+
+
+Package natbib Warning: Citation `MeepParallel' on page 36 undefined on input l
+ine 687.
+
+
+Package natbib Warning: Citation `Oskooi2020Machine' on page 36 undefined on in
+put line 687.
+
+[36]
+
+Package natbib Warning: Citation `Fajardo2017' on page 37 undefined on input li
+ne 709.
+
+
+Package natbib Warning: Citation `Rashed2020' on page 37 undefined on input lin
+e 709.
+
+[37] [38]
+
+Package natbib Warning: Citation `Balanis2016' on page 39 undefined on input li
+ne 726.
+
+
+Package natbib Warning: Citation `Rashed2020' on page 39 undefined on input lin
+e 737.
+
+
+Package natbib Warning: Citation `Fajardo2017' on page 39 undefined on input li
+ne 737.
+
+[39]) [40]
+Cap\'{\i }tulo 5.
+(./antecedentes.tex
+
+Package natbib Warning: Citation `hossain2026' on page 41 undefined on input li
+ne 4.
+
+
+Package natbib Warning: Citation `garcia2026' on page 41 undefined on input lin
+e 4.
+
+
+Package natbib Warning: Citation `wang2024' on page 41 undefined on input line 
+6.
+
+
+Package natbib Warning: Citation `fichte2021' on page 41 undefined on input lin
+e 6.
+
+
+Package natbib Warning: Citation `smith2022' on page 41 undefined on input line
+ 8.
+
+
+Package natbib Warning: Citation `chen2023' on page 41 undefined on input line 
+8.
+
+
+Package natbib Warning: Citation `jones2026' on page 41 undefined on input line
+ 8.
+
+
+Package natbib Warning: Citation `oskooi2023' on page 41 undefined on input lin
+e 10.
+
+) [41] [42]
+Cap\'{\i }tulo 6.
+(./teoria.tex [43] [44] [45]
+
+LaTeX Warning: Reference `eq:tan_delta_desarrollo' on page 46 undefined on inpu
+t line 229.
+
+
+LaTeX Warning: Reference `eq:alpha_estable' on page 46 undefined on input line 
+289.
+
+[46] [47] [48]
+
+LaTeX Warning: Reference `eq:Hphi_cilindrica' on page 49 undefined on input lin
+e 553.
+
+
+LaTeX Warning: Reference `eq:Ez_cilindrica' on page 49 undefined on input line 
+553.
+
+[49] [50]
+
+LaTeX Warning: Reference `eq:derivada_cilindrica_discreta' on page 51 undefined
+ on input line 730.
+
+[51] [52]
+
+LaTeX Warning: Reference `eq:lambda_medio' on page 53 undefined on input line 8
+23.
+
+
+LaTeX Warning: Reference `eq:altura_monopolo' on page 53 undefined on input lin
+e 875.
+
+[53] [54] [55]
+
+LaTeX Warning: Reference `eq:S_decaimiento' on page 56 undefined on input line 
+1076.
+
+[56] [57]
+
+LaTeX Warning: Reference `eq:perfil_db_alpha' on page 58 undefined on input lin
+e 1234.
+
+[58]
+
+LaTeX Warning: Reference `eq:M2' on page 59 undefined on input line 1353.
+
+[59] [60] [61]
+
+LaTeX Warning: Command \' invalid in math mode on input line 1537.
+
+Missing character: There is no � in font cmr7!
+[62] [63] [64] [65]
+
+LaTeX Warning: Reference `eq:balance_general' on page 66 undefined on input lin
+e 1938.
+
+[66] [67] [68]
+
+LaTeX Warning: Reference `eq:alpha_exacta' on page 69 undefined on input line 2
+110.
+
+
+LaTeX Warning: Reference `eq:S_decaimiento' on page 69 undefined on input line 
+2158.
+
+[69] [70] [71] [72] [73]
+
+LaTeX Warning: Reference `eq:residuo_balance' on page 74 undefined on input lin
+e 2453.
+
+
+LaTeX Warning: Reference `eq:altura_monopolo' on page 74 undefined on input lin
+e 2455.
+
+[74]) [75] (./capitulos.tex
+Cap\'{\i }tulo 7.
+[76] [77] [78]
+Overfull \hbox (29.8538pt too wide) in paragraph at lines 166--167
+[]\T1/cmr/m/n/10 El pro-gra-ma tam-bi�n per-mi-ti� mo-di-fi-car la re-so-lu-ci�
+n me-dian-te la va-ria-ble de en-torno \T1/cmtt/m/n/10 MEEP_RESOLUTION\T1/cmr/m
+/n/10 .
+[79] [80] [81] [82] [83] [84] [85] [86]) [87] [88]
+Cap\'{\i }tulo 8.
+(./resultados.tex
+
+LaTeX Warning: Hyper reference `an:fdtd-fuentes' on page 89 undefined on input 
+line 2.
+
+
+LaTeX Warning: Hyper reference `an:fdtd-fuentes' on page 89 undefined on input 
+line 5.
+
+[89]
+
+LaTeX Warning: Reference `tab:fdtd-mallas' on page 90 undefined on input line 3
+7.
+
+[90] [91 <./figuras/Tesis_Resultado_vacio5px.png> <./figuras/Tesis_Resultado_co
+ncreto5px.jpeg>] [92 <./figuras/Tesis_Resultado_agua_salada5px.jpeg> <./figuras
+/Tesis_Resultados_Tejido_Muscular5px.jpeg>]
+
+LaTeX Warning: Reference `tab:balance-costo' on page 93 undefined on input line
+ 51.
+
+[93]
+
+LaTeX Warning: Reference `tab:balance-medios' on page 94 undefined on input lin
+e 89.
+
+
+LaTeX Warning: Hyper reference `an:balance-registros' on page 94 undefined on i
+nput line 89.
+
+
+LaTeX Warning: Reference `tab:balance-tiempo' on page 94 undefined on input lin
+e 109.
+
+[94]
+
+LaTeX Warning: Reference `tab:balance-costo' on page 95 undefined on input line
+ 132.
+
+) [95] [96]
+Cap\'{\i }tulo 9.
+(./discusion.tex
+
+LaTeX Warning: Reference `tab:fdtd-base' on page 97 undefined on input line 2.
+
+[97]
+
+LaTeX Warning: Reference `tab:fdtd-mallas' on page 98 undefined on input line 1
+2.
+
+
+LaTeX Warning: Hyper reference `an:fdtd-perfiles' on page 98 undefined on input
+ line 12.
+
+
+LaTeX Warning: Reference `tab:balance-agua-cinco' on page 98 undefined on input
+ line 19.
+
+
+LaTeX Warning: Reference `tab:balance-medios' on page 98 undefined on input lin
+e 24.
+
+[98]
+
+LaTeX Warning: Reference `tab:balance-costo' on page 99 undefined on input line
+ 35.
+
+) [99]
+Cap\'{\i }tulo 10.
+(./conclusiones.tex) [100]
+Cap\'{\i }tulo 11.
+(./recomendaciones.tex
+
+LaTeX Warning: Reference `Theta' on page 101 undefined on input line 8.
+
+) [101]
+Cap\'{\i }tulo 12.
+(./bibliografia_manual.tex
+
+./bibliografia_manual.tex:4: LaTeX Error: Lonely \item--perhaps a missing list 
+environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \bibitem[Fumeron et al.(2020)]{Fumeron2020}
+                                               
+./bibliografia_manual.tex:4:  ==> Fatal error occurred, no output PDF file prod
+uced!
+Transcript written on compilacion/main.log.
+Latexmk: Missing input file 'main.toc' (or dependence on it) from following:
+  No file main.toc.
+Latexmk: Missing input file 'main.lof' (or dependence on it) from following:
+  No file main.lof.
+Latexmk: Missing input file 'main.lot' (or dependence on it) from following:
+  No file main.lot.
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Citation `Hon2020' on page 5 undefined on input line 5
+  Citation `Hon2020' on page 5 undefined on input line 5
+  Citation `Hon2020' on page 5 undefined on input line 7
+  Citation `Hon2020' on page 5 undefined on input line 7
+  Citation `Hon2020' on page 5 undefined on input line 9
+  Citation `Hon2020' on page 5 undefined on input line 9
+  Citation `Fumeron2020' on page 5 undefined on input line 11
+ And 96 more --- see log file 'compilacion/main.log'
+Latexmk: Sometimes, the -f option can be used to get latexmk
+  to try to force complete processing.
+  But normally, you will need to correct the file(s) that caused the
+  error, and then rerun latexmk.
+  In some cases, it is best to clean out generated files before rerunning
+  latexmk after you've corrected the files.
+Latexmk: Getting log file 'compilacion/main.log'
+Latexmk: Examining 'compilacion/main.fls'
+Latexmk: Examining 'compilacion/main.log'
+Latexmk: Summary of warnings from last run of *latex:
+  Latex failed to resolve 26 reference(s)
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+  Latex failed to resolve 76 citation(s)
+Latexmk: Errors, so I did not complete making targets
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 1
+      Refer to 'compilacion/main.log' and/or above output for details
+

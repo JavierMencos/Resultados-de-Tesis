@@ -1,0 +1,38 @@
+\chapter{Anexo A}\renewcommand{\tablename}{Cuadro}\label{an:fdtd-fuentes}
+\section{Código, perfiles radiales e informes de ajuste}
+El estudio se documentó en el repositorio \href{https://github.com/JavierMencos/Resultados-de-Tesis}{Resultados-de-Tesis}. Para identificar el material utilizado en el análisis se fijaron las versiones enumeradas a continuación.
+\begin{enumerate}
+\item \href{https://github.com/JavierMencos/Resultados-de-Tesis/blob/0dc64c175678ffb762755169c651f998836e8f8a/Tesis_programa.py}{Programa de simulación y extracción de la atenuación}. El archivo \texttt{Tesis\_programa.py} reunió la definición del medio y del monopolo, el cálculo del flujo radial, la selección del modelo de ajuste y la estimación de los intervalos por bloques.
+\item \href{https://github.com/JavierMencos/Resultados-de-Tesis/tree/e96d8776842d98bcb3e97faac9887df156888eac/Tesis_Resultados}{Archivos de las diez configuraciones}. En cada nombre, el número anterior a \texttt{px} indicó la resolución en px/mm. Cinco archivos sin extensión contuvieron perfiles separados por comas, con radio, magnitud del flujo radial y perfil compensado en decibelios. Se conservaron estos perfiles para vacío a 5, concreto a 10, músculo a 10 y 20, y agua salada a 40 px/mm.
+\item Para las otras cinco configuraciones, los informes de las figuras documentaron las estimaciones y sus intervalos. Se consultaron los correspondientes a agua salada a \href{https://github.com/JavierMencos/Resultados-de-Tesis/commit/823defa}{5}, \href{https://github.com/JavierMencos/Resultados-de-Tesis/commit/adbe296}{10} y \href{https://github.com/JavierMencos/Resultados-de-Tesis/commit/100e2a0}{20 px/mm}, a \href{https://github.com/JavierMencos/Resultados-de-Tesis/commit/209d7d6}{concreto a 5 px/mm} y a \href{https://github.com/JavierMencos/Resultados-de-Tesis/commit/e96d877}{tejido muscular a 5 px/mm}.
+\end{enumerate}
+
+\section{Auditoría de las incertidumbres del ajuste}
+Se reprodujo el posprocesamiento de los cinco perfiles numéricos conservados. El coeficiente y ambos límites de cada IC coincidieron con el registro histórico a cuatro decimales. Se verificó además una corrección del remuestreo que incluyó la última posición posible de inicio de un bloque. Con $n$ residuos y longitud $b$, se sortearon los enteros entre 0 y $n-b$, ambos incluidos. El programa original había omitido la última posición al usar un límite superior exclusivo.
+
+Con esta corrección, el extremo superior del IC del vacío pasó de 0.0075 a 0.0074 dB/mm. En los otros cuatro perfiles ambos extremos coincidieron a la precisión registrada. El Cuadro~\ref{tab:fdtd-base} conservó el intervalo histórico, cuya interpretación en vacío quedó limitada por la calidad insuficiente del ajuste. Las cinco configuraciones respaldadas exclusivamente por figuras e informes conservaron sus IC publicados. La auditoría, los códigos de análisis y las tablas se conservaron en la \href{https://github.com/JavierMencos/Resultados-de-Tesis/tree/0720a8d4f872b3a98538f2d91427c173715534f0/Tesis_Resultados/Atenuacion}{versión archivada del análisis de atenuación}.
+
+\section{Registros de la campaña de balance}\label{an:balance-registros}
+Se archivaron los resultados en \href{https://github.com/JavierMencos/Resultados-de-Tesis/tree/cfe106687c66daf53a6fc653ad23edda9b855882/Tesis_Resultados/Balance}{Tesis\_Resultados/Balance}. Se utilizaron los identificadores del Cuadro~\ref{tab:balance-identificadores}. Cada nombre completo incluyó el medio, el sufijo de resolución y una marca UTC con precisión de microsegundos. El \href{https://github.com/JavierMencos/Resultados-de-Tesis/blob/cfe106687c66daf53a6fc653ad23edda9b855882/Tesis_Resultados/Balance/tablas/indice_corridas.csv}{índice de corridas} relacionó los identificadores con los nombres completos y sus hashes SHA-256. Las dos pruebas breves de instrumentación se conservaron en la subcarpeta \texttt{pruebas}, separadas de las cinco corridas físicas.
+
+\begin{table}[htbp]\centering\small
+\caption{Identificación de las corridas físicas de balance. La fecha UTC correspondió al guardado del archivo.}\label{tab:balance-identificadores}
+\begin{tabular}{llrl}\hline
+ID & Medio & Resolución (px/mm) & Fecha UTC \\ \hline
+B-AS05 & Agua salada & 5 & 2026-11-05 21:57:39 \\
+B-AS10 & Agua salada & 10 & 2026-11-06 01:12:39 \\
+B-TM05 & Tejido muscular & 5 & 2026-11-06 01:17:20 \\
+B-CO05 & Concreto & 5 & 2026-11-06 02:57:12 \\
+B-VA05 & Vacío & 5 & 2026-11-06 09:46:53 \\ \hline
+\end{tabular}\end{table}
+
+Los JSON conservaron las dos muestras, los límites del anillo en mm, la versión del programa, el sistema, el tiempo de pared y la memoria residente máxima. En esos registros, \texttt{interior} se guardó positivo hacia el volumen, mientras que \texttt{exterior}, \texttt{tapa\_superior} y \texttt{tapa\_inferior} se guardaron positivos hacia fuera. El campo \texttt{residuo\_relativo} empleó como denominador el valor absoluto del flujo de la pared interior. Para los cuadros comparativos de la tesis se reconstruyó la entrada total mediante la Ecuación~\ref{eq:balance-normalizado}. Se distinguieron así ambas normalizaciones.
+
+En la subcarpeta \texttt{tablas} se conservaron un CSV por corrida, el cuadro \texttt{balance\_campana.csv} y la comparación \texttt{balance\_refinamiento.csv}. El primero de esos cuadros reunidos incluyó las regiones físicas, ambos tiempos y los diagnósticos temporales. El segundo comparó únicamente corridas del mismo medio y con límites físicos idénticos. Los signos, las unidades y los denominadores se identificaron en los encabezados y en la guía de reproducción.
+
+\section{Procedimiento de reproducción y entorno}
+El archivo \texttt{balance.py} conservó los parámetros electromagnéticos y geométricos del simulador y añadió la integración anular. Se sincronizó el campo magnético antes de evaluar los productos con el campo eléctrico, conforme al procedimiento descrito en la \href{https://meep.readthedocs.io/en/latest/Synchronizing_the_Magnetic_and_Electric_Fields/}{documentación de Meep}. Se aplicó el factor de integración cilíndrico $2\pi r$ explícitamente al muestreo puntual.
+
+Se abrió la carpeta de trabajo en VS Code conectado a Ubuntu y se ejecutaron las tareas de la configuración \texttt{.vscode/tasks.json}. Se fijaron a uno los hilos de OpenMP y OpenBLAS. Cada corrida escribió un JSON nuevo al finalizar. Se ejecutó \texttt{resumir\_balance.py} con la ruta de cada JSON para verificar las identidades de potencia y producir las dos muestras en CSV. Luego se utilizó \texttt{comparar\_balances.py} para obtener los cuadros comunes y la sensibilidad entre mallas. El archivo \texttt{SHA256SUMS} permitió verificar la integridad de los códigos y los registros publicados.
+
+El entorno y los recursos se documentaron en la Sección~\ref{sec:costo-balance}. Se empleó además SciPy 1.17.1 para la auditoría de los ajustes. La RSS máxima correspondió al proceso individual.

@@ -1,0 +1,9 @@
+# Compilaciones locales de la tesis
+
+El PDF Tesis_compilada_VSCode.pdf correspondió a la compilación local final, generada en Ubuntu desde la tarea de VS Code. Se archivaron los registros de cada intento y su código de retorno. Un valor salida=0 identificó una compilación terminada correctamente. Los dos primeros intentos se detuvieron por problemas de la plantilla en la inclusión de la hoja firmada y en el entorno bibliográfico. Se corrigieron esas instrucciones y se repitió la compilación.
+
+La carpeta fuentes/ conservó los capítulos actualizados y los dos archivos reparados de la plantilla. Sus hashes se registraron en los JSON de compilación. La copia completa del proyecto permaneció en Overleaf y en el directorio documento/ del proyecto de VS Code del autor. Se utilizaron TeX Live 2023, pdfLaTeX y latexmk 4.83, con su configuración de ejecución restringida habitual.
+
+Para reproducir la compilación se exportó el proyecto completo de Overleaf, se extrajo en documento/ junto a compilar_tesis.py y se ejecutó ese programa mediante una tarea de VS Code. Se necesitaron latexmk, texlive-latex-extra, texlive-lang-spanish, texlive-science, texlive-fonts-recommended, texlive-bibtex-extra, texlive-font-utils y ghostscript. Los archivos EPS de la plantilla se convirtieron mediante epstopdf.
+
+Se verificaron visualmente las páginas de resultados, discusión y anexos. Las figuras se conservaron en figuras/ dentro del proyecto LaTeX y se les asignaron etiquetas. El contenido de los capítulos ajenos a esta revisión mantuvo avisos de la plantilla. La hoja de firmas quedó pendiente de incorporar. En recomendaciones persistió una referencia Theta relacionada con contenido previo sobre un péndulo. Los registros permitieron localizar esos avisos. La revisión de esos capítulos quedó fuera de la actualización de resultados y discusión.
