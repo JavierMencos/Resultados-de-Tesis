@@ -1,0 +1,6 @@
+perfil,n_ajuste,modelo,alpha,IC95_inf,IC95_sup,coincide_a_4_decimales
+Resultados_agua_salada40px,895,M1,0.7267,0.7267,0.7268,True
+Resultados_concreto10px,1177,M1,0.0381,0.0381,0.0381,True
+Resultados_tejido_muscular10px,273,M0,0.4778,0.4776,0.478,True
+Resultados_tejido_muscular20px,546,M1,0.4843,0.4842,0.4845,True
+Resultados_vacio5px,1249,M0,0.0,0.0,0.0074,False

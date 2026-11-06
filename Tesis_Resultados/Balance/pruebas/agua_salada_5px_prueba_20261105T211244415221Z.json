@@ -1,0 +1,44 @@
+{
+  "medio": "agua_salada",
+  "px_mm": 5,
+  "prueba": true,
+  "unidades": "Meep",
+  "meep": "1.33.0-beta",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "segundos": 2.231164840999554,
+  "rss_max_KiB": 231500,
+  "muestras": [
+    {
+      "t": 2.0,
+      "dominio_mm": [
+        11.186743365228892,
+        22.373486730457785,
+        2.796685841307223,
+        13.983429206536115
+      ],
+      "interior": 0.0,
+      "exterior": 0.0,
+      "tapa_superior": 0.0,
+      "tapa_inferior": -0.0,
+      "joule": 0.0,
+      "residuo": 0.0,
+      "residuo_relativo": null
+    },
+    {
+      "t": 3.0,
+      "dominio_mm": [
+        11.186743365228892,
+        22.373486730457785,
+        2.796685841307223,
+        13.983429206536115
+      ],
+      "interior": 0.0,
+      "exterior": 0.0,
+      "tapa_superior": 0.0,
+      "tapa_inferior": -0.0,
+      "joule": 0.0,
+      "residuo": 0.0,
+      "residuo_relativo": null
+    }
+  ]
+}

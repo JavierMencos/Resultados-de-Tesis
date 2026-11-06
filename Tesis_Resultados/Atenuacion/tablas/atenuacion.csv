@@ -1,0 +1,11 @@
+medio,px_mm,h_mm,modelo,alpha_dB_mm,IC95_inf,IC95_sup,bloque,teoria_dB_mm,error_abs_dB_mm,error_pct,R2,RMSE_dB,DW,apto,fuente
+agua_salada,5,0.2,M0,0.7012,0.7005,0.7019,5,0.7326,0.0314,4.29,1.0000,0.0120,0.0051,True,823defa
+agua_salada,10,0.1,M0,0.7133,0.7130,0.7136,6,0.7326,0.0193,2.64,1.0000,0.0069,0.0013,True,adbe296
+agua_salada,20,0.05,M1,0.7224,0.7222,0.7226,8,0.7326,0.0102,1.39,1.0000,0.0042,0.0006,True,100e2a0
+agua_salada,40,0.025,M1,0.7267,0.7267,0.7268,10,0.7326,0.0059,0.805,1.0000,0.0031,0.0002,True,Resultados_agua_salada40px
+concreto,5,0.2,M1,0.038,0.0380,0.0381,8,0.0385,0.0005,1.31,1.0000,0.0063,0.0008,True,209d7d6
+concreto,10,0.1,M1,0.0381,0.0381,0.0381,11,0.0385,0.0004,1.039,1.0000,0.0057,0.0008,True,Resultados_concreto10px
+tejido_muscular,5,0.2,M0,0.4669,0.4663,0.4674,5,0.4921,0.0252,5.12,1.0000,0.0116,0.0034,True,e96d877
+tejido_muscular,10,0.1,M0,0.4778,0.4776,0.4780,6,0.4921,0.0143,2.906,1.0000,0.0064,0.0009,True,Resultados_tejido_muscular10px
+tejido_muscular,20,0.05,M1,0.4843,0.4842,0.4845,8,0.4921,0.0078,1.585,1.0000,0.0039,0.0004,True,Resultados_tejido_muscular20px
+vacio,5,0.2,M0,0.0,0.0000,0.0075,11,0.0,0.0,,0.0000,5.8227,2.2611,False,Resultados_vacio5px
