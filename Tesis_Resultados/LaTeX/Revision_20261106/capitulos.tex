@@ -1,0 +1,130 @@
+\chapter{Metodología}
+\section{Diseño y alcance}
+Se realizó un estudio computacional de un monopolo inmerso en cuatro medios homogéneos a 3 GHz. Se resolvieron las ecuaciones de Maxwell mediante FDTD en Meep, con coordenadas cilíndricas y modo azimutal $m=0$. La evidencia se organizó en diez configuraciones históricas de atenuación y cinco corridas adicionales de balance local. Los archivos y sus versiones se identificaron en el Anexo~\ref{an:fdtd-fuentes}.
+
+La penetración se examinó mediante el decaimiento dentro del material. La transmisión a través de interfaces entre materiales y la pérdida de inserción de una pared quedaron fuera del dominio simulado. Esta delimitación se utilizó al evaluar los objetivos de la tesis.
+
+Se trabajó en un equipo con procesador AMD Ryzen 5 4600H. La campaña de balance se ejecutó desde VS Code conectado a Ubuntu bajo WSL2, con Python 3.13.13, Meep 1.33.0-beta y un hilo de cómputo. Los tiempos y la memoria máxima se registraron por corrida.
+
+\section{Modelo físico y geometría}
+Se fijaron $f=3.0\times10^9$ Hz, $c=299792458$ m/s y $\lambda_0=c/f$. Las longitudes se introdujeron en milímetros.
+Los medios analizados fueron definidos mediante su permitividad relativa $\varepsilon_r$ y su conductividad $\sigma$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Medio} & $\boldsymbol{\varepsilon_r}$ & $\boldsymbol{\sigma}$ (\textbf{S/m}) \\ \hline
+Vacío & 1.0 & 0.0 \\ \hline
+Concreto & 4.5 & 0.05 \\ \hline
+Agua salada & 78.0 & 4.0 \\ \hline
+Tejido muscular & 52.7 & 2.2 \\ \hline
+\end{tabular}
+\caption{Propiedades electromagnéticas utilizadas para definir los medios simulados a la frecuencia de trabajo.}
+\label{tab:materiales_metodologia}
+\end{table}
+
+Cada material fue simulado por separado. El medio activo se seleccionó mediante la variable \texttt{nombre\_medio}. A partir de esta selección, el programa recuperó automáticamente los valores de $\varepsilon_r$ y $\sigma$.
+
+Con estos parámetros se calculó la tangente de pérdidas,
+
+\begin{equation}
+\tan\delta=
+\frac{\sigma}
+{\omega\varepsilon_0\varepsilon_r},
+\end{equation}
+
+además de las constantes de atenuación $\alpha$ y fase $\beta$.
+
+La longitud de onda dentro del medio fue calculada mediante
+
+\begin{equation}
+\lambda_m=\frac{2\pi}{\beta}.
+\end{equation}
+
+Estos valores fueron obtenidos antes de iniciar la simulación FDTD y se utilizaron para adaptar las dimensiones del dominio a cada material.
+
+La conductividad física expresada en $\mathrm{S/m}$ fue convertida a las unidades utilizadas internamente por MEEP. Después de esta conversión, cada medio se definió mediante \texttt{mp.Medium}, usando su permitividad relativa y su conductividad normalizada.
+
+La geometría estuvo formada por un plano conductor perfecto y un monopolo cilíndrico. El radio del monopolo fue de $0.2$ mm, por lo que su diámetro fue de $0.4$ mm.
+
+El programa definió inicialmente
+
+\begin{equation}
+L_{\mathrm{antena}}=\frac{\lambda_m}{2}.
+\end{equation}
+
+La altura del brazo metálico se calculó como
+
+\begin{equation}
+h_{\mathrm{brazo}}
+=
+\frac{L_{\mathrm{antena}}-g}{2},
+\end{equation}
+
+donde la separación de alimentación inicial fue
+
+\begin{equation}
+g=0.4\ \mathrm{mm}.
+\end{equation}
+
+Debido a esta definición, la longitud física del monopolo cambió con el material, ya que $\lambda_m$ también cambió. Por lo tanto, las simulaciones compararon monopolos ajustados a la longitud de onda de cada medio y no una única antena con dimensiones físicas constantes.
+
+El dominio radial útil fue definido como
+
+\begin{equation}
+R_{\max}=5\lambda_m.
+\end{equation}
+
+La región absorbente tuvo un espesor de
+
+\begin{equation}
+d_{\mathrm{abs}}=2\lambda_m.
+\end{equation}
+
+Para valores de $\tan\delta\leq1$, el programa utilizó capas PML en las direcciones radial y axial. También se dejó disponible una condición alternativa con \texttt{Absorber} para valores de $\tan\delta>1$.
+
+
+\section{Resoluciones y extracción de atenuación}
+Se compararon los cuatro medios a 5 px/mm, equivalentes a $h=0.2$ mm y dos celdas sobre el diámetro del conductor. Las resoluciones históricas fueron 5 px/mm en vacío, 5 y 10 en concreto, 5, 10, 20 y 40 en agua salada, y 5, 10 y 20 en músculo. Cada resolución se identificó a partir del archivo de la corrida. En el programa adicional de balance se seleccionó mediante el argumento \texttt{--resolucion}.
+
+El simulador histórico extrajo $E_z$ y $H_\phi$ sobre $z=0$ al concluir el avance temporal. Se calculó $S_r=-\operatorname{Re}(E_zH_\phi^*)/2$ y se ajustó el logaritmo del perfil $|S_r|r^2$. El módulo eliminó el signo del flujo de esta serie radial. Los residuos se definieron como observación menos ajuste.
+
+Se emplearon ventanas entre $1.5\lambda_m$ y $4\lambda_m$ en vacío y concreto, y entre $2\lambda_m$ y $4\lambda_m$ en agua salada y músculo, con puntos superiores a $-80$ dB. El modelo M0 ajustó una recta, M1 añadió una sinusoide y M2 añadió un término logarítmico. Se restringió la atenuación a valores no negativos y se prefirió M0, salvo una mejora del AIC superior a diez unidades. Se exigieron $R^2>0.85$ y RMSE inferior a 0.5 dB para considerar utilizable la extracción.
+
+Los IC del 95\,\% se obtuvieron de los percentiles 2.5 y 97.5 de 1500 intentos de remuestreo por bloques de residuos, con semilla cero. Se reprodujo el ajuste en los cinco perfiles numéricos disponibles y se documentó la corrección del índice de inicio de los bloques. Para las otras configuraciones se recuperaron los IC de los informes de las figuras. El procedimiento y sus limitaciones se detallaron en el Anexo~\ref{an:fdtd-fuentes}.
+
+\section{Medición del balance local}
+Se conservaron la fuente continua, los parámetros del medio y la geometría del simulador histórico. Se definió un anillo homogéneo sin fuente ni conductor, con $r\in[\lambda_m,2\lambda_m]$ y $z\in[0.25\lambda_m,1.25\lambda_m]$. Se midieron las cuatro caras y la pérdida volumétrica de Joule mediante las Ecuaciones~\ref{eq:joule-anular} y~\ref{eq:balance-normalizado}.
+
+En unidades temporales de Meep, se utilizó $t_{\rm vuelo}=R_{\max}\sqrt{\varepsilon_r}$ y
+\begin{equation}
+ t_{\rm est}=\begin{cases}3t_{\rm vuelo}+20\lambda_0,&\tan\delta<0.1,\\1.5t_{\rm vuelo}+10\lambda_0,&\tan\delta\geq0.1.\end{cases}
+\end{equation}
+Se tomó una muestra al terminar este intervalo y otra aproximadamente un período después. Antes de cada medición se sincronizaron los campos eléctrico y magnético. Se interpolaron sus valores en puntos físicos del anillo y se aplicó la regla trapezoidal con el factor cilíndrico $2\pi r$.
+
+Se calcularon los flujos netos por cara y se agruparon por su signo para obtener entrada y salida. Se verificó el residuo $R=P_{\rm ent}-P_{\rm sal}-P_{\rm J}$ y el cambio temporal de cada término. Se dispuso de balances a 5 px/mm para los cuatro medios y de un refinamiento a 10 px/mm en agua salada. Las pruebas breves de instrumentación se excluyeron de los resultados físicos.
+
+\section{Unidades y normalización}\label{sec:unidades-campana}
+Se adoptó la longitud de referencia $a=1$ mm. Las coordenadas numéricas se relacionaron con las físicas mediante $x_{\rm SI}=a x_{\rm M}$ y el tiempo mediante $t_{\rm SI}=(a/c)t_{\rm M}$. Así, una unidad temporal correspondió a 3.33564 ps y $f_{\rm M}=fa/c=0.0100069$. El período de la fuente fue de aproximadamente 99.9308 unidades temporales, equivalente a 333.333 ps.
+
+La conductividad introducida en Meep se calculó como
+\begin{equation}
+ \sigma_D=\frac{\sigma_{\rm SI}a}{\varepsilon_0\varepsilon_r c}.
+\end{equation}
+Este valor normalizado multiplicó a $D$ en la ecuación de evolución. Por ello, la densidad de pérdida usada en la integración fue $q_{\rm M}=\varepsilon_r\sigma_D|E_{\rm M}|^2/2$.
+
+Para expresar los campos y las potencias en SI se requirió además una escala de campo $E_*$, en V/m. Con $Z_0=\sqrt{\mu_0/\varepsilon_0}$, se obtuvo
+\begin{equation}
+ E_{\rm SI}=E_*E_{\rm M},\quad H_{\rm SI}=\frac{E_*}{Z_0}H_{\rm M},\quad P_{\rm SI}=\frac{E_*^2a^2}{Z_0}P_{\rm M}.
+\end{equation}
+La excitación utilizada dejó $E_*$ sin calibrar. Los valores de potencia se informaron como $P/P_*$, con $P_*=E_*^2a^2/Z_0$, y las fracciones de potencia fueron adimensionales. El tiempo de pared en segundos describió el costo de ejecución, mientras que $t_{\rm M}$ describió la evolución electromagnética.
+
+\section{Protocolo de comparación y criterios de interpretación}
+Se propuso un procedimiento reproducible que reunió la identificación del material y la malla, la extracción radial con ventana declarada, el informe de IC y residuos, la comparación teórica y la comprobación independiente del balance. Para comparar resoluciones del balance se conservaron los límites físicos del mismo anillo.
+
+La sensibilidad de una magnitud $Q$ se expresó como $\delta_Q=100|Q_5-Q_{\rm fina}|/|Q_{\rm fina}|$. Se examinó el umbral de 5\,\% propuesto en el diseño como criterio interno de comparación. Su cumplimiento se evaluó por magnitud. La fracción disipada y las potencias absolutas recibieron evaluaciones independientes. Cuando la referencia fue cero se utilizó una diferencia absoluta.
+
+La discrepancia teórica de atenuación, el IC condicional del ajuste, el cambio temporal y la diferencia entre mallas se reportaron individualmente. Se evaluó el orden aparente en agua salada, atendiendo al cambio de modelo de ajuste. La extrapolación al continuo quedó condicionada a la identificación de un régimen asintótico estable.
+
+Se conservaron los perfiles originales, las figuras y los informes históricos. Cada nueva corrida de balance produjo un JSON fechado, con dos muestras, dominio, versión, tiempo de ejecución y memoria máxima. Los CSV derivados se vincularon con ese registro mediante un índice y hashes. La organización se documentó en el Anexo~\ref{an:balance-registros}.
