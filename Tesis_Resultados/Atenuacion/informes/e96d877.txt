@@ -1,0 +1,22 @@
+--- REPORTE DE EXTRACCIÓN FDTD ---
+  AIC por modelo: M0=-1218.1, M1=-1219.8, M2=-1216.1
+  Modelo seleccionado (parsimonia, Delta-AIC>10.0): M0
+  alpha_app=0.4669 dB/mm  vs  alpha_teorico=0.4921 dB/mm  (diferencia -5.12%)
+  R²=1.0000 | RMSE=0.0116 dB | DW=0.0034 (rango sin autocorrelación [1.5,2.5])
+  Diagnóstico de residuos: ESTRUCTURA SISTEMÁTICA DETECTABLE (posible campo cercano residual o reflexión de frontera, Cap. 4.6/8 -- no invalida alpha_app si el error vs. teoría es pequeño, pero repórtelo explícitamente en la tesis)
+  Ajuste utilizable (R²>0.85 y RMSE<0.5): VÁLIDO
+----------------------------------
+
+  --- Barrido de sensibilidad de limite_inf (M0) ---
+    limite_inf=1.50*lambda (20.5 mm): alpha_app=0.4650 dB/mm
+    limite_inf=2.00*lambda (27.3 mm): alpha_app=0.4669 dB/mm
+    limite_inf=2.50*lambda (34.2 mm): alpha_app=0.4684 dB/mm
+    limite_inf=3.00*lambda (41.0 mm): alpha_app=0.4695 dB/mm
+  Deriva de alpha_app entre la ventana más angosta y la más ancha probada: 1.0% -- si es grande (>10-15%), confirma contaminación de campo cercano/reflexión aún presente en la ventana usada por defecto.
+
+  --- Incertidumbre de alpha_app ---
+    CI 95% (pcov, asume residuos i.i.d.):        [0.4666, 0.4671] dB/mm  (ancho=0.0005)
+    CI 95% (bootstrap por bloques, block_len=5): [0.4663, 0.4674] dB/mm  (ancho=0.0010)
+    Bootstrap es 2.1x más ancho que pcov -- consistente con autocorrelación real en los residuos.
+    alpha_teorico (0.4921) respecto al CI bootstrap: FUERA -- diferencia probablemente sistemática (campo cercano/reflexión, no ruido), ver Cap. 4.6/8
+-----------------------------------
