@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Balance agua_salada 10 px_mm",
+      "type": "process",
+      "command": "${env:TESIS_PYTHON}",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "agua_salada",
+        "--resolucion",
+        "10"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance tejido_muscular 5 px_mm",
+      "type": "process",
+      "command": "${env:TESIS_PYTHON}",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "tejido_muscular",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance concreto 5 px_mm",
+      "type": "process",
+      "command": "${env:TESIS_PYTHON}",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "concreto",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance vacio 5 px_mm",
+      "type": "process",
+      "command": "${env:TESIS_PYTHON}",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "vacio",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: ejecutar balances pendientes",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Balance agua_salada 10 px_mm",
+        "Balance tejido_muscular 5 px_mm",
+        "Balance concreto 5 px_mm",
+        "Balance vacio 5 px_mm"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

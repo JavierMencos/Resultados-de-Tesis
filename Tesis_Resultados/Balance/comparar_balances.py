@@ -39,7 +39,7 @@ def resumir(ruta):
     a, b = corrida["muestras"]
     if a["dominio_mm"] != b["dominio_mm"] or b["t"] <= a["t"]:
         raise ValueError("Las dos muestras deben cubrir el mismo volumen en orden temporal.")
-    ent_a, _, j_a, _ = calcular(a)
+    ent_a, _, j_a, res_a = calcular(a)
     ent, sal, joule, residuo = calcular(b)
     terminos = ["interior", "exterior", "tapa_superior", "tapa_inferior", "joule"]
     return dict(archivo=ruta.name, medio=corrida["medio"], px_mm=corrida["px_mm"],
@@ -48,6 +48,7 @@ def resumir(ruta):
                 t1=a["t"], t2=b["t"], entrada=ent, salida=sal, joule=joule,
                 residuo=residuo, disipada_pct=100*joule/ent, saliente_pct=100*sal/ent,
                 residuo_pct=100*residuo/ent,
+                residuo_inicial_pct=100*res_a/ent_a,
                 cambio_temporal_disipada_pp=100*(joule/ent-j_a/ent_a),
                 max_cambio_terminos_pct_entrada=100*max(abs(b[k]-a[k]) for k in terminos)/ent,
                 segundos=corrida["segundos"], rss_MiB=corrida["rss_max_KiB"]/1024)
@@ -69,6 +70,8 @@ def main():
                          cambio_disipada_pp=delta,
                          diferencia_rel_pct_ref_fina=100*abs(delta)/fina["disipada_pct"] if fina["disipada_pct"] else "",
                          cambio_residuo_pp=fina["residuo_pct"]-gruesa["residuo_pct"],
+                         cambio_entrada_pct_ref_gruesa=100*(fina["entrada"]/gruesa["entrada"]-1),
+                         cambio_joule_pct_ref_gruesa=100*(fina["joule"]/gruesa["joule"]-1) if gruesa["joule"] else "",
                          factor_tiempo=fina["segundos"]/gruesa["segundos"],
                          factor_memoria=fina["rss_MiB"]/gruesa["rss_MiB"]))
     guardar("balance_refinamiento.csv", pares)
