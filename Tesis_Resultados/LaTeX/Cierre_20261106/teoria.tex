@@ -1,0 +1,2235 @@
+\section{Desarrollo físico-matemático del modelo computacional}
+Se distinguió el programa histórico de extracción radial de la campaña adicional de balance. Se conservaron las relaciones analíticas y se identificó el procedimiento efectivamente usado en cada caso. En este capítulo se empleó la convención fasorial $e^{+j\omega t}$; el marco teórico y Meep utilizaron $e^{-i\omega t}$. El cambio conjugó las cantidades complejas sin alterar $\alpha$, $\beta$, $|E|^2$ ni $\Re(E\times H^*)$ cuando se mantuvo una convención consistente.
+
+El programa desarrollado para este trabajo no utiliza las ecuaciones electromagnéticas únicamente como una referencia teórica previa. Las magnitudes que posteriormente se analizan, entre ellas la constante de atenuación, el vector de Poynting, la potencia electromagnética que atraviesa un contorno y la potencia disipada dentro del medio, se obtienen a partir de relaciones físicas que deben conservar coherencia entre sí. Por esta razón, el desarrollo de esta sección se concentra en reconstruir matemáticamente las operaciones realizadas por el programa y en establecer qué representa físicamente cada una de ellas.
+
+El problema corresponde a una antena monopolo tipo Marconi excitada a una frecuencia de $3~\mathrm{GHz}$ y rodeada completamente por un medio homogéneo caracterizado mediante su permitividad relativa $\varepsilon_r$ y su conductividad eléctrica $\sigma$. El vacío se utiliza como caso de referencia, mientras que el concreto, el agua salada y el tejido muscular representan medios con pérdidas.
+
+La simulación no resuelve directamente una expresión analítica para el campo radiado por la antena. En su lugar, evoluciona numéricamente los campos eléctrico y magnético mediante el método FDTD y, una vez alcanzado un régimen aproximadamente estacionario, utiliza esos campos para calcular las magnitudes energéticas de interés. El procedimiento físico puede representarse mediante la cadena
+
+\begin{equation}
+(\varepsilon_r,\sigma,f)
+\longrightarrow
+(\alpha,\beta,\lambda_m)
+\longrightarrow
+\mathbf{E},\mathbf{H}
+\longrightarrow
+\left\langle\mathbf{S}\right\rangle
+\longrightarrow
+P_{\mathrm{flujo}},P_{\mathrm{diss}}
+\longrightarrow
+\alpha_{\mathrm{app}},
+\end{equation}
+
+donde $\alpha$ y $\beta$ corresponden a las constantes de atenuación y fase del medio, $\lambda_m$ es la longitud de onda dentro de este, $\left\langle\mathbf{S}\right\rangle$ es el vector de Poynting promediado temporalmente y $\alpha_{\mathrm{app}}$ representa la atenuación recuperada a partir de los campos generados por la simulación.
+
+Esta construcción permite efectuar dos verificaciones independientes. Por un lado, la atenuación obtenida del campo numérico puede compararse con la atenuación calculada a partir de las propiedades constitutivas del medio. Por otro, el flujo de potencia calculado sobre superficies cerradas puede compararse con la disipación integrada en el volumen comprendido entre esas superficies. El modelo, por tanto, no depende de una única magnitud numérica para establecer su consistencia.
+
+\section{Propagación electromagnética en el medio utilizado por la simulación}
+
+\subsection{Incorporación de la conductividad en la propagación}
+
+El programa considera materiales lineales, homogéneos e isotrópicos en la frecuencia de trabajo. Para un campo electromagnético armónico con dependencia temporal de la forma
+
+\begin{equation}
+\mathbf{E}(\mathbf{r},t)
+=
+\Re\left\{
+\widetilde{\mathbf{E}}(\mathbf{r})
+e^{j\omega t}
+\right\},
+\end{equation}
+
+la frecuencia angular está dada por
+
+\begin{equation}
+\omega=2\pi f.
+\end{equation}
+
+Para la frecuencia utilizada en el programa,
+
+\begin{equation}
+f=3.0\times10^{9}~\mathrm{Hz},
+\end{equation}
+
+por lo que
+
+\begin{equation}
+\omega
+=
+2\pi(3.0\times10^{9})
+\approx
+1.885\times10^{10}~\mathrm{rad/s}.
+\end{equation}
+
+La densidad de corriente de conducción del material satisface
+
+\begin{equation}
+\mathbf{J}_{\sigma}=\sigma\mathbf{E}.
+\end{equation}
+
+Al trabajar en régimen armónico, la ecuación de Ampère-Maxwell puede escribirse como
+
+\begin{equation}
+\nabla\times\widetilde{\mathbf{H}}
+=
+\sigma\widetilde{\mathbf{E}}
++
+j\omega\varepsilon\widetilde{\mathbf{E}},
+\end{equation}
+
+con
+
+\begin{equation}
+\varepsilon=\varepsilon_0\varepsilon_r.
+\end{equation}
+
+Agrupando los términos que multiplican al campo eléctrico,
+
+\begin{equation}
+\nabla\times\widetilde{\mathbf{H}}
+=
+j\omega
+\left(
+\varepsilon-\frac{j\sigma}{\omega}
+\right)
+\widetilde{\mathbf{E}}.
+\end{equation}
+
+De esta forma puede identificarse una permitividad compleja equivalente,
+
+\begin{equation}
+\widetilde{\varepsilon}
+=
+\varepsilon-\frac{j\sigma}{\omega}.
+\end{equation}
+
+La parte imaginaria no representa una segunda permitividad independiente. Es una forma matemática de incorporar las pérdidas producidas por conducción dentro de la respuesta electromagnética del material.
+
+El cociente entre la corriente de conducción y la corriente de desplazamiento conduce a
+
+\begin{equation}
+\tan\delta
+=
+\frac{\sigma}{\omega\varepsilon}
+=
+\frac{\sigma}
+{\omega\varepsilon_0\varepsilon_r}.
+\label{eq:tan_delta_desarrollo}
+\end{equation}
+
+Esta es precisamente la magnitud calculada por la función \texttt{tan\_delta} del programa. Su utilidad radica en que $\sigma$ por sí sola no determina el comportamiento disipativo del medio. Una conductividad dada puede representar una pérdida relativamente pequeña o grande dependiendo simultáneamente de la permitividad y de la frecuencia de operación.
+
+\subsection{Obtención de la constante de propagación}
+
+Para una onda que se propaga dentro de un medio con pérdidas se escribe
+
+\begin{equation}
+\widetilde{\mathbf{E}}(r)
+=
+\widetilde{\mathbf{E}}_0 e^{-\gamma r},
+\end{equation}
+
+donde la constante de propagación compleja es
+
+\begin{equation}
+\gamma=\alpha+j\beta.
+\end{equation}
+
+El término $\alpha$ controla la disminución exponencial de la amplitud, mientras que $\beta$ determina la acumulación de fase.
+
+La constante de propagación satisface
+
+\begin{equation}
+\gamma^2
+=
+j\omega\mu
+\left(
+\sigma+j\omega\varepsilon
+\right).
+\end{equation}
+
+Separando las contribuciones de conducción y desplazamiento,
+
+\begin{equation}
+\gamma^2
+=
+-\omega^2\mu\varepsilon
++
+j\omega\mu\sigma.
+\end{equation}
+
+Por otra parte,
+
+\begin{equation}
+(\alpha+j\beta)^2
+=
+\alpha^2-\beta^2
++
+j2\alpha\beta.
+\end{equation}
+
+Al igualar partes reales e imaginarias se obtiene
+
+\begin{equation}
+\alpha^2-\beta^2
+=
+-\omega^2\mu\varepsilon,
+\label{eq:real_gamma}
+\end{equation}
+
+y
+
+\begin{equation}
+2\alpha\beta
+=
+\omega\mu\sigma.
+\label{eq:imag_gamma}
+\end{equation}
+
+A partir de estas dos ecuaciones pueden obtenerse $\alpha$ y $\beta$ sin realizar ninguna aproximación de buen conductor o dieléctrico de bajas pérdidas.
+
+La forma utilizada por el programa es
+
+\begin{equation}
+\alpha
+=
+\omega
+\sqrt{\frac{\mu\varepsilon}{2}}
+\sqrt{
+\sqrt{
+1+
+\left(
+\frac{\sigma}{\omega\varepsilon}
+\right)^2
+}
+-1
+},
+\label{eq:alpha_exacta}
+\end{equation}
+
+mientras que
+
+\begin{equation}
+\beta
+=
+\omega
+\sqrt{\frac{\mu\varepsilon}{2}}
+\sqrt{
+\sqrt{
+1+
+\left(
+\frac{\sigma}{\omega\varepsilon}
+\right)^2
+}
++1
+}.
+\label{eq:beta_exacta}
+\end{equation}
+
+Utilizando la Ecuación (\ref{eq:tan_delta_desarrollo}), estas expresiones también pueden escribirse como
+
+\begin{equation}
+\alpha
+=
+\omega
+\sqrt{\frac{\mu\varepsilon}{2}}
+\sqrt{
+\sqrt{1+\tan^2\delta}-1
+},
+\end{equation}
+
+y
+
+\begin{equation}
+\beta
+=
+\omega
+\sqrt{\frac{\mu\varepsilon}{2}}
+\sqrt{
+\sqrt{1+\tan^2\delta}+1
+}.
+\end{equation}
+
+Para valores muy pequeños de $\tan\delta$, la resta
+
+\begin{equation}
+\sqrt{1+\tan^2\delta}-1
+\end{equation}
+
+involucra dos números cercanos entre sí. Numéricamente esto puede producir pérdida de precisión. El programa evita este problema empleando la identidad
+
+\begin{equation}
+\sqrt{1+x^2}-1
+=
+\frac{x^2}{\sqrt{1+x^2}+1}.
+\end{equation}
+
+Por tanto, la implementación equivalente es
+
+\begin{equation}
+\alpha
+=
+\omega
+\sqrt{\frac{\mu\varepsilon}{2}}
+\sqrt{
+\frac{\tan^2\delta}
+{\sqrt{1+\tan^2\delta}+1}
+}.
+\label{eq:alpha_estable}
+\end{equation}
+
+Esta transformación no modifica la física del problema. Su función es únicamente evitar una cancelación numérica cuando las pérdidas son muy pequeñas.
+
+Para el vacío, $\sigma=0$. Entonces
+
+\begin{equation}
+\tan\delta=0
+\end{equation}
+
+y la Ecuación (\ref{eq:alpha_estable}) produce directamente
+
+\begin{equation}
+\alpha=0.
+\end{equation}
+
+Simultáneamente,
+
+\begin{equation}
+\beta
+=
+\omega\sqrt{\mu_0\varepsilon_0}
+=
+\frac{\omega}{c}.
+\end{equation}
+
+El vacío constituye así un caso de control particularmente útil: cualquier disminución sistemática del perfil compensado obtenida numéricamente no puede atribuirse a absorción material, debido a que el modelo físico impone $\alpha=0$.
+
+\subsection{Longitud de onda dentro del medio}
+
+Una vez determinada $\beta$, la longitud de onda utilizada por el programa se calcula mediante
+
+\begin{equation}
+\lambda_m
+=
+\frac{2\pi}{\beta}.
+\label{eq:lambda_medio}
+\end{equation}
+
+Esta definición se mantiene válida cuando el medio posee pérdidas, pues $\beta$ continúa representando la variación espacial de la fase.
+
+A partir de los parámetros introducidos en el programa se obtienen, antes de ejecutar FDTD, las siguientes magnitudes:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Medio &
+$\tan\delta$ &
+$\alpha$ (Np/m) &
+$\alpha_{\mathrm{dB}}$ (dB/mm) &
+$\lambda_m$ (mm)
+\\ \hline
+Vacío
+& $0$
+& $0$
+& $0$
+& $99.932$
+\\ \hline
+Concreto
+& $0.0666$
+& $4.437$
+& $0.03854$
+& $47.082$
+\\ \hline
+Agua salada
+& $0.3073$
+& $84.346$
+& $0.73263$
+& $11.187$
+\\ \hline
+Tejido muscular
+& $0.2501$
+& $56.650$
+& $0.49207$
+& $13.661$
+\\ \hline
+\end{tabular}
+\caption{Magnitudes electromagnéticas obtenidas a partir de los parámetros utilizados por el programa a $3~\mathrm{GHz}$.}
+\label{tab:parametros_derivados}
+\end{table}
+
+La conversión de nepers por metro a decibelios por milímetro utilizada en el código es
+
+\begin{equation}
+\alpha_{\mathrm{dB/mm}}
+=
+\frac{8.686}{1000}\alpha_{\mathrm{Np/m}}.
+\label{eq:alpha_db}
+\end{equation}
+
+Más adelante se demostrará por qué este mismo coeficiente puede compararse directamente con la pendiente de una magnitud de potencia expresada en decibelios.
+
+\section{Normalización de las propiedades físicas en MEEP}
+
+El programa utiliza milímetros como unidad fundamental de longitud. Sea
+
+\begin{equation}
+a=1~\mathrm{mm}=10^{-3}~\mathrm{m}.
+\end{equation}
+
+Cuando se normaliza el sistema de unidades imponiendo $c=1$, la unidad temporal asociada es
+
+\begin{equation}
+t_0=\frac{a}{c}.
+\end{equation}
+
+Para incorporar un término disipativo proporcional a $\mathbf{D}$, la conductividad física debe expresarse en una forma adimensional compatible con esta escala temporal.
+
+Partiendo de
+
+\begin{equation}
+\mathbf{D}
+=
+\varepsilon_0\varepsilon_r\mathbf{E},
+\end{equation}
+
+se tiene
+
+\begin{equation}
+\sigma\mathbf{E}
+=
+\frac{\sigma}{\varepsilon_0\varepsilon_r}\mathbf{D}.
+\end{equation}
+
+El factor
+
+\begin{equation}
+\frac{\sigma}{\varepsilon_0\varepsilon_r}
+\end{equation}
+
+posee dimensiones de inverso del tiempo. Para convertirlo a las unidades temporales normalizadas se multiplica por $t_0$:
+
+\begin{equation}
+\sigma_D
+=
+\frac{\sigma}{\varepsilon_0\varepsilon_r}
+\frac{a}{c}.
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+\boxed{
+\sigma_D
+=
+\frac{\sigma a}
+{\varepsilon_0 c\varepsilon_r}
+}
+\label{eq:sigma_meep}
+\end{equation}
+
+es la expresión implementada por la función \texttt{calc\_meep\_conductivity}.
+
+Esta transformación tiene una consecuencia relevante. El parámetro empleado internamente por el programa no es numéricamente igual a la conductividad expresada en $\mathrm{S/m}$; representa esa conductividad después de adaptarla a la escala espacial y temporal de la simulación. Confundir ambas cantidades modificaría la disipación y, en consecuencia, la atenuación calculada.
+
+\section{Reducción axisimétrica del problema electromagnético}
+
+La geometría del monopolo es invariante ante rotaciones alrededor del eje $z$. La fuente utilizada también se encuentra alineada con este eje. Bajo estas condiciones puede imponerse
+
+\begin{equation}
+\frac{\partial}{\partial\phi}=0.
+\end{equation}
+
+El programa selecciona el modo azimutal
+
+\begin{equation}
+m=0,
+\end{equation}
+
+de manera que el problema tridimensional completo puede representarse en el plano $(r,z)$ conservando el factor geométrico correspondiente a la rotación alrededor del eje.
+
+Para la excitación implementada, el sistema electromagnético posee las componentes
+
+\begin{equation}
+\mathbf{E}
+=
+E_r\hat{\mathbf{r}}
++
+E_z\hat{\mathbf{z}},
+\end{equation}
+
+y
+
+\begin{equation}
+\mathbf{H}
+=
+H_\phi\hat{\boldsymbol{\phi}}.
+\end{equation}
+
+No es necesario almacenar una dependencia explícita respecto de $\phi$, aunque físicamente cada punto del plano $(r,z)$ representa una circunferencia completa al rotarlo alrededor del eje.
+
+Aplicando el rotacional en coordenadas cilíndricas a esta estructura de campos se obtiene
+
+\begin{equation}
+(\nabla\times\mathbf{E})_\phi
+=
+\frac{\partial E_r}{\partial z}
+-
+\frac{\partial E_z}{\partial r}.
+\end{equation}
+
+A partir de la ley de Faraday,
+
+\begin{equation}
+\nabla\times\mathbf{E}
+=
+-\mu\frac{\partial\mathbf{H}}{\partial t},
+\end{equation}
+
+resulta
+
+\begin{equation}
+\mu
+\frac{\partial H_\phi}{\partial t}
+=
+\frac{\partial E_z}{\partial r}
+-
+\frac{\partial E_r}{\partial z}.
+\label{eq:Hphi_cilindrica}
+\end{equation}
+
+Para el campo magnético,
+
+\begin{equation}
+(\nabla\times\mathbf{H})_r
+=
+-\frac{\partial H_\phi}{\partial z},
+\end{equation}
+
+mientras que
+
+\begin{equation}
+(\nabla\times\mathbf{H})_z
+=
+\frac{1}{r}
+\frac{\partial}{\partial r}
+\left(
+rH_\phi
+\right).
+\end{equation}
+
+Incluyendo la corriente de conducción, la componente radial satisface
+
+\begin{equation}
+\varepsilon
+\frac{\partial E_r}{\partial t}
++
+\sigma E_r
+=
+-\frac{\partial H_\phi}{\partial z},
+\label{eq:Er_cilindrica}
+\end{equation}
+
+y la componente axial,
+
+\begin{equation}
+\varepsilon
+\frac{\partial E_z}{\partial t}
++
+\sigma E_z
+=
+\frac{1}{r}
+\frac{\partial}{\partial r}
+\left(
+rH_\phi
+\right)
+-
+J_{s,z}.
+\label{eq:Ez_cilindrica}
+\end{equation}
+
+El término $J_{s,z}$ representa la excitación colocada en la separación de alimentación de la antena.
+
+Las Ecuaciones (\ref{eq:Hphi_cilindrica})--(\ref{eq:Ez_cilindrica}) constituyen, en forma continua, el sistema que el cálculo FDTD debe aproximar. Esta reducción también explica por qué el programa recupera específicamente $E_z$ y $H_\phi$ para calcular la propagación radial.
+
+\section{Discretización temporal y espacial mediante FDTD}
+
+En una malla de Yee los campos eléctrico y magnético no se calculan en exactamente la misma posición ni en el mismo instante. El campo eléctrico se evalúa en tiempos enteros
+
+\begin{equation}
+t^n=n\Delta t,
+\end{equation}
+
+mientras que el campo magnético se encuentra desplazado medio paso temporal,
+
+\begin{equation}
+t^{n+1/2}
+=
+\left(
+n+\frac{1}{2}
+\right)\Delta t.
+\end{equation}
+
+Para mostrar cómo aparece el término disipativo puede considerarse una componente genérica del campo eléctrico que satisface
+
+\begin{equation}
+\varepsilon
+\frac{\partial E}{\partial t}
++
+\sigma E
+=
+C_H,
+\end{equation}
+
+donde $C_H$ representa el rotacional correspondiente del campo magnético.
+
+La derivada temporal se aproxima mediante
+
+\begin{equation}
+\frac{\partial E}{\partial t}
+\approx
+\frac{E^{n+1}-E^n}{\Delta t}.
+\end{equation}
+
+Para conservar una aproximación centrada del término de conducción se emplea
+
+\begin{equation}
+E
+\approx
+\frac{E^{n+1}+E^n}{2}.
+\end{equation}
+
+Sustituyendo,
+
+\begin{equation}
+\varepsilon
+\frac{E^{n+1}-E^n}{\Delta t}
++
+\sigma
+\frac{E^{n+1}+E^n}{2}
+=
+C_H^{n+1/2}.
+\end{equation}
+
+Multiplicando por $\Delta t$,
+
+\begin{equation}
+\varepsilon E^{n+1}
+-
+\varepsilon E^n
++
+\frac{\sigma\Delta t}{2}E^{n+1}
++
+\frac{\sigma\Delta t}{2}E^n
+=
+\Delta t\,C_H^{n+1/2}.
+\end{equation}
+
+Agrupando los términos correspondientes a $E^{n+1}$,
+
+\begin{equation}
+\left(
+\varepsilon+
+\frac{\sigma\Delta t}{2}
+\right)
+E^{n+1}
+=
+\left(
+\varepsilon-
+\frac{\sigma\Delta t}{2}
+\right)
+E^n
++
+\Delta t\,C_H^{n+1/2}.
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+E^{n+1}
+=
+C_E E^n
++
+C_C C_H^{n+1/2},
+\label{eq:update_E}
+\end{equation}
+
+con
+
+\begin{equation}
+C_E
+=
+\frac{
+1-\dfrac{\sigma\Delta t}{2\varepsilon}
+}{
+1+\dfrac{\sigma\Delta t}{2\varepsilon}
+},
+\end{equation}
+
+y
+
+\begin{equation}
+C_C
+=
+\frac{
+\dfrac{\Delta t}{\varepsilon}
+}{
+1+\dfrac{\sigma\Delta t}{2\varepsilon}
+}.
+\end{equation}
+
+Cuando $\sigma=0$,
+
+\begin{equation}
+C_E=1,
+\end{equation}
+
+y se recupera el esquema correspondiente a un medio sin pérdidas. Si $\sigma>0$, el primer coeficiente es menor que la unidad y aparece un amortiguamiento del campo entre pasos sucesivos. La disipación observada posteriormente en el vector de Poynting no se introduce como una corrección externa después de la simulación; surge durante la propia evolución temporal de los campos.
+
+Para la componente magnética puede escribirse, de forma representativa,
+
+\begin{equation}
+H_{\phi}^{n+1/2}
+=
+H_{\phi}^{n-1/2}
++
+\frac{\Delta t}{\mu}
+\left[
+\frac{\Delta E_z}{\Delta r}
+-
+\frac{\Delta E_r}{\Delta z}
+\right].
+\label{eq:update_H}
+\end{equation}
+
+De manera análoga, la componente $E_z$ requiere la forma cilíndrica
+
+\begin{equation}
+\frac{1}{r}
+\frac{\partial}{\partial r}
+(rH_\phi).
+\end{equation}
+
+Para un punto radial $r_i$, su versión discreta puede escribirse como
+
+\begin{equation}
+\frac{1}{r}
+\frac{\partial}{\partial r}(rH_\phi)
+\Bigg|_{r_i}
+\approx
+\frac{
+r_{i+1/2}H_{\phi,i+1/2}
+-
+r_{i-1/2}H_{\phi,i-1/2}
+}{
+r_i\Delta r
+}.
+\label{eq:derivada_cilindrica_discreta}
+\end{equation}
+
+La presencia explícita de $r$ en la Ecuación (\ref{eq:derivada_cilindrica_discreta}) diferencia este problema de una simulación cartesiana bidimensional. En $r=0$ la expresión requiere la condición de simetría correspondiente al eje; esta singularidad coordenada se maneja dentro de la formulación cilíndrica utilizada por el motor FDTD.
+
+\subsection{Resolución espacial del modelo}
+
+Si la resolución utilizada es $\mathcal{R}$ puntos por milímetro,
+
+\begin{equation}
+\Delta r=\Delta z=\frac{1}{\mathcal{R}}~\mathrm{mm}.
+\end{equation}
+
+La resolución se tomó de cada archivo de resultados y del argumento explícito de las corridas adicionales. Se compararon 5 px/mm en los cuatro medios; las mallas históricas adicionales fueron 10 px/mm en concreto, 10, 20 y 40 px/mm en agua salada, y 10 y 20 px/mm en músculo. No se supuso una resolución base automática de 20 px/mm.
+
+La condición geométrica es especialmente relevante debido al diámetro del monopolo,
+
+\begin{equation}
+d=0.4~\mathrm{mm}.
+\end{equation}
+
+El número de celdas que representan ese diámetro es
+
+\begin{equation}
+N_d
+=
+d\mathcal{R}.
+\end{equation}
+
+Para la comparación a $5~\mathrm{puntos/mm}$,
+
+\begin{equation}
+N_d
+=
+(0.4)(5)
+=
+2.
+\end{equation}
+
+Así, aunque la longitud de onda podría resolverse adecuadamente con una densidad espacial menor en algunos materiales, el radio reducido del conductor obliga a utilizar una malla más fina.
+
+La variación explícita de $\mathcal{R}$ permitió examinar la sensibilidad espacial. Si una magnitud física calculada se representa por $Q_h$, donde $h=1/\mathcal{R}$ es el tamaño de celda, la convergencia exige
+
+\begin{equation}
+\lim_{h\rightarrow0}Q_h
+=
+Q.
+\end{equation}
+
+Para dos resoluciones consecutivas puede utilizarse
+
+\begin{equation}
+\epsilon_Q
+=
+\frac{
+|Q_{h_2}-Q_{h_1}|
+}{
+|Q_{h_2}|
+}
+\times100\%.
+\label{eq:error_convergencia}
+\end{equation}
+
+Un resultado físicamente interpretable no debe depender de manera considerable de una única elección de resolución. Los valores no tienen que ser exactamente iguales, debido al error de discretización, pero deben tender hacia un valor estable al refinar la malla.
+
+\section{Representación electromagnética del monopolo}
+
+La longitud de onda obtenida mediante la Ecuación (\ref{eq:lambda_medio}) determina directamente la geometría utilizada por el programa.
+
+Se define inicialmente
+
+\begin{equation}
+L_{\mathrm{antena}}
+=
+\frac{\lambda_m}{2}.
+\end{equation}
+
+Sin embargo, el elemento metálico colocado sobre el plano conductor posee una altura
+
+\begin{equation}
+h_{\mathrm{mono}}
+=
+\frac{L_{\mathrm{antena}}-g}{2},
+\end{equation}
+
+donde
+
+\begin{equation}
+g=0.4~\mathrm{mm}
+\end{equation}
+
+es la separación de alimentación.
+
+Sustituyendo $L_{\mathrm{antena}}$,
+
+\begin{equation}
+h_{\mathrm{mono}}
+=
+\frac{1}{2}
+\left(
+\frac{\lambda_m}{2}-g
+\right),
+\end{equation}
+
+de donde
+
+\begin{equation}
+\boxed{
+h_{\mathrm{mono}}
+=
+\frac{\lambda_m}{4}
+-
+\frac{g}{2}
+}
+\label{eq:altura_monopolo}
+\end{equation}
+
+La geometría implementada es, por tanto, aproximadamente la de un monopolo de cuarto de onda.
+
+Esta relación también permite identificar una característica del modelo que debe mantenerse explícita durante la interpretación posterior. Como $\lambda_m$ depende del material, la Ecuación (\ref{eq:altura_monopolo}) hace que la longitud física de la antena cambie cuando se modifica el medio. El programa no está comparando actualmente una única antena física inalterada introducida sucesivamente en cuatro materiales. Compara monopolos reescalados para conservar aproximadamente la misma longitud eléctrica.
+
+Esta decisión puede ser apropiada si el objetivo es estudiar la propagación de configuraciones eléctricamente equivalentes. En contraposición, si se desea estudiar qué ocurre con una antena física determinada al ser sumergida en diferentes materiales, $h_{\mathrm{mono}}$ debería mantenerse constante y la variación de $\lambda_m$ debería manifestarse como un cambio en la longitud eléctrica y en la adaptación de la antena.
+
+El medio se asigna como material predeterminado de todo el dominio que no pertenece al conductor. En consecuencia, no existe una capa de aire separando el monopolo del concreto, agua salada o tejido muscular. Desde el punto de vista del modelo numérico, la antena se encuentra inmersa directamente en el material seleccionado.
+
+\subsection{Frecuencia de excitación en unidades normalizadas}
+
+La longitud de onda en vacío correspondiente a la frecuencia física es
+
+\begin{equation}
+\lambda_0
+=
+\frac{c}{f}.
+\end{equation}
+
+Con $f=3~\mathrm{GHz}$,
+
+\begin{equation}
+\lambda_0
+\approx
+99.932~\mathrm{mm}.
+\end{equation}
+
+Cuando $c=1$ dentro de las unidades normalizadas, frecuencia y longitud de onda satisfacen
+
+\begin{equation}
+f_{\mathrm{MEEP}}
+=
+\frac{1}{\lambda_0},
+\end{equation}
+
+si $\lambda_0$ se expresa en la misma unidad espacial utilizada por la simulación. Esta es la razón por la cual la fuente del programa se define como
+
+\begin{equation}
+f_{\mathrm{MEEP}}
+=
+\frac{1}{\lambda_{0,\mathrm{mm}}}.
+\end{equation}
+
+La excitación se aplica sobre la componente $E_z$ dentro de la región correspondiente al espacio de alimentación. De esta manera se favorece el modo electromagnético consistente con una corriente axial sobre el monopolo.
+
+\section{Obtención del vector de Poynting a partir de los campos calculados}
+
+Una vez alcanzado el régimen armónico, los campos pueden escribirse como fasores complejos. El vector de Poynting complejo es
+
+\begin{equation}
+\widetilde{\mathbf{S}}
+=
+\frac{1}{2}
+\widetilde{\mathbf{E}}
+\times
+\widetilde{\mathbf{H}}^{*}.
+\end{equation}
+
+La parte real corresponde al transporte medio de energía,
+
+\begin{equation}
+\left\langle
+\mathbf{S}
+\right\rangle
+=
+\frac{1}{2}
+\Re
+\left(
+\widetilde{\mathbf{E}}
+\times
+\widetilde{\mathbf{H}}^{*}
+\right).
+\label{eq:poynting_promedio}
+\end{equation}
+
+Para el sistema axisimétrico,
+
+\begin{equation}
+\widetilde{\mathbf{E}}
+=
+E_r\hat{\mathbf{r}}
++
+E_z\hat{\mathbf{z}},
+\end{equation}
+
+y
+
+\begin{equation}
+\widetilde{\mathbf{H}}
+=
+H_\phi\hat{\boldsymbol{\phi}}.
+\end{equation}
+
+El producto vectorial resulta
+
+\begin{equation}
+\widetilde{\mathbf{E}}
+\times
+\widetilde{\mathbf{H}}^{*}
+=
+E_rH_\phi^{*}
+\left(
+\hat{\mathbf{r}}\times\hat{\boldsymbol{\phi}}
+\right)
++
+E_zH_\phi^{*}
+\left(
+\hat{\mathbf{z}}\times\hat{\boldsymbol{\phi}}
+\right).
+\end{equation}
+
+Utilizando
+
+\begin{equation}
+\hat{\mathbf{r}}\times\hat{\boldsymbol{\phi}}
+=
+\hat{\mathbf{z}},
+\end{equation}
+
+y
+
+\begin{equation}
+\hat{\mathbf{z}}\times\hat{\boldsymbol{\phi}}
+=
+-\hat{\mathbf{r}},
+\end{equation}
+
+se obtiene
+
+\begin{equation}
+\widetilde{\mathbf{E}}
+\times
+\widetilde{\mathbf{H}}^{*}
+=
+E_rH_\phi^{*}\hat{\mathbf{z}}
+-
+E_zH_\phi^{*}\hat{\mathbf{r}}.
+\end{equation}
+
+La componente radial del vector de Poynting es entonces
+
+\begin{equation}
+\boxed{
+\left\langle
+S_r
+\right\rangle
+=
+-\frac{1}{2}
+\Re
+\left(
+E_zH_\phi^{*}
+\right)
+}
+\label{eq:Sr}
+\end{equation}
+
+que coincide con la expresión evaluada directamente por el programa.
+
+Esta deducción también explica el signo negativo presente en el código. No corresponde a una corrección empírica: surge de la orientación de los vectores unitarios cilíndricos.
+
+\section{Separación de la divergencia geométrica y la absorción material}
+
+La intensidad electromagnética producida por una fuente localizada disminuye aunque el medio no posea pérdidas. Una parte de esta reducción corresponde simplemente a la expansión espacial del frente de onda.
+
+En una región suficientemente alejada de la antena puede escribirse, de manera aproximada,
+
+\begin{equation}
+|E(r)|
+\propto
+\frac{1}{r}
+e^{-\alpha r}.
+\label{eq:E_radial}
+\end{equation}
+
+En la zona donde la impedancia efectiva varía lentamente con la distancia,
+
+\begin{equation}
+|H(r)|
+\propto
+\frac{1}{r}
+e^{-\alpha r}.
+\end{equation}
+
+El vector de Poynting es proporcional al producto de ambas amplitudes. Por tanto,
+
+\begin{equation}
+|S_r(r)|
+\propto
+\frac{1}{r^2}
+e^{-2\alpha r}.
+\label{eq:S_decaimiento}
+\end{equation}
+
+Si se intentara obtener $\alpha$ ajustando directamente $|S_r|$, la pendiente contendría simultáneamente la divergencia $1/r^2$ y la absorción exponencial.
+
+El programa elimina el primer término multiplicando por $r^2$:
+
+\begin{equation}
+P_c(r)
+=
+|S_r(r)|r^2.
+\label{eq:potencia_compensada}
+\end{equation}
+
+Sustituyendo la Ecuación (\ref{eq:S_decaimiento}),
+
+\begin{equation}
+P_c(r)
+\propto
+e^{-2\alpha r}.
+\end{equation}
+
+Puede escribirse
+
+\begin{equation}
+P_c(r)
+=
+P_0e^{-2\alpha r}.
+\end{equation}
+
+La representación utilizada por el programa es
+
+\begin{equation}
+P_{\mathrm{dB}}(r)
+=
+10\log_{10}P_c(r).
+\end{equation}
+
+Sustituyendo,
+
+\begin{equation}
+P_{\mathrm{dB}}(r)
+=
+10\log_{10}
+\left(
+P_0e^{-2\alpha r}
+\right).
+\end{equation}
+
+Aplicando las propiedades del logaritmo,
+
+\begin{equation}
+P_{\mathrm{dB}}(r)
+=
+10\log_{10}P_0
++
+10\log_{10}
+\left(
+e^{-2\alpha r}
+\right).
+\end{equation}
+
+Como
+
+\begin{equation}
+\log_{10}(e^x)
+=
+\frac{x}{\ln 10},
+\end{equation}
+
+resulta
+
+\begin{equation}
+P_{\mathrm{dB}}(r)
+=
+10\log_{10}P_0
+-
+\frac{20\alpha}{\ln 10}r.
+\end{equation}
+
+Definiendo
+
+\begin{equation}
+A
+=
+10\log_{10}P_0,
+\end{equation}
+
+y utilizando
+
+\begin{equation}
+\frac{20}{\ln10}
+\approx
+8.686,
+\end{equation}
+
+se obtiene
+
+\begin{equation}
+\boxed{
+P_{\mathrm{dB}}(r)
+=
+A
+-
+8.686\,\alpha r
+}
+\label{eq:perfil_db_alpha}
+\end{equation}
+
+si $\alpha$ y $r$ se expresan en unidades compatibles.
+
+Por esta razón, el parámetro que el programa denomina $\alpha_{\mathrm{app}}$ puede compararse directamente con
+
+\begin{equation}
+\alpha_{\mathrm{teo,dB/mm}}
+=
+\frac{8.686}{1000}
+\alpha_{\mathrm{teo,Np/m}}.
+\end{equation}
+
+No se requiere introducir un factor adicional de dos en la comparación. El factor $2$ que aparece al pasar de amplitud de campo a potencia ya queda compensado por el uso de $10\log_{10}$ para una magnitud de potencia, frente al factor $20\log_{10}$ utilizado para amplitudes.
+
+El uso de
+
+\begin{equation}
+|S_r|
+\end{equation}
+
+en esta parte del programa tiene una finalidad distinta a la integración energética posterior. Aquí se busca caracterizar la envolvente de la propagación. Por ello se elimina el signo local del flujo. En el balance energético, en cambio, el signo no puede eliminarse, pues determina si la energía entra o sale de una superficie.
+
+\section{Extracción de una atenuación aparente a partir del perfil FDTD}
+
+El perfil producido por una antena real dentro de un dominio numérico no tiene por qué coincidir exactamente con una exponencial ideal. Cerca de la antena existen componentes reactivas y, adicionalmente, pueden quedar pequeñas contribuciones de las fronteras numéricas.
+
+Por esta razón, el programa no ajusta todos los puntos del dominio.
+
+El límite inferior se define mediante
+
+\begin{equation}
+r_{\min}
+=
+\begin{cases}
+2\lambda_m,
+&
+\tan\delta>0.2,
+\\
+1.5\lambda_m,
+&
+\tan\delta\leq0.2.
+\end{cases}
+\end{equation}
+
+El límite superior se establece como
+
+\begin{equation}
+r_{\max,\mathrm{ajuste}}
+=
+R_{\max}-\lambda_m.
+\end{equation}
+
+El intervalo excluye, por una parte, la región inmediatamente próxima a la antena y, por otra, la zona cercana a la frontera absorbente.
+
+También se eliminan puntos cuyo nivel se encuentre por debajo de
+
+\begin{equation}
+-80~\mathrm{dB},
+\end{equation}
+
+pues en esa región el ajuste puede quedar dominado por cantidades numéricamente pequeñas.
+
+\subsection{Modelo lineal de atenuación}
+
+A partir de la Ecuación (\ref{eq:perfil_db_alpha}), el modelo más simple es
+
+\begin{equation}
+M_0(r)
+=
+A-\alpha_{\mathrm{app}}r.
+\label{eq:M0}
+\end{equation}
+
+Si la compensación por $r^2$ elimina adecuadamente la divergencia geométrica y las reflexiones son despreciables, este modelo debería ser suficiente.
+
+El parámetro se restringe a
+
+\begin{equation}
+\alpha_{\mathrm{app}}\geq0.
+\end{equation}
+
+Esta condición no es solamente estadística. Para los medios pasivos utilizados en el programa no existe un mecanismo capaz de producir una amplificación neta de la energía conforme aumenta la distancia. Una pendiente positiva persistente del perfil compensado requeriría revisar el intervalo de ajuste o la simulación, en lugar de interpretarla como una atenuación negativa del material.
+
+\subsection{Modelo con estructura oscilatoria residual}
+
+El segundo modelo utilizado es
+
+\begin{equation}
+M_1(r)
+=
+A
+-
+\alpha_{\mathrm{app}}r
++
+B\sin(\beta_r r+\phi).
+\label{eq:M1}
+\end{equation}
+
+La adición del término sinusoidal permite representar oscilaciones aproximadamente periódicas superpuestas al decaimiento principal.
+
+Su origen puede entenderse considerando una componente directa y una componente reflejada,
+
+\begin{equation}
+E(r)
+=
+E_d(r)
++
+E_r(r)e^{j\Delta k r}.
+\end{equation}
+
+Entonces
+
+\begin{equation}
+|E|^2
+=
+|E_d|^2
++
+|E_r|^2
++
+2\Re
+\left(
+E_dE_r^{*}
+e^{-j\Delta kr}
+\right).
+\end{equation}
+
+El último término produce una modulación espacial de tipo seno o coseno. El modelo $M_1$ no afirma que toda oscilación sea necesariamente una reflexión de frontera; permite cuantificar una estructura periódica que el modelo puramente exponencial no representa.
+
+El valor inicial de la frecuencia espacial empleado por el programa es
+
+\begin{equation}
+\beta_{r,0}
+=
+\frac{2\pi}{\lambda_m/2}
+=
+\frac{4\pi}{\lambda_m}.
+\end{equation}
+
+Esto corresponde a una oscilación con período espacial inicial aproximado de media longitud de onda.
+
+\subsection{Modelo con divergencia geométrica residual}
+
+El tercer modelo es
+
+\begin{equation}
+M_2(r)
+=
+A
+-
+\alpha_{\mathrm{app}}r
+-
+C\log_{10}(r).
+\label{eq:M2}
+\end{equation}
+
+Su interpretación puede obtenerse suponiendo que la intensidad no sigue exactamente $r^{-2}$, sino
+
+\begin{equation}
+S(r)
+\propto
+r^{-p}e^{-2\alpha r}.
+\end{equation}
+
+Después de multiplicar por $r^2$,
+
+\begin{equation}
+P_c(r)
+\propto
+r^{2-p}e^{-2\alpha r}.
+\end{equation}
+
+Expresando en decibelios,
+
+\begin{equation}
+10\log_{10}P_c
+=
+A
+-
+8.686\alpha r
++
+10(2-p)\log_{10}r.
+\end{equation}
+
+Comparando con la Ecuación (\ref{eq:M2}), se obtiene
+
+\begin{equation}
+C
+=
+10(p-2)
+\end{equation}
+
+cuando $p>2$.
+
+Por tanto, el término logarítmico permite absorber una desviación sistemática respecto de la dependencia geométrica $1/r^2$. No reemplaza la atenuación material, debido a que mantiene separado el término lineal asociado a $\alpha_{\mathrm{app}}$.
+
+\section{Selección matemática del modelo de atenuación}
+
+Para cada modelo se calculan residuos
+
+\begin{equation}
+e_i
+=
+y_i-\widehat{y}_i,
+\end{equation}
+
+donde $y_i$ corresponde al perfil FDTD y $\widehat{y}_i$ al valor calculado por el modelo ajustado.
+
+La suma de cuadrados residual es
+
+\begin{equation}
+RSS
+=
+\sum_{i=1}^{n}e_i^2.
+\end{equation}
+
+El criterio empleado por el código para comparar modelos es
+
+\begin{equation}
+AIC
+=
+2k
++
+n\ln
+\left(
+\frac{RSS}{n}
+\right),
+\label{eq:AIC}
+\end{equation}
+
+donde $k$ representa el número de parámetros ajustados.
+
+Los tres modelos poseen
+
+\begin{equation}
+k_{M_0}=2,
+\qquad
+k_{M_1}=5,
+\qquad
+k_{M_2}=3.
+\end{equation}
+
+Esto evita seleccionar automáticamente el modelo que contenga más parámetros únicamente porque consigue reducir el error residual. Un término adicional tiene que producir una mejora suficiente para justificar la complejidad introducida.
+
+El programa utiliza $M_0$ como referencia y solamente permite que un modelo más complejo lo sustituya cuando la disminución del AIC supera
+
+\begin{equation}
+\Delta AIC>10.
+\end{equation}
+
+De esta forma se conserva el modelo lineal cuando la estructura adicional de $M_1$ o $M_2$ aporta una mejora pequeña.
+
+\subsection{Coeficiente de determinación y error cuadrático medio}
+
+La suma total de cuadrados se define como
+
+\begin{equation}
+SS_{\mathrm{tot}}
+=
+\sum_{i=1}^{n}
+(y_i-\overline{y})^2.
+\end{equation}
+
+Entonces,
+
+\begin{equation}
+R^2
+=
+1-
+\frac{RSS}{SS_{\mathrm{tot}}}.
+\label{eq:R2}
+\end{equation}
+
+El error cuadrático medio utilizado por el programa es
+
+\begin{equation}
+RMSE
+=
+\sqrt{
+\frac{1}{n}
+\sum_{i=1}^{n}
+e_i^2
+}.
+\label{eq:RMSE}
+\end{equation}
+
+La regla operacional implementada considera utilizable un ajuste cuando
+
+\begin{equation}
+R^2>0.85
+\end{equation}
+
+y simultáneamente
+
+\begin{equation}
+RMSE<0.5~\mathrm{dB}.
+\end{equation}
+
+Estos límites constituyen criterios establecidos dentro del análisis y no leyes físicas universales. Su función es evitar utilizar un valor de $\alpha_{\mathrm{app}}$ cuando el modelo no representa razonablemente el perfil producido por FDTD.
+
+\subsection{Estructura espacial de los residuos}
+
+Un valor elevado de $R^2$ no garantiza que los residuos sean aleatorios. Puede existir una oscilación pequeña pero organizada espacialmente que apenas afecte el error global.
+
+El programa calcula
+
+\begin{equation}
+DW
+=
+\frac{
+\displaystyle
+\sum_{i=2}^{n}
+(e_i-e_{i-1})^2
+}{
+\displaystyle
+\sum_{i=1}^{n}e_i^2
+}.
+\label{eq:DW}
+\end{equation}
+
+Si residuos consecutivos poseen valores similares, el numerador disminuye. Si alternan rápidamente de signo, aumenta.
+
+En el análisis se utiliza como intervalo de referencia
+
+\begin{equation}
+1.5<DW<2.5.
+\end{equation}
+
+Cuando el estadístico se encuentra fuera de este intervalo, el programa no elimina automáticamente el valor de $\alpha_{\mathrm{app}}$. En su lugar, registra que existe estructura sistemática en los residuos. Esta distinción es físicamente conveniente: una pequeña reflexión o una contribución de campo cercano puede producir autocorrelación sin alterar de forma considerable la pendiente media de atenuación.
+
+\section{Sensibilidad de la atenuación respecto del intervalo de ajuste}
+
+La separación entre campo cercano y región predominantemente radiativa no constituye una frontera geométrica abrupta. En un medio con pérdidas esta cuestión es todavía menos simple, puesto que el campo se modifica simultáneamente por geometría y absorción.
+
+Por esta razón, el programa repite el ajuste lineal $M_0$ utilizando límites inferiores
+
+\begin{equation}
+r_{\min}
+=
+m\lambda_m,
+\end{equation}
+
+con valores de $m$ tomados entre
+
+\begin{equation}
+1.5,\;2.0,\;2.5,\;3.0,
+\end{equation}
+
+además del límite empleado originalmente.
+
+Para cada elección se obtiene
+
+\begin{equation}
+\alpha_{\mathrm{app}}^{(m)}.
+\end{equation}
+
+Una medida directa de sensibilidad entre los extremos puede escribirse como
+
+\begin{equation}
+D_\alpha
+=
+100
+\frac{
+\alpha_{\mathrm{app}}^{(\text{último})}
+-
+\alpha_{\mathrm{app}}^{(\mathrm{primero})}
+}{
+\alpha_{\mathrm{app}}^{(\mathrm{primero})}
+}.
+\label{eq:deriva_alpha}
+\end{equation}
+
+Si $\alpha_{\mathrm{app}}$ cambia poco al desplazar el inicio del ajuste, la estimación es relativamente estable frente a la selección de la ventana. Si cambia de manera considerable, la pendiente obtenida todavía contiene una dependencia relevante con la región espacial seleccionada.
+
+Esta comprobación es distinta al refinamiento de malla. El estudio de resolución evalúa la sensibilidad frente a la discretización; el barrido de $r_{\min}$ evalúa la sensibilidad frente a la región física utilizada para estimar la atenuación.
+
+\section{Incertidumbre de la constante de atenuación extraída}
+
+El ajuste proporciona una matriz de covarianza para los parámetros estimados. Si la varianza correspondiente a $\alpha_{\mathrm{app}}$ es
+
+\begin{equation}
+\operatorname{Var}
+(\alpha_{\mathrm{app}})
+=
+C_{\alpha\alpha},
+\end{equation}
+
+su error estándar es
+
+\begin{equation}
+s_\alpha
+=
+\sqrt{C_{\alpha\alpha}}.
+\end{equation}
+
+Con
+
+\begin{equation}
+\nu=n-k
+\end{equation}
+
+grados de libertad, el intervalo convencional del $95\%$ se calcula como
+
+\begin{equation}
+\alpha_{\mathrm{app}}
+\pm
+t_{0.975,\nu}s_\alpha.
+\label{eq:CI_parametrico}
+\end{equation}
+
+Esta estimación supone, sin embargo, que la estructura de error utilizada para obtener la covarianza describe adecuadamente los residuos.
+
+Como el perfil radial puede contener autocorrelación, el programa calcula además un intervalo mediante remuestreo por bloques.
+
+Sea la secuencia residual
+
+\begin{equation}
+\{e_1,e_2,\ldots,e_n\}.
+\end{equation}
+
+El tamaño de bloque utilizado es
+
+\begin{equation}
+L
+=
+\max
+\left[
+5,
+\operatorname{round}
+\left(
+n^{1/3}
+\right)
+\right].
+\end{equation}
+
+En lugar de seleccionar residuos individuales de manera independiente, se extraen fragmentos consecutivos
+
+\begin{equation}
+(e_j,e_{j+1},\ldots,e_{j+L-1}).
+\end{equation}
+
+Estos bloques se concatenan hasta reconstruir una nueva secuencia de longitud aproximadamente $n$. La réplica sintética queda entonces
+
+\begin{equation}
+y_i^{*}
+=
+\widehat{y}_i
++
+e_i^{*}.
+\end{equation}
+
+Para cada réplica se vuelve a ajustar el modelo y se obtiene
+
+\begin{equation}
+\alpha_{\mathrm{app}}^{*}.
+\end{equation}
+
+El programa intentó $1500$ réplicas con semilla cero y retuvo los reajustes convergentes. El número de intentos no equivalió necesariamente al número de estimaciones válidas. Se auditó además la inclusión de la última posición posible de inicio de bloque, como se documentó en el Anexo~\ref{an:fdtd-fuentes}. Si la distribución resultante es
+
+\begin{equation}
+\left\{
+\alpha_1^{*},
+\alpha_2^{*},
+\ldots,
+\alpha_B^{*}
+\right\},
+\end{equation}
+
+el intervalo percentil se define mediante
+
+\begin{equation}
+CI_{95\%}
+=
+\left[
+Q_{0.025},
+Q_{0.975}
+\right],
+\label{eq:CI_bootstrap}
+\end{equation}
+
+donde $Q_p$ corresponde al percentil $p$ de la distribución bootstrap.
+
+El interés de este segundo intervalo no consiste únicamente en producir otra incertidumbre numérica. Si su anchura es considerablemente mayor que la obtenida mediante la matriz de covarianza, esto indica que tratar los residuos como observaciones independientes subestima la variabilidad asociada a la estructura espacial presente en la simulación.
+
+\section{Balance energético calculado mediante superficies cerradas}
+
+La segunda parte central del programa no utiliza un ajuste radial. Se basa directamente en conservación de energía.
+
+El teorema de Poynting puede escribirse como
+
+\begin{equation}
+\nabla\cdot\mathbf{S}
++
+\frac{\partial u}{\partial t}
++
+\mathbf{J}_{\sigma}\cdot\mathbf{E}
+=
+-\mathbf{J}_s\cdot\mathbf{E},
+\label{eq:poynting_diferencial}
+\end{equation}
+
+donde $u$ representa la densidad de energía electromagnética almacenada y $\mathbf{J}_s$ la fuente impresa.
+
+Integrando sobre un volumen $V$,
+
+\begin{equation}
+\oint_{\partial V}
+\mathbf{S}\cdot\hat{\mathbf{n}}\,dA
++
+\frac{d}{dt}
+\int_V u\,dV
++
+\int_V
+\mathbf{J}_{\sigma}\cdot\mathbf{E}\,dV
+=
+-
+\int_V
+\mathbf{J}_s\cdot\mathbf{E}\,dV.
+\end{equation}
+
+En régimen armónico estacionario, el promedio temporal de la variación de energía almacenada durante un período se anula:
+
+\begin{equation}
+\left\langle
+\frac{d}{dt}
+\int_Vu\,dV
+\right\rangle
+=
+0.
+\end{equation}
+
+El balance medio queda
+
+\begin{equation}
+P_{\mathrm{in}}
+=
+P_{\mathrm{flujo}}
++
+P_{\mathrm{diss}}.
+\label{eq:balance_general}
+\end{equation}
+
+Aquí
+
+\begin{equation}
+P_{\mathrm{flujo}}
+=
+\oint_{\partial V}
+\left\langle
+\mathbf{S}
+\right\rangle
+\cdot
+\hat{\mathbf{n}}
+\,dA,
+\label{eq:Pflujo}
+\end{equation}
+
+mientras que
+
+\begin{equation}
+P_{\mathrm{diss}}
+=
+\frac{1}{2}
+\int_V
+\sigma|\widetilde{\mathbf{E}}|^2\,dV.
+\label{eq:Pdiss}
+\end{equation}
+
+Debido a la simetría axial,
+
+\begin{equation}
+dV
+=
+r\,dr\,d\phi\,dz.
+\end{equation}
+
+Integrando respecto de $\phi$ entre $0$ y $2\pi$,
+
+\begin{equation}
+dV
+=
+2\pi r\,dr\,dz.
+\end{equation}
+
+Por tanto, la potencia disipada dentro de una región axisimétrica puede escribirse como
+
+\begin{equation}
+P_{\mathrm{diss}}
+=
+\pi
+\int\int_V
+\sigma
+\left(
+|E_r|^2+|E_z|^2
+\right)
+r\,dr\,dz.
+\label{eq:Pdiss_cilindrica}
+\end{equation}
+
+El factor $\pi$ aparece porque
+
+\begin{equation}
+\frac{1}{2}(2\pi)=\pi.
+\end{equation}
+
+El programa excluye de esta integral el volumen ocupado por el monopolo y el plano metálico. Los conductores se modelan como perfectos, por lo que no se pretende calcular calentamiento resistivo dentro de ellos. La disipación considerada corresponde al medio complejo que rodea la antena.
+
+\subsection{Equivalente normalizado utilizado en la integración}
+
+En las unidades internas del programa,
+
+\begin{equation}
+\sigma_D
+=
+\frac{\sigma a}
+{\varepsilon_0c\varepsilon_r}.
+\end{equation}
+
+La densidad utilizada en la integración numérica es proporcional a
+
+\begin{equation}
+q_{\mathrm{norm}}
+=
+\frac{1}{2}
+\sigma_D\varepsilon_r
+\left(
+|E_r|^2+|E_z|^2
+\right).
+\end{equation}
+
+Sustituyendo $\sigma_D$,
+
+\begin{equation}
+q_{\mathrm{norm}}
+=
+\frac{1}{2}
+\frac{\sigma a}{\varepsilon_0c}
+\left(
+|E_r|^2+|E_z|^2
+\right).
+\end{equation}
+
+Se conserva, por tanto, la estructura física
+
+\begin{equation}
+q\propto\sigma|E|^2.
+\end{equation}
+
+Sin embargo, el resultado permanece en unidades normalizadas de la simulación. La fuente no se encuentra calibrada mediante un voltaje y una corriente físicos conocidos, de modo que estas potencias no deben etiquetarse como vatios.
+
+Los cocientes entre potencias y la verificación del cierre energético continúan siendo utilizables porque todas las cantidades pertenecen al mismo sistema normalizado.
+
+\section{Balance sobre el volumen anular utilizado}
+Se eligió un volumen sin fuentes ni metal, con $r_1=\lambda_m$, $r_2=2\lambda_m$, $z_1=0.25\lambda_m$ y $z_2=1.25\lambda_m$. Se integraron campos complejos sincronizados. Los flujos con normal saliente se expresaron como
+\begin{align}
+F_{r_1}&=-2\pi r_1\int_{z_1}^{z_2}\langle S_r(r_1,z)\rangle\,dz, &
+F_{r_2}&=2\pi r_2\int_{z_1}^{z_2}\langle S_r(r_2,z)\rangle\,dz,\\
+F_{z_1}&=-2\pi\int_{r_1}^{r_2}r\langle S_z(r,z_1)\rangle\,dr, &
+F_{z_2}&=2\pi\int_{r_1}^{r_2}r\langle S_z(r,z_2)\rangle\,dr.
+\end{align}
+Se definieron entrada y salida a partir del signo del flujo neto de cada cara:
+\begin{equation}
+P_{\rm ent}=-\sum_{F_k<0}F_k,\qquad P_{\rm sal}=\sum_{F_k>0}F_k.
+\end{equation}
+Estas sumas describieron flujos netos por cara; no separaron contribuciones locales de signos opuestos dentro de una misma cara. La disipación $P_J$ se obtuvo mediante la integral volumétrica de la Ecuación~\ref{eq:Pdiss_cilindrica}, con la conductividad normalizada correspondiente. El residuo se escribió
+\begin{equation}
+R_B=P_{\rm ent}-P_{\rm sal}-P_J,\qquad
+\epsilon_B=100\frac{|R_B|}{P_{\rm ent}}.
+\label{eq:error_balance}
+\end{equation}
+En régimen armónico estacionario ideal se esperó $R_B=0$. En el cálculo discreto, el residuo recogió efectos de interpolación, cuadratura, discretización y régimen temporal. No se interpretó como incertidumbre estadística ni como error total de la solución.
+
+\section{Fracciones locales de disipación y transporte}
+Para el mismo volumen se definieron
+\begin{equation}
+\eta_J=\frac{P_J}{P_{\rm ent}},\qquad
+\eta_{\rm sal}=\frac{P_{\rm sal}}{P_{\rm ent}},\qquad
+\eta_J+\eta_{\rm sal}=1-\frac{R_B}{P_{\rm ent}}.
+\label{eq:fracciones_balance}
+\end{equation}
+La entrada correspondió al transporte hacia el anillo y no a la potencia entregada por el generador. Por ello, las fracciones no representaron la eficiencia global de la antena. La salida indicó la potencia que continuó fuera del volumen seleccionado, donde el medio pudo seguir absorbiendo energía. La comparación entre materiales conservó las posiciones relativas a $\lambda_m$, con tamaños físicos diferentes.
+
+\subsection{Relación entre potencia absorbida y potencia disipada}
+
+Dentro del modelo utilizado,
+
+\begin{equation}
+\mathbf{J}_{\sigma}
+=
+\sigma\mathbf{E}.
+\end{equation}
+
+La energía electromagnética transferida al material por unidad de volumen y de tiempo es
+
+\begin{equation}
+p_{\mathrm{abs}}
+=
+\mathbf{J}_{\sigma}\cdot\mathbf{E}.
+\end{equation}
+
+En régimen armónico,
+
+\begin{equation}
+\left\langle
+p_{\mathrm{abs}}
+\right\rangle
+=
+\frac{1}{2}
+\sigma|\widetilde{\mathbf{E}}|^2.
+\end{equation}
+
+Esta es exactamente la cantidad utilizada para calcular la disipación.
+
+Por ello,
+
+\begin{equation}
+\boxed{
+P_{\mathrm{abs}}
+=
+P_{\mathrm{diss}}
+}
+\end{equation}
+
+para el modelo constitutivo implementado.
+
+No son dos mecanismos independientes que deban sumarse. La energía absorbida del campo es precisamente la que se transforma mediante las pérdidas conductivas representadas por $\sigma$. Presentar
+
+\begin{equation}
+P_{\mathrm{rad}}
++
+P_{\mathrm{abs}}
++
+P_{\mathrm{diss}}
+\end{equation}
+
+como tres términos independientes duplicaría la misma contribución física.
+
+El balance correcto del modelo es de la forma
+
+\begin{equation}
+P_{\mathrm{in}}
+=
+P_{\mathrm{EM,saliente}}
++
+P_{\mathrm{diss}}.
+\end{equation}
+
+\section{Relación entre la atenuación teórica y la obtenida por FDTD}
+
+La simulación genera un campo producido por una antena finita, mientras que $\alpha$ se calcula a partir de las propiedades constitutivas de un medio homogéneo. Ambas cantidades no se obtienen mediante el mismo procedimiento.
+
+La atenuación teórica es
+
+\begin{equation}
+\alpha_{\mathrm{teo}}
+=
+\alpha
+(\varepsilon_r,\sigma,\omega),
+\end{equation}
+
+a partir de la Ecuación (\ref{eq:alpha_exacta}).
+
+La atenuación numérica es
+
+\begin{equation}
+\alpha_{\mathrm{app}}
+=
+-\frac{dP_{\mathrm{dB}}}{dr},
+\end{equation}
+
+cuando el perfil puede aproximarse mediante el modelo $M_0$.
+
+La comparación
+
+\begin{equation}
+\Delta_\alpha
+=
+100
+\frac{
+\alpha_{\mathrm{app}}
+-
+\alpha_{\mathrm{teo}}
+}{
+\alpha_{\mathrm{teo}}
+}
+\label{eq:error_alpha}
+\end{equation}
+
+permite determinar cuánto se aproxima el comportamiento recuperado del campo completo de la antena al comportamiento esperado por las propiedades del medio.
+
+Una diferencia entre ambos valores no demuestra por sí sola que las ecuaciones del medio sean incorrectas. Puede estar producida por una región de ajuste todavía influida por el campo cercano, una reflexión residual, una discretización insuficiente, la geometría real del campo del monopolo o una falta de convergencia temporal.
+
+Precisamente por ello el programa complementa $\Delta_\alpha$ con el análisis de residuos, la sensibilidad respecto de $r_{\min}$, el refinamiento espacial y el balance energético.
+
+\subsection{El vacío como prueba de consistencia}
+
+Para el vacío,
+
+\begin{equation}
+\sigma=0,
+\end{equation}
+
+de donde
+
+\begin{equation}
+\alpha_{\mathrm{teo}}=0.
+\end{equation}
+
+De la Ecuación (\ref{eq:S_decaimiento}),
+
+\begin{equation}
+|S_r|
+\propto
+\frac{1}{r^2}.
+\end{equation}
+
+Después de la compensación geométrica,
+
+\begin{equation}
+|S_r|r^2
+\approx
+\mathrm{constante}.
+\end{equation}
+
+En decibelios,
+
+\begin{equation}
+P_{\mathrm{dB}}(r)
+\approx
+A.
+\end{equation}
+
+Por tanto,
+
+\begin{equation}
+\alpha_{\mathrm{app}}
+\approx0.
+\end{equation}
+
+El caso de vacío permite separar con claridad una propiedad del material de un efecto numérico. Una pendiente persistente o una oscilación apreciable no puede atribuirse a disipación física del medio porque el propio modelo establece $\sigma=0$. Su origen tendría que buscarse en la geometría, la frontera absorbente, la región de ajuste, la discretización o el régimen temporal alcanzado.
+
+\section{Criterio de convergencia de las magnitudes energéticas}
+
+El estudio de convergencia no debe limitarse a comprobar que dos imágenes de campo se parecen. Las magnitudes que determinan las conclusiones deben estabilizarse al cambiar la malla.
+
+Para una resolución $\mathcal{R}_j$ pueden registrarse
+
+\begin{equation}
+Q_j
+=
+\left\{
+\alpha_{\mathrm{app},j},
+P_{\mathrm{ent},j},
+P_{\mathrm{sal},j},
+P_{J,j},
+\eta_{\mathrm{diss},j},
+\epsilon_{B,j}
+\right\}.
+\end{equation}
+
+La diferencia entre resoluciones sucesivas para una magnitud $Q$ puede escribirse como
+
+\begin{equation}
+\delta_Q^{(j)}
+=
+100
+\frac{
+|Q_{j+1}-Q_j|
+}{
+|Q_{j+1}|
+}.
+\end{equation}
+
+Si al aumentar $\mathcal{R}$ se observa
+
+\begin{equation}
+\delta_Q^{(j)}
+\rightarrow0,
+\end{equation}
+
+existe evidencia numérica de convergencia.
+
+Esto explica por qué no se espera que todos los resultados obtenidos con diferentes resoluciones sean exactamente iguales. De hecho, la igualdad exacta no constituye el objetivo. Lo que se busca es que las diferencias se reduzcan progresivamente hasta dejar de modificar las conclusiones físicas.
+
+Un valor de $\alpha_{\mathrm{app}}$ que permanezca estable mientras las potencias cambian ampliamente todavía exigiría revisar el balance energético. Del mismo modo, un buen cierre energético acompañado por una atenuación altamente dependiente de la ventana radial indicaría que la conservación global es adecuada, pero que la extracción local de $\alpha_{\mathrm{app}}$ todavía no es robusta. Las dos verificaciones responden a preguntas distintas.
+
+\section{Interpretación física conjunta de las magnitudes calculadas}
+
+El programa permite estudiar la propagación desde dos escalas.
+
+La primera es local. A partir de
+
+\begin{equation}
+S_r(r)
+=
+-\frac{1}{2}
+\Re
+\left(
+E_zH_\phi^*
+\right),
+\end{equation}
+
+se observa cómo disminuye el transporte radial de energía con la distancia. Después de eliminar la dependencia geométrica dominante, la pendiente del perfil permite obtener $\alpha_{\mathrm{app}}$.
+
+La segunda es integral. Mediante
+
+\begin{equation}
+P_{\mathrm{flujo}}
+=
+\oint_S
+\left\langle\mathbf{S}\right\rangle
+\cdot\hat{\mathbf n}\,dA
+\end{equation}
+
+y
+
+\begin{equation}
+P_{\mathrm{diss}}
+=
+\frac{1}{2}
+\int_V
+\sigma|\mathbf{E}|^2dV,
+\end{equation}
+
+se determina cómo se reparte la energía entregada al sistema.
+
+Ambas descripciones deben ser compatibles. Un material con una constante $\alpha$ grande debe producir una disminución radial más rápida y, bajo condiciones comparables, una transferencia más intensa de energía electromagnética hacia el medio. Sin embargo, esta relación no obliga a que las potencias normalizadas sean comparables directamente entre materiales si simultáneamente se modifica la geometría de la antena. El reescalado de $h_{\mathrm{mono}}$ modifica la distribución de campo y la interacción fuente-antena.
+
+Esta observación resulta particularmente relevante al interpretar agua salada y tejido muscular. Ambos poseen una atenuación teórica elevada respecto del concreto, pero la comparación computacional completa incluye no solamente $\sigma$ y $\varepsilon_r$, sino también una antena cuya dimensión física fue recalculada a partir de $\lambda_m$.
+
+Por ello conviene separar dos afirmaciones distintas:
+
+\begin{equation}
+\text{``el medio posee mayor }\alpha\text{''}
+\end{equation}
+
+es una propiedad derivada de sus parámetros electromagnéticos a la frecuencia fijada, mientras que
+
+\begin{equation}
+\text{``el sistema antena--medio transmite menor fracción de energía''}
+\end{equation}
+
+es un resultado del problema electromagnético completo.
+
+No son afirmaciones equivalentes.
+
+\section{Alcance físico del modelo desarrollado}
+
+El modelo trabaja a una única frecuencia,
+
+\begin{equation}
+f=3~\mathrm{GHz}.
+\end{equation}
+
+Por ello, los valores de $\varepsilon_r$ y $\sigma$ se utilizan como propiedades efectivas en esa frecuencia. El programa actual no calcula una función
+
+\begin{equation}
+\varepsilon_r(\omega)
+\end{equation}
+
+ni
+
+\begin{equation}
+\sigma(\omega)
+\end{equation}
+
+sobre una banda completa.
+
+La simulación tampoco introduce heterogeneidad espacial dentro de cada material. Matemáticamente,
+
+\begin{equation}
+\varepsilon_r(\mathbf r)
+=
+\varepsilon_r
+\end{equation}
+
+y
+
+\begin{equation}
+\sigma(\mathbf r)
+=
+\sigma
+\end{equation}
+
+en toda la región no metálica.
+
+El concreto, el agua salada y el tejido muscular se representan, por tanto, mediante medios homogéneos equivalentes. Esta simplificación permite aislar el efecto de sus propiedades electromagnéticas sin añadir interfaces internas cuya geometría requeriría parámetros adicionales.
+
+La antena y el plano conductor se consideran conductores perfectos. En consecuencia, el modelo no incluye pérdidas óhmicas del metal:
+
+\begin{equation}
+P_{\mathrm{metal}}=0.
+\end{equation}
+
+La disipación calculada corresponde exclusivamente al medio.
+
+La simetría $m=0$ excluye perturbaciones azimutales. Una geometría perfectamente axial puede representarse de esta manera, pero defectos, alimentaciones asimétricas, objetos laterales o heterogeneidades tridimensionales requerirían abandonar esta reducción.
+
+Finalmente, la amplitud de la fuente se encuentra normalizada. Esto impide afirmar que
+
+\begin{equation}
+P=10~\mathrm{W},
+\end{equation}
+
+por ejemplo, a partir del número producido directamente por el programa. Lo que sí puede estudiarse sin una calibración adicional son cocientes como
+
+\begin{equation}
+\frac{P_{\mathrm{diss}}}{P_{\mathrm{in}}},
+\qquad
+\frac{P_{\mathrm{out}}}{P_{\mathrm{in}}},
+\end{equation}
+
+el cierre energético y la variación relativa entre configuraciones numéricamente compatibles.
+
+\section{Aporte físico del trabajo}
+
+El aporte de este trabajo no consiste en proponer nuevas ecuaciones de Maxwell ni una nueva definición del vector de Poynting. La contribución se encuentra en la construcción y evaluación de un modelo computacional donde esas relaciones se utilizan de manera conjunta para estudiar el comportamiento energético de una antena inmersa completamente en medios disipativos.
+
+La simulación no se limita a obtener la amplitud de un campo eléctrico y asociar su reducción con una pérdida de señal. El campo eléctrico y el campo magnético calculados mediante FDTD se combinan para recuperar el transporte de energía electromagnética mediante
+
+\begin{equation}
+\left\langle
+\mathbf{S}
+\right\rangle
+=
+\frac{1}{2}
+\Re
+\left(
+\mathbf{E}\times\mathbf{H}^{*}
+\right).
+\end{equation}
+
+A partir de esa magnitud se construyen dos niveles de análisis. El perfil espacial permite obtener una constante de atenuación aparente que puede contrastarse con la propagación prevista a partir de $\varepsilon_r$ y $\sigma$. Paralelamente, la integración sobre superficies y volúmenes permite comprobar si la pérdida observada en el flujo electromagnético aparece como disipación dentro del material. La disminución de señal deja así de tratarse únicamente como una caída de amplitud y se interpreta como una transferencia cuantificable de energía.
+
+Esta relación puede expresarse mediante
+
+\begin{equation}
+\boxed{
+P_{\mathrm{in}}
+\approx
+P_{\mathrm{EM,saliente}}
++
+P_{\mathrm{diss}}
+}
+\end{equation}
+
+Para el anillo sin fuentes se evaluó $P_{\rm ent}-P_{\rm sal}-P_{\rm J}$. Su residuo, normalizado por la entrada, cuantificó el cierre entre las cuatro caras y el volumen. Se distinguió de una eficiencia global de la antena y de una estimación del error al continuo.
+
+Otro componente del aporte está en la forma de extraer la atenuación a partir de una fuente que no es una onda plana ideal. El campo de una antena disminuye por divergencia geométrica incluso en ausencia de absorción. Al construir
+
+\begin{equation}
+P_c(r)
+=
+r^2|S_r(r)|,
+\end{equation}
+
+se separa la dependencia dominante asociada al esparcimiento espacial y se conserva el término exponencial relacionado con las pérdidas del material:
+
+\begin{equation}
+P_c(r)
+\propto
+e^{-2\alpha r}.
+\end{equation}
+
+De esta forma puede establecerse una comparación directa entre una constante derivada de las propiedades constitutivas,
+
+\begin{equation}
+\alpha_{\mathrm{teo}}
+=
+\alpha(\varepsilon_r,\sigma,\omega),
+\end{equation}
+
+y otra recuperada del campo electromagnético completo generado por una antena,
+
+\begin{equation}
+\alpha_{\mathrm{app}}
+=
+\alpha(\mathbf{E}_{\mathrm{FDTD}},
+\mathbf{H}_{\mathrm{FDTD}}).
+\end{equation}
+
+La diferencia entre ambas contiene información sobre cuánto se aproxima el comportamiento del sistema completo al modelo ideal de propagación homogénea.
+
+El trabajo también introduce controles destinados a distinguir una diferencia física de una diferencia numérica. La constante $\alpha_{\mathrm{app}}$ se examina mediante sensibilidad de la ventana espacial, análisis de residuos, comparación entre modelos, estimación de incertidumbre y refinamiento de malla. De forma independiente, las potencias se someten a una condición de cierre energético. Una conclusión sobre penetración o absorción no depende así de una única gráfica ni de un único ajuste.
+
+Desde esta perspectiva, el carácter físico de la tesis se encuentra en la pregunta que responde el cálculo. FDTD constituye el instrumento numérico; el objeto del análisis continúa siendo la evolución y conservación de la energía electromagnética en un sistema antena--materia. Las variables finales poseen significado físico definido: $\alpha$ cuantifica la pérdida de propagación, $\beta$ determina la evolución de fase, $\mathbf{S}$ describe el transporte energético y $\sigma|\mathbf{E}|^2/2$ representa la conversión de energía electromagnética dentro del medio.
+
+El resultado más relevante del modelo no debería expresarse únicamente como que un material ``pierde más señal'' que otro. Una comparación físicamente completa debe indicar cuánto cambia la constante de atenuación, qué fracción de la energía que entró en el volumen de control se disipó en él, qué fracción continúa propagándose y con qué error se satisface la conservación de energía. Esta combinación transforma la simulación en un análisis del balance energético del sistema y establece la conexión directa con el objetivo central de la tesis.
+
+\section{Convenciones y comprobaciones de implementación}
+La campaña adicional utilizó integración de campos puntuales, sin recurrir a \texttt{get\_fluxes}. El factor $1/2$ correspondió al promedio armónico de amplitudes complejas y se aplicó de manera consistente al flujo y a la disipación. La sincronización magnética y el factor $2\pi r$ se incorporaron explícitamente en \texttt{balance.py}.
+
+La geometría se reescaló con $\lambda_m$ en cada material. La longitud eléctrica aproximada de cuarto de onda no demostró resonancia, pues no se calculó la impedancia de entrada. Tampoco se representó una misma antena de longitud física fija sumergida sucesivamente en todos los medios.
+
+Se distinguió el transporte saliente del anillo de la radiación global. La fuente permaneció sin calibración física y sólo se guardaron dos muestras temporales por corrida. La comparación entre mallas se interpretó por magnitud; las potencias absolutas y sus cocientes no compartieron necesariamente la misma estabilidad. Estas condiciones delimitaron el uso de los resultados en modelos de propagación.

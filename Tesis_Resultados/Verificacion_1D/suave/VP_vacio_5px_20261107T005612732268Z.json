@@ -1,0 +1,66 @@
+{
+  "tipo": "verificacion_onda_plana_1D",
+  "medio": "vacio",
+  "px_mm": 5,
+  "epsr": 1.0,
+  "sigma_S_m": 0.0,
+  "frecuencia_Hz": 3000000000.0,
+  "longitud_referencia_mm": 1,
+  "lambda_mm": 99.93187923107207,
+  "sigmaD": 0.0,
+  "alpha_teoria_dB_mm": 0.0,
+  "encendido": "suave",
+  "width_tM": 199.86163866666666,
+  "slowness": 6,
+  "error_absoluto_dB_mm": 2.802422016114031e-11,
+  "error_relativo_porcentaje": null,
+  "dominio_z_mm": [
+    -599.5912753864325,
+    599.5912753864325
+  ],
+  "pml_espesor_mm": 199.86375846214415,
+  "fuente_z_mm": -299.79563769321624,
+  "ventana_z_mm": [
+    -99.93187923107207,
+    99.93187923107207
+  ],
+  "muestras": [
+    {
+      "t_M": 4397.0,
+      "alpha_dB_mm": -1.99706665977352e-11,
+      "IC95_bloques": [
+        -6.87191114604953e-08,
+        6.752653208282938e-08
+      ],
+      "RMSE_dB": 1.4013762908176058e-05,
+      "bloque": 6,
+      "replicas": 500,
+      "semilla": 0,
+      "condicion": "IC condicional al ajuste; no incertidumbre total"
+    },
+    {
+      "t_M": 4497.0,
+      "alpha_dB_mm": -2.802422016114031e-11,
+      "IC95_bloques": [
+        -6.612792321946608e-08,
+        6.534893025058605e-08
+      ],
+      "RMSE_dB": 1.3972225085152585e-05,
+      "bloque": 6,
+      "replicas": 500,
+      "semilla": 0,
+      "condicion": "IC condicional al ajuste; no incertidumbre total"
+    }
+  ],
+  "cambio_temporal_alpha_dB_mm": 8.05355356340511e-12,
+  "cambio_temporal_flujo_max_rel": 6.419138745814832e-06,
+  "segundos": 1.8997953120001512,
+  "rss_max_proceso_KiB": 113224,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "script_sha256": "f7b99830304092070b019faa4e7bc32de009f367529dc965d51f9011a88d1ee3",
+  "perfil": "VP_vacio_5px_20261107T005612732268Z.csv",
+  "fuente_calibrada": false
+}

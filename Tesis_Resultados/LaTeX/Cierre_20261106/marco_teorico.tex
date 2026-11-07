@@ -1,0 +1,637 @@
+%==================================================================
+\section{Fundamentos del Electromagnetismo}
+
+\subsection{Electromagnetismo}
+Durante buena parte del siglo XVIII y comienzos del XIX, la electricidad y el magnetismo se estudiaron como fenómenos independientes. En 1820 Hans Christian Ørsted observó que una corriente eléctrica desviaba la aguja de una brújula cercana, demostrando por primera vez una conexión física entre corrientes eléctricas y efectos magnéticos. A partir de esta observación, André Marie Ampère formuló durante la década de 1820 las leyes cuantitativas que describieron la fuerza entre corrientes eléctricas, sentando las bases de la electrodinámica como disciplina matemática \cite{Hon2020}.
+
+Una década más tarde, Michael Faraday llevó a cabo los experimentos que establecieron la inducción electromagnética. Mostró que un campo magnético variable en el tiempo podía inducir una corriente eléctrica en un circuito cercano, incluso en ausencia de contacto físico o de baterías. Aunque no empleaba el lenguaje matemático formal, introdujo la noción de ``líneas de fuerza'' para representar el campo como una entidad física distribuida en el espacio y no únicamente como una abstracción utilizada para calcular fuerzas a distancia \cite{Hon2020}.
+
+James Clerk Maxwell reunió las leyes empíricas de Coulomb, Gauss, Ampère y Faraday y, entre 1861 y 1865, las expresó mediante el cálculo diferencial. Durante este proceso identificó una inconsistencia matemática en la ley de Ampère cuando se aplicaba a situaciones no estacionarias, como la carga de un capacitor. Para resolverla introdujo un término adicional, \textbf{la corriente de desplazamiento}, con el cual se recuperó la consistencia matemática de la teoría. La formulación resultante predijo además la existencia de ondas electromagnéticas autopropagantes cuya velocidad, calculada a partir de constantes eléctricas y magnéticas medidas en el laboratorio, coincidía con la velocidad de la luz conocida experimentalmente. A partir de esta coincidencia, Maxwell concluyó que la luz correspondía a una onda electromagnética y reunió la electricidad, el magnetismo y la óptica dentro de una misma teoría de campos \cite{Hon2020}.
+
+Heinrich Hertz confirmó experimentalmente la existencia de estas ondas entre 1887 y 1888, aproximadamente veinte años después de la formulación teórica de Maxwell, al generar y detectar ondas de radio en el laboratorio. La forma vectorial compacta de las cuatro relaciones que posteriormente se conocieron como ecuaciones de Maxwell no fue escrita por el propio Maxwell, quien había trabajado con un conjunto mayor de ecuaciones expresadas por componentes. Esta formulación se debió a la posterior reorganización de Oliver Heaviside mediante el cálculo vectorial moderno. La distinción resultó relevante porque las herramientas de divergencia, rotacional y teoremas integrales utilizadas para pasar entre las formas integral y diferencial, y posteriormente para construir el esquema de Yee, correspondieron a una formalización posterior de los descubrimientos físicos originales \cite{Fumeron2020}.
+
+\section{Electricidad y campo eléctrico}
+
+\subsection{Carga eléctrica y campo eléctrico}
+La carga eléctrica $q$ fue la propiedad fundamental de la materia responsable de la interacción electromagnética. Se consideraron dos signos de carga: las cargas de signo igual se repelían, mientras que las de signo opuesto se atraían. El campo eléctrico $\vec{E}(\vec{r})$ en un punto del espacio se definió como la fuerza por unidad de carga que experimentaría una carga de prueba $q_0$ infinitesimalmente pequeña (para no perturbar la distribución de carga que generó el campo) colocada en dicho punto:
+\begin{equation}
+    \vec{E}(\vec{r}) \equiv \lim_{q_0 \to 0} \frac{\vec{F}(\vec{r})}{q_0}
+\end{equation}
+Esta definición convirtió al campo eléctrico en una propiedad asociada al espacio y a la distribución de cargas que lo producía, independiente de la carga de prueba utilizada para medirlo. De esta manera, el campo pudo tratarse como una entidad física definida en cada punto del espacio \cite{Griffiths2017}.
+
+\subsection{Ley de Coulomb}
+La ley de Coulomb, establecida experimentalmente por Charles Augustin de Coulomb en 1785 mediante una balanza de torsión, cuantificó la fuerza electrostática entre dos cargas puntuales $q_1$ y $q_2$ separadas una distancia $r$:
+\begin{equation}
+    \vec{F}_{12} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r^2} \hat{r}
+\end{equation}
+donde $\hat{r}$ fue el vector unitario que apuntaba de la carga fuente hacia el punto de observación y $\varepsilon_0 \approx 8.854 \times 10^{-12} \text{ F/m}$ fue la permitividad eléctrica del vacío. La constante $k = 1 / 4\pi\varepsilon_0 \approx 8.988 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$ se conoció como constante de Coulomb. A partir de esta ley y de la definición de campo eléctrico, el campo generado por una carga puntual $q$ en el origen fue:
+\begin{equation}
+    \vec{E}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r}
+\end{equation}
+Debido a que las fuerzas eléctricas obedecían el principio de superposición (la fuerza neta sobre una carga de prueba debida a varias fuentes fue la suma vectorial de las fuerzas individuales), el campo generado por una distribución continua de carga con densidad volumétrica $\rho(\vec{r}')$ contenida en un volumen $V$ se obtuvo integrando las contribuciones infinitesimales $dq' = \rho(\vec{r}') \, dV'$:
+\begin{equation}
+    \vec{E}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \int_V \rho(\vec{r}') \frac{\vec{r} - \vec{r}'}{|\vec{r} - \vec{r}'|^3} \, dV'
+\end{equation}
+Esta forma integral podía resultar difícil de evaluar directamente para distribuciones de carga complejas. La ley de Gauss proporcionó una relación alternativa entre el campo y sus fuentes y, por ello, resultó útil como base para las formulaciones diferenciales utilizadas posteriormente.
+
+\subsection{Ley de Gauss para el campo eléctrico}
+\textbf{Forma integral.} Se consideró una carga puntual $q$ situada en el centro de una superficie esférica de radio $r$. Como $\vec{E}$ era radial y su magnitud permanecía constante sobre la esfera, el flujo se escribió como:
+\begin{equation}
+    \oint_S \vec{E} \cdot d\vec{A} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} (4\pi r^2) = \frac{q}{\varepsilon_0}
+\end{equation}
+El resultado fue independiente del radio $r$: todo el flujo generado por la carga atravesaba cualquier esfera que la encerrara. Un argumento de ángulo sólido permitió generalizar el resultado a una superficie cerrada de forma arbitraria, y el principio de superposición permitió extenderlo a una distribución arbitraria de cargas. Se obtuvo así la \textit{ley de Gauss} en su forma integral:
+\begin{equation}
+    \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+\end{equation}
+donde $Q_{\text{enc}}$ fue la carga neta encerrada por la superficie cerrada $S$.
+
+\textbf{Forma diferencial.} Si se escribió $Q_{\text{enc}} = \int_V \rho \, dV$ y se aplicó el teorema de la divergencia (teorema de Gauss y Ostrogradsky) al miembro izquierdo:
+\begin{equation}
+    \oint_S \vec{E} \cdot d\vec{A} = \int_V \nabla \cdot \vec{E} \, dV = \int_V \frac{\rho}{\varepsilon_0} \, dV
+\end{equation}
+Como esta igualdad debía cumplirse para cualquier volumen $V$ elegido arbitrariamente, los integrandos debían ser iguales punto a punto, lo que condujo a la forma diferencial (local) de la ley de Gauss:
+\begin{equation}
+    \nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+\textbf{Interpretación física.} La forma diferencial relacionó directamente la densidad de carga con la divergencia del campo eléctrico. En regiones con carga positiva, las líneas de campo divergían; con carga negativa, convergían. En regiones sin carga se cumplía $\nabla \cdot \vec{E}=0$. Esta relación correspondió a la primera ecuación de Maxwell y, dentro de una formulación discreta consistente, quedó vinculada con la conservación de la carga mediante la ley de Ampère con la corrección de Maxwell y la ecuación de continuidad \cite{Taflove2005}.
+
+\section{Magnetismo y campo magnético}
+
+\subsection{Fuerza magnética y campo magnético}
+A diferencia del campo eléctrico, no existían cargas magnéticas aisladas, \textbf{monopolos magnéticos}, en la naturaleza observada; el magnetismo se originaba en cargas eléctricas en movimiento llamadas \textbf{corrientes}. El campo magnético $\vec{B}$ se definió a través de la fuerza que ejercía sobre una carga de prueba $q$ que se movía con velocidad $\vec{v}$, dada por la fuerza de Lorentz:
+\begin{equation}
+    \vec{F} = q(\vec{v} \times \vec{B})
+\end{equation}
+Se observó que esta fuerza fue siempre perpendicular a la velocidad de la carga, por lo que un campo magnético estático no realizaba trabajo sobre una carga en movimiento; únicamente modificaba la dirección de su velocidad.
+
+\subsection{Ley de Gauss para el campo magnético}
+La ausencia experimental de monopolos magnéticos se expresó mediante la condición de que el flujo magnético neto a través de cualquier superficie cerrada fuera nulo:
+\begin{equation}
+    \oint_S \vec{B} \cdot d\vec{A} = 0
+\end{equation}
+Al aplicar el teorema de la divergencia y exigir que la igualdad se cumpliera para cualquier volumen, se obtuvo la forma diferencial:
+\begin{equation}
+    \nabla \cdot \vec{B} = 0
+\end{equation}
+Esta relación correspondió a la segunda ecuación de Maxwell. Desde el punto de vista físico, indicó que el campo magnético era solenoidal: sus líneas no presentaban un inicio o un final aislado, sino que formaban trayectorias cerradas. En el algoritmo de Yee, esta condición se preservó de manera natural por la geometría escalonada de la malla, una propiedad relevante del método \cite{Teixeira2023}.
+
+\subsection{Ley de Ampère}
+La ley de Ampère, formulada a partir de los experimentos de Ørsted y del propio Ampère en la década de 1820, relacionó la circulación del campo magnético alrededor de una trayectoria cerrada con la corriente eléctrica que atravesaba cualquier superficie delimitada por dicha trayectoria:
+\begin{equation}
+    \oint_C \vec{B} \cdot d\vec{\ell} = \mu_0 I_{\text{enc}}
+\end{equation}
+donde $\mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A}$ fue la permeabilidad magnética del vacío e $I_{\text{enc}}$ fue la corriente neta que atravesaba cualquier superficie $S$ cuyo borde fuera la curva $C$. Escribiendo $I_{\text{enc}} = \int_S \vec{J} \cdot d\vec{A}$, donde $\vec{J}$ fue la densidad de corriente, y aplicando el teorema de Stokes al miembro izquierdo:
+\begin{equation}
+    \oint_C \vec{B} \cdot d\vec{\ell} = \int_S (\nabla \times \vec{B}) \cdot d\vec{A} = \mu_0 \int_S \vec{J} \cdot d\vec{A}
+\end{equation}
+Como la superficie $S$ fue arbitraria (cualquier superficie que tuviera a $C$ como borde debía dar el mismo resultado), se obtuvo la forma diferencial de la ley de Ampère en su versión original, válida solo para corrientes estacionarias:
+\begin{equation}
+    \nabla \times \vec{B} = \mu_0 \vec{J}
+\end{equation}
+Como se mostró previamente al analizar la corrección introducida por Maxwell, esta expresión resultó incompleta y debía corregirse para dar cuenta de situaciones no estacionarias.
+
+\section{Ley de Faraday: inducción electromagnética}
+Los experimentos de Faraday de 1831 mostraron que una fuerza electromotriz (f.e.m.) se inducía en un circuito cerrado cuando el flujo magnético $\Phi_B = \int_S \vec{B} \cdot d\vec{A}$ a través de una superficie delimitada por el circuito variaba en el tiempo, sin importar si dicha variación se debía al movimiento del circuito, del imán, o a un cambio intrínseco del campo. La ley de Faraday, en su forma integral, estableció:
+\begin{equation}
+    \oint_C \vec{E} \cdot d\vec{\ell} = -\frac{d\Phi_B}{dt} = -\frac{d}{dt} \int_S \vec{B} \cdot d\vec{A}
+\end{equation}
+El signo negativo representó la ley de Lenz: la fuerza electromotriz inducida se oponía a la variación de flujo que la originaba, garantizando la conservación de la energía. Suponiendo una superficie fija en el tiempo (de modo que la derivada temporal podía introducirse dentro de la integral) y aplicando el teorema de Stokes al miembro izquierdo:
+\begin{equation}
+    \int_S (\nabla \times \vec{E}) \cdot d\vec{A} = - \int_S \frac{\partial \vec{B}}{\partial t} \cdot d\vec{A}
+\end{equation}
+de donde, al ser $S$ arbitraria, se obtuvo la forma diferencial:
+\begin{equation}
+    \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+\end{equation}
+Esta relación correspondió a la tercera ecuación de Maxwell. Físicamente, indicó que un campo magnético variable en el tiempo generaba un campo eléctrico rotacional. Junto con la corrección introducida por Maxwell en la ley de Ampère, este acoplamiento permitió explicar cómo una perturbación electromagnética podía sostenerse y propagarse en una región sin cargas ni corrientes libres, como se desarrolló posteriormente.
+
+\section{La inconsistencia de Ampère y la corrección de Maxwell: la corriente de desplazamiento}
+La forma diferencial de la ley de Ampère obtenida previamente, $\nabla \times \vec{B} = \mu_0 \vec{J}$, fue matemáticamente inconsistente en el caso general. Para comprobarlo, se tomó la divergencia de ambos miembros. La divergencia del rotacional de cualquier campo vectorial fue idénticamente nula:
+\begin{equation}
+    \nabla \cdot (\nabla \times \vec{B}) \equiv 0 \implies \mu_0 \nabla \cdot \vec{J} = 0 \implies \nabla \cdot \vec{J} = 0
+\end{equation}
+Sin embargo, la conservación de la carga eléctrica se expresó mediante la ecuación de continuidad,
+\begin{equation}
+    \nabla \cdot \vec{J} = -\frac{\partial \rho}{\partial t}
+\end{equation}
+que estableció que la corriente que divergía de un punto debía ser igual a la rapidez con que decrecía la densidad de carga en ese punto. La ley de Ampère original exigió $\nabla \cdot \vec{J} = 0$ en todo momento, lo cual solo fue cierto si $\partial \rho / \partial t = 0$, es decir, únicamente en régimen estacionario (corriente continua, sin acumulación de carga en ningún punto). 
+
+En una situación tan elemental como la carga de un capacitor, donde la corriente de conducción $\vec{J}$ se interrumpía físicamente entre las placas, la ley de Ampère original conducía a una contradicción: el valor de $I_{\text{enc}}$ calculado con la ley de Ampère dependía de qué superficie se eligiera para delimitar la curva $C$, violando la condición de que dicho valor debía ser independiente de la superficie escogida.
+
+Maxwell resolvió esta inconsistencia postulando la existencia de un término adicional, la \textit{corriente de desplazamiento}, definida como:
+\begin{equation}
+    \vec{J}_d \equiv \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation}
+Para verificar que este término restauraba la consistencia, se utilizó la ley de Gauss ($\rho = \varepsilon_0 \nabla \cdot \vec{E}$) y se reescribió la ecuación de continuidad:
+\begin{equation}
+    \frac{\partial \rho}{\partial t} = \varepsilon_0 \frac{\partial}{\partial t} (\nabla \cdot \vec{E}) = \nabla \cdot \left( \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\end{equation}
+de modo que la ecuación de continuidad podía escribirse como $\nabla \cdot \vec{J} + \nabla \cdot \vec{J}_d = 0$, es decir, $\nabla \cdot (\vec{J} + \vec{J}_d) = 0$.
+
+Maxwell propuso entonces sustituir $\vec{J}$ por $\vec{J} + \vec{J}_d$ en la ley de Ampère, obteniendo la \textit{ley de Ampère con la corrección de Maxwell}:
+\begin{equation}
+    \nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation}
+Esta forma sí fue consistente: al tomar su divergencia se obtuvo $0 = \mu_0 \nabla \cdot (\vec{J} + \vec{J}_d)$, que fue idénticamente cierto por la ecuación de continuidad, en cualquier régimen, estacionario o no. 
+
+En el ejemplo del capacitor, la corriente de desplazamiento entre las placas estuvo asociada con el campo eléctrico variable presente en esa región, aunque no existiera una corriente de conducción real entre las placas. Este término sustituyó a la corriente de conducción que faltaba cuando se elegía una superficie que pasaba por el espacio entre placas, de modo que $I_{\text{enc}}$ dejó de depender de la superficie escogida.
+
+Esta corrección, aparentemente un detalle técnico para resolver una inconsistencia matemática, fue la que introdujo el acoplamiento bidireccional entre $\vec{E}$ y $\vec{B}$ que hizo posible la propagación ondulatoria: un campo eléctrico variable generó un campo magnético (mediante la ley de Ampère con la corrección de Maxwell), y un campo magnético variable generó un campo eléctrico (vía Faraday), permitiendo que la perturbación se autosostuviera y viajara por el espacio sin necesidad de un medio material ni de cargas libres. También fue el término de desplazamiento el que se discretizó en la malla de Yee para obtener la ecuación de actualización temporal del campo eléctrico \cite{Yee1966, Taflove2005}.
+
+\section{Las ecuaciones de Maxwell: síntesis unificada}
+Reuniendo los resultados de los apartados anteriores, las cuatro ecuaciones de Maxwell en el vacío, en presencia de fuentes libres $\rho$ y $\vec{J}$, fueron:
+
+\textbf{Forma diferencial (local):}
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{ll}
+        \hline
+        \textbf{Nombre} & \textbf{Ecuación} \\
+        \hline
+        Ley de Gauss (eléctrica) & $\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}$ \\
+        Ley de Gauss (magnética) & $\nabla \cdot \vec{B} = 0$ \\
+        Ley de Faraday & $\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$ \\
+        Ley de Ampère con la corrección de Maxwell & $\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}$ \\
+        \hline
+    \end{tabular}
+    \caption{Ecuaciones de Maxwell en el vacío en forma diferencial.}
+    \label{tab:maxwell_diferencial}
+\end{table}
+
+\textbf{Forma integral:}
+\begin{align}
+    \oint_S \vec{E} \cdot d\vec{A} &= \frac{Q_{\text{enc}}}{\varepsilon_0}, & \oint_S \vec{B} \cdot d\vec{A} &= 0 \\
+    \oint_C \vec{E} \cdot d\vec{\ell} &= -\frac{d}{dt} \int_S \vec{B} \cdot d\vec{A}, & \oint_C \vec{B} \cdot d\vec{\ell} &= \mu_0 I_{\text{enc}} + \mu_0 \varepsilon_0 \frac{d}{dt} \int_S \vec{E} \cdot d\vec{A}
+\end{align}
+
+Para un medio material lineal, homogéneo e isótropo, la aproximación que se empleó para cada uno de los medios complejos considerados en esta tesis (concreto, agua salada, tejido muscular, etc.), fue conveniente introducir el desplazamiento eléctrico $\vec{D} = \varepsilon \vec{E}$ y el campo magnético auxiliar $\vec{H} = \vec{B}/\mu$, con $\varepsilon = \varepsilon_r \varepsilon_0$ y $\mu = \mu_r \mu_0$ las constantes del medio. 
+
+Las ecuaciones de Maxwell ``macroscópicas'' tomaron entonces una forma que permitió describir los medios materiales y que, además, constituyó la base directa de la implementación FDTD:
+\begin{equation}
+    \nabla \cdot \vec{D} = \rho_{\text{libre}}, \quad \nabla \cdot \vec{B} = 0, \quad \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}, \quad \nabla \times \vec{H} = \vec{J}_{\text{libre}} + \frac{\partial \vec{D}}{\partial t}
+\end{equation}
+Esta síntesis, cuatro ecuaciones acopladas de primer orden en el tiempo y el espacio, fue, en el sentido más literal, el objeto matemático que un simulador FDTD como MEEP resolvía numéricamente en cada celda de la malla y en cada paso temporal \cite{Teixeira2023}.
+
+\section{De las ecuaciones de Maxwell a la ecuación de onda electromagnética}
+A continuación se dedujo el resultado que conectó las ecuaciones de Maxwell con la propagación ondulatoria: la existencia de ondas electromagnéticas y la relación que determinaba su velocidad.
+
+\textbf{Paso 1, Región sin fuentes.} Se consideró una región del espacio sin cargas ni corrientes libres ($\rho = 0$, $\vec{J} = 0$), como la región que rodeaba a una antena lejos de sus conductores. Bajo esta condición, las ecuaciones de Maxwell se redujeron a:
+\begin{equation}
+    \nabla \cdot \vec{E} = 0, \quad \nabla \cdot \vec{B} = 0, \quad \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}, \quad \nabla \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{equation}
+
+\textbf{Paso 2, Desacoplar las ecuaciones.} Se tomó el rotacional de la ley de Faraday:
+\begin{equation}
+    \nabla \times (\nabla \times \vec{E}) = -\frac{\partial}{\partial t} (\nabla \times \vec{B})
+\end{equation}
+Sustituyendo en el miembro derecho la ley de Ampère con la corrección de Maxwell (sin fuentes):
+\begin{equation}
+    \nabla \times (\nabla \times \vec{E}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}
+\end{equation}
+
+\textbf{Paso 3, Identidad vectorial.} Se empleó la identidad del cálculo vectorial
+\begin{equation}
+    \nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2 \vec{E}
+\end{equation}
+y, como en la región considerada $\nabla \cdot \vec{E}=0$ (Paso 1), el primer término se anuló, por lo que quedó:
+\begin{equation}
+    -\nabla^2 \vec{E} = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}
+\end{equation}
+
+\textbf{Paso 4, Ecuación de onda.} Reordenando, se obtuvo la ecuación de onda vectorial homogénea para el campo eléctrico:
+\begin{equation}
+    \nabla^2 \vec{E} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} = 0
+\end{equation}
+y, mediante un procedimiento idéntico partiendo de la ley de Ampère con la corrección de Maxwell y sustituyendo la ley de Faraday, se obtuvo la ecuación análoga para el campo magnético:
+\begin{equation}
+    \nabla^2 \vec{B} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} = 0
+\end{equation}
+
+\textbf{Interpretación física.} Ambas ecuaciones tenían la forma canónica de una ecuación de onda tridimensional, $\nabla^2 \psi - \frac{1}{v^2} \frac{\partial^2 \psi}{\partial t^2} = 0$, cuya velocidad de propagación fue
+\begin{equation}
+    v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}
+\end{equation}
+Al sustituir los valores medidos de $\mu_0$ y $\varepsilon_0$, constantes obtenidas originalmente de experimentos puramente eléctricos y magnéticos, sin ninguna referencia a la óptica, se obtuvo $v \approx 2.998 \times 10^8 \text{ m/s} = c$, la velocidad de la luz en el vacío. Este resultado, obtenido por Maxwell en 1865 por vía puramente teórica y confirmado experimentalmente por Hertz veinte años después, fue el que permitió identificar a la luz visible como un caso particular de onda electromagnética, unificando la óptica con el electromagnetismo \cite{Hon2020}.
+
+Para el desarrollo posterior de esta tesis, dos observaciones fueron cruciales:
+\begin{itemize}
+    \item En un medio material con pérdidas, como el agua salada, el concreto húmedo o el tejido muscular estudiados en esta tesis, las ecuaciones de Maxwell incluyeron una densidad de corriente de conducción $\vec{J}=\sigma\vec{E}$, con $\sigma$ como conductividad del medio. Al no anularse este término, el mismo procedimiento condujo a una \textit{ecuación de onda amortiguada} con un término disipativo proporcional a $\sigma \frac{\partial \vec{E}}{\partial t}$. Este resultado proporcionó la base matemática de la atenuación y de las pérdidas de potencia que posteriormente se estudiaron mediante el vector de Poynting.
+    \item La deducción anterior se realizó en el continuo. En su formulación numérica, el algoritmo de Yee sustituyó los operadores diferenciales $\nabla \times$ y $\partial/\partial t$ de las ecuaciones de Ampère con la corrección de Maxwell y de Faraday por diferencias finitas centradas sobre una malla espaciotemporal escalonada. Al refinar la discretización, la evolución temporal de las ecuaciones discretizadas se aproximó a la propagación ondulatoria obtenida en el continuo \cite{Yee1966, Teixeira2023}.
+\end{itemize}
+
+\section{Ondas Electromagnéticas}
+
+\subsection{Solución de onda plana armónica en un medio sin pérdidas}
+Se buscó una solución de la ecuación de onda homogénea:
+\begin{equation}
+    \nabla^2\vec{E} - \mu\varepsilon\frac{\partial^2\vec{E}}{\partial t^2} = 0
+\end{equation}
+de la forma de una onda plana uniforme que se propagaba en la dirección $+\hat{z}$ y estaba polarizada linealmente a lo largo de $\hat{x}$:
+\begin{equation}
+    \vec{E}(z, t) = \text{Re}\left[E_0 e^{i(kz-\omega t)}\right]\hat{x}
+\end{equation}
+
+Al sustituir esta forma de prueba en la ecuación de onda, cada derivada espacial aportó un factor $ik$ y cada derivada temporal un factor $-i\omega$, de modo que:
+\begin{equation}
+    (ik)^2 E_0 e^{i(kz-\omega t)} - \mu\varepsilon(-i\omega)^2 E_0 e^{i(kz-\omega t)} = 0 \implies -k^2 + \mu\varepsilon\omega^2 = 0
+\end{equation}
+lo que produjo la relación de dispersión:
+\begin{equation}
+    k = \omega\sqrt{\mu\varepsilon} \qquad \text{(número de onda, rad/m)}
+\end{equation}
+
+Esta relación, lineal entre $k$ y $\omega$, fue la que caracterizó a un medio no dispersivo: todas las frecuencias viajaban a la misma velocidad. Cuando $\varepsilon$ o $\mu$ dependieron de la frecuencia (como ocurrió en los modelos de Debye y de Lorentz del modelo de medios considerado), la relación dejaba de ser lineal y el medio se volvió dispersivo, con consecuencias importantes sobre la forma de un pulso que se propagara en él.
+
+El campo magnético asociado se obtuvo de la ley de Faraday, $\nabla\times\vec{E} = -\mu \frac{\partial\vec{H}}{\partial t}$. Para la onda propuesta, el rotacional se redujo a $-ikE_0 e^{i(kz-\omega t)}\hat{y}$ (dado que $\vec{E}$ solo dependió de $z$), y al igualar con $-\mu(-i\omega)\vec{H}$ se obtuvo $\vec{H}(z, t) = \text{Re}\left[H_0 e^{i(kz-\omega t)}\right]\hat{y}$, con:
+\begin{equation}
+    H_0 = \frac{k}{\omega\mu}E_0 = \frac{E_0}{\sqrt{\mu/\varepsilon}}
+\end{equation}
+
+Se observó que $\vec{E}$, $\vec{H}$ y la dirección de propagación $\hat{z}$ formaban un triedro ortogonal. Por esta razón, la onda electromagnética en un medio homogéneo e isótropo correspondió a una onda transversal electromagnética (TEM), sin componentes de campo en la dirección de propagación.
+
+\section{Velocidad de fase, longitud de onda y frecuencia}
+La velocidad de fase fue la rapidez con la que se desplazaba un frente de fase constante ($kz-\omega t = \text{cte.}$):
+\begin{equation}
+    v_p = \frac{\omega}{k} = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{\mu_r\varepsilon_r}} = \frac{c}{n}
+\end{equation}
+donde $n=\sqrt{\mu_r\varepsilon_r}$ fue el índice de refracción del medio \cite{ITU2025}. La longitud de onda $\lambda$, distancia espacial tras la cual la fase avanzaba $2\pi$, y la frecuencia $f$, número de oscilaciones por segundo, se relacionaron con $k$ y $\omega$ mediante:
+\begin{equation}
+    \lambda = \frac{2\pi}{k} = \frac{v_p}{f}, \qquad \omega = 2\pi f
+\end{equation}
+
+Un punto que tuvo relevancia para esta tesis fue el siguiente: al pasar de un medio a otro (por ejemplo, del aire al agua salada, o del aire al tejido muscular), la frecuencia de la onda, fijada por la fuente, en este caso la antena Marconi excitada a una frecuencia determinada, no cambió, pero sí lo hicieron la velocidad de fase y, en consecuencia, la longitud de onda dentro del medio, que se acortaba en un factor $1/\sqrt{\varepsilon_r}$ (en un medio con pérdidas se empleó $\lambda=2\pi/\beta$, con $\beta$ la parte real del número de onda). Este acortamiento de la longitud de onda dentro de medios de alta permitividad, el agua tenía $\varepsilon_r\approx 80$ a bajas frecuencias, tenía implicaciones prácticas directas sobre el diseño geométrico de la malla FDTD dentro de la formulación FDTD, que debía resolver espacialmente la longitud de onda más corta de entre todos los medios simulados.
+
+\section{Impedancia intrínseca del medio}
+La razón entre las amplitudes complejas del campo eléctrico y del campo magnético de una onda plana definió la impedancia intrínseca del medio:
+\begin{equation}
+    \eta \equiv \frac{E_0}{H_0} = \sqrt{\frac{\mu}{\varepsilon}}
+\end{equation}
+
+En el vacío se obtuvo $\eta_0=\sqrt{\mu_0/\varepsilon_0}\approx376.73\ \Omega$, cantidad conocida como impedancia del espacio libre. Para una onda plana, la impedancia intrínseca desempeñó un papel análogo al de la impedancia característica de una línea de transmisión: determinó la relación entre los campos, intervino en los coeficientes de reflexión y transmisión en una interfaz \cite[ecs.~31--38]{ITU2025} y fijó la relación entre las contribuciones eléctrica y magnética de la onda.
+
+\section{Propagación en medios con pérdidas: atenuación y penetración}
+En un medio con conductividad $\sigma\neq0$, como el concreto, el agua salada y el tejido muscular considerados en esta tesis, se repitió el procedimiento empleado previamente para la onda plana armónica, esta vez a partir de la ecuación de onda con pérdidas obtenida previamente:
+\begin{equation}
+    \nabla^2\vec{E} = \mu\varepsilon\frac{\partial^2\vec{E}}{\partial t^2} + \mu\sigma\frac{\partial\vec{E}}{\partial t}
+\end{equation}
+
+Al sustituir nuevamente $\vec{E}=\text{Re}[E_0 e^{i(kz-\omega t)}]\hat{x}$, cada derivada temporal aportó un factor $-i\omega$ y se obtuvo:
+\begin{equation}
+    -k^2 = -\omega^2\mu\varepsilon - i\omega\mu\sigma \implies k^2 = \omega^2\mu\left(\varepsilon+i\frac{\sigma}{\omega}\right) = \omega^2\mu\varepsilon_c
+\end{equation}
+donde $\varepsilon_c = \varepsilon + i\sigma/\omega$ fue la permitividad compleja ya introducida previamente. El número de onda pasó entonces a ser complejo; se escribió convencionalmente como:
+\begin{equation}
+    k = \beta + i\alpha
+\end{equation}
+de modo que la onda tomó la forma $E_0 e^{i\beta z} e^{-\alpha z} e^{-i\omega t}$: se propagó con fase gobernada por $\beta$ (la constante de fase, en rad/m) mientras su amplitud decaía exponencialmente según $e^{-\alpha z}$, con $\alpha$ la constante de atenuación (en Np/m). Igualando partes real e imaginaria de $k^2=\omega^2\mu\varepsilon_c$ se obtuvo el sistema:
+\begin{equation}
+    \beta^2-\alpha^2 = \omega^2\mu\varepsilon \qquad 2\alpha\beta = \omega\mu\sigma
+\end{equation}
+cuya solución simultánea produjo las expresiones estándar:
+\begin{equation}
+    \alpha = \omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma}{\omega\varepsilon}\right)^2}-1\right]^{1/2} \qquad \beta = \omega\sqrt{\frac{\mu\varepsilon}{2}}\left[\sqrt{1+\left(\frac{\sigma}{\omega\varepsilon}\right)^2}+1\right]^{1/2}
+\end{equation}
+
+Estas fórmulas coincidieron, salvo por una diferencia de signo en la parte imaginaria de $\varepsilon_c$, debida únicamente a la convención temporal elegida ($e^{-i\omega t}$ en esta tesis frente a $e^{+j\omega t}$ en la convención de ingeniería utilizada por la UIT), sin modificar ninguna magnitud física, con las recomendadas directamente por la Recomendación P.2040, revisión 4 de la UIT R \cite{ITU2025} para el cálculo de atenuación en materiales de construcción.
+
+La cantidad adimensional que aparece repetidamente, $\tan\delta = \sigma/(\omega\varepsilon)$, fue la tangente de pérdidas del medio, y resultó ser la magnitud individual más importante para clasificar el comportamiento electromagnético de un material a una frecuencia dada \cite{ITU2025}:
+\begin{itemize}
+    \item Si $\tan\delta \ll 1$ (medio de bajas pérdidas, ``buen dieléctrico''): $\alpha \approx \dfrac{\sigma}{2}\sqrt{\dfrac{\mu}{\varepsilon}}$, casi independiente de la frecuencia salvo por la dependencia de $\sigma$ y $\varepsilon$ con ella.
+    \item Si $\tan\delta \gg 1$ (medio de altas pérdidas, ``buen conductor''): $\alpha\approx\beta\approx\sqrt{\pi f\mu\sigma}$, y ambas crecían con la raíz cuadrada de la frecuencia.
+\end{itemize}
+
+La profundidad de penetración (o ``skin depth'' cuando el medio fue un buen conductor) se definió como la distancia $\delta_p=1/\alpha$ a la cual la amplitud del campo decaía a $1/e\approx 36.8\%$ de su valor inicial. Fue habitual expresar la atenuación en decibelios por metro mediante la conversión $A\text{ [dB/m]} = 8.686\alpha\text{ [Np/m]}$ \cite[ec.~26]{ITU2025}. Estas dos cantidades, $\alpha$ (o, equivalentemente, $\delta_p$) y $\beta$, fueron, junto con la impedancia intrínseca compleja $\eta=\sqrt{\mu/\varepsilon_c}$, los tres parámetros que describieron por completo la propagación de una onda plana en cualquiera de los medios complejos estudiados en esta tesis, y fueron exactamente las cantidades que un simulador FDTD reprodujo numéricamente cuando resolvía las ecuaciones de Maxwell discretizadas en presencia de un material con pérdidas dentro de la formulación FDTD.
+
+En un medio con pérdidas, $\vec{E}$ y $\vec{H}$ dejaban de estar en fase. La impedancia intrínseca $\eta=\sqrt{\mu/\varepsilon_c}$ adquiría un valor complejo, $\eta=|\eta|e^{i\theta_\eta}$, con $\tan(2\theta_\eta)=-\sigma/(\omega\varepsilon)$. Como consecuencia, el campo magnético presentaba un desfase $\theta_\eta$ respecto del campo eléctrico. Este desfase reducía la componente del vector de Poynting asociada con el transporte neto de potencia, mientras que parte de la energía instantánea permanecía intercambiándose entre las contribuciones eléctrica y magnética.
+
+\section{Polarización de las ondas electromagnéticas}
+Hasta ese punto se había considerado una onda con el campo eléctrico oscilando enteramente a lo largo de una única dirección transversal fija ($\hat{x}$): este fue el caso de la polarización lineal. En general, sin embargo, una onda plana que se propagó a lo largo de $\hat{z}$ podía tener simultáneamente dos componentes transversales independientes:
+\begin{equation}
+    \vec{E}(z, t) = \text{Re}\left[\left(E_{x0}\hat{x} + E_{y0}e^{i\phi}\hat{y}\right)e^{i(kz-\omega t)}\right]
+\end{equation}
+donde $E_{x0}$, $E_{y0}$ fueron reales y $\phi$ fue la diferencia de fase entre ambas componentes. Según los valores relativos de $E_{x0}$, $E_{y0}$ y $\phi$, la punta del vector $\vec{E}$, observada en un plano transversal fijo, trazaba una de tres figuras:
+\begin{itemize}
+    \item \textbf{Polarización lineal:} si $\phi=0$ o $\phi=\pi$ (las componentes estuvieron en fase o en contrafase), la punta del vector oscilaba a lo largo de una línea recta cuya orientación dependió del cociente $E_{y0}/E_{x0}$.
+    \item \textbf{Polarización circular:} si $E_{x0}=E_{y0}$ y $\phi=\pm\pi/2$, la punta del vector describió un círculo; el signo de $\phi$ determinaba el sentido de giro (dextrógiro o levógiro, según la convención del IEEE).
+    \item \textbf{Polarización elíptica:} el caso general correspondió a aquel en el que la punta del vector describía una elipse; la polarización lineal y la circular fueron casos particulares de ella.
+\end{itemize}
+
+La potencia recibida dependió de la proyección entre las polarizaciones de la onda y de la antena. Dos polarizaciones lineales ortogonales produjeron acoplamiento nulo en el caso ideal. Una onda circular recibida con una antena lineal produjo, en cambio, un factor de acoplamiento de $1/2$, equivalente a aproximadamente 3 dB de pérdida \citep{Balanis2016}. La literatura sobre antenas circulares para 5G proporcionó ejemplos de diseño \citep{Mohammadkhani2023}; ese grado de libertad no se investigó en la presente simulación.
+
+La antena Marconi ($\lambda/4$) modelada en esta tesis se trató como un radiador linealmente polarizado. Al corresponder a un monopolo vertical sobre un plano de tierra, el campo eléctrico radiado se orientó principalmente en dirección paralela al eje del monopolo dentro del plano de elevación. Esta condición simplificó el análisis de polarización. Se reconoció, sin embargo, que un material biológico anisótropo podía introducir efectos de depolarización asociados con la orientación de sus fibras; estos efectos quedaron fuera del alcance del modelo, en el cual los medios se trataron como isótropos dentro del modelo de medios considerado.
+
+\section{Energía electromagnética: densidad de energía}
+Se consideró que una onda electromagnética transportaba energía. Para un medio lineal, no dispersivo y sin pérdidas, la densidad volumétrica instantánea almacenada en los campos eléctrico y magnético se escribió como:
+\begin{equation}
+    u(\vec{r}, t) = u_E + u_H = \frac{1}{2}\varepsilon|\vec{E}(\vec{r}, t)|^2 + \frac{1}{2}\mu|\vec{H}(\vec{r}, t)|^2
+\end{equation}
+
+La expresión tuvo una interpretación directa: el primer término correspondió a la energía por unidad de volumen asociada con el campo eléctrico, de forma análoga a la energía de un capacitor, y el segundo a la energía asociada con el campo magnético, análoga a la de un inductor. Para la onda plana descrita anteriormente, al utilizar $H_0=E_0\sqrt{\varepsilon/\mu}$, se comprobó que $u_E=u_H$; por tanto, en un medio sin pérdidas las contribuciones eléctrica y magnética resultaron iguales para la onda plana considerada.
+
+Sin embargo, la expresión anterior dejó de ser exacta cuando el medio presentaba dispersión y disipación, como ocurrió en los materiales cuya permitividad compleja $\varepsilon_c(\omega)$ dependía de la frecuencia. En ese caso, la energía recuperable almacenada debía distinguirse de la energía disipada irreversiblemente por efecto Joule y requería una formulación más cuidadosa, como la fórmula de Brillouin generalizada, que incorporaba derivadas de $\omega\varepsilon'(\omega)$ respecto de la frecuencia \cite{Philbin2011}. Esta distinción no modificó el cálculo del flujo neto utilizado en la tesis, que se obtuvo mediante el vector de Poynting sin separar de forma explícita la energía almacenada de la energía disipada.
+
+\section{Potencia transportada por la onda: hacia el vector de Poynting}
+La potencia que atravesaba, por unidad de área, una superficie perpendicular a la dirección de propagación se definió mediante el vector de Poynting instantáneo:
+\begin{equation}
+    \vec{S}(\vec{r}, t) \equiv \vec{E}(\vec{r}, t)\times\vec{H}(\vec{r}, t)
+\end{equation}
+cuyas unidades fueron $\mathrm{W/m^2}$. Para la onda plana sin pérdidas descrita anteriormente, $\vec{S}=E_0 H_0\cos^2(kz-\omega t)\hat{z}$: la potencia instantánea fluía en la dirección de propagación y oscilaba entre cero y su valor máximo al doble de la frecuencia de la onda, nunca invirtiendo su signo (la energía no fluía ``hacia atrás'' en una onda progresiva pura). Su valor promediado en el tiempo, la cantidad de interés práctico en la gran mayoría de las aplicaciones de RF, incluida esta tesis, se calculó convenientemente mediante fasores como:
+\begin{equation}
+    \langle\vec{S}\rangle = \frac{1}{2}\text{Re}\left[\vec{E}\times\vec{H}^{*}\right]
+\end{equation}
+
+Para la onda plana en un medio con pérdidas descrita anteriormente, esta expresión se redujo a $\langle\vec{S}\rangle = \frac{1}{2}|E_0|^2 e^{-2\alpha z}\text{Re}(1/\eta)\hat{z}$. La potencia disminuía con una dependencia $e^{-2\alpha z}$, es decir, con el doble del exponente que aparecía en la amplitud del campo. El factor $\text{Re}(1/\eta)<1/|\eta|$ incorporó además el desfase entre $\vec{E}$ y $\vec{H}$ propio de un medio con pérdidas.
+
+Estas relaciones sirvieron como punto de partida para el análisis energético posterior. El vector de Poynting se retomó desde las ecuaciones de Maxwell para establecer el balance entre el flujo electromagnético, la energía almacenada y la energía disipada, y posteriormente se llevó a la formulación numérica utilizada en FDTD.
+
+\section{El Vector de Poynting}
+
+El vector de Poynting y el teorema asociado constituyeron la herramienta matemática central para describir el balance energético de una antena Marconi inmersa en medios complejos. A partir de los campos $\vec{E}$ y $\vec{H}$, la ecuación de continuidad de la energía permitió determinar cuánta potencia abandonaba una región, cuánta se disipaba como calor en el medio y cuánta permanecía almacenada temporalmente en el campo cercano de la antena.
+
+También se examinó la no unicidad local del vector de Poynting y su aplicación a la propagación en medios dieléctricos y conductores, a la radiación de antenas y a la dosimetría de materiales biológicos. Esta formulación, desarrollada inicialmente de forma analítica, se relacionó después con su evaluación numérica mediante FDTD y, de manera específica, con las herramientas disponibles en MEEP.
+
+\section{Histórica}
+El físico inglés John Henry Poynting (1852 a 1914), quien había estudiado bajo la dirección de Maxwell en el Laboratorio Cavendish, publicó en 1884 el artículo ``On the Transfer of Energy in the Electromagnetic Field'' en las \textit{Philosophical Transactions of the Royal Society} \cite{Poynting1884}. En ese trabajo demostró que el flujo de energía en un punto del espacio podía expresarse mediante una relación construida a partir de los campos eléctrico y magnético evaluados en ese mismo punto, formulación que posteriormente se conoció como teorema de Poynting. También aplicó esta idea al flujo de energía alrededor de un alambre conductor, de un capacitor en descarga y de una batería voltaica. Un año más tarde, Oliver Heaviside llegó de forma independiente a una formulación equivalente y más general en una serie de artículos publicados en la revista \textit{The Electrician}. En ellos ya había señalado que podía sumarse al vector de Poynting el rotacional de un campo vectorial arbitrario sin alterar el contenido físico del teorema; esta observación temprana sobre la no unicidad del vector fue retomada y contextualizada posteriormente para la ingeniería eléctrica moderna por Mörée y Leijon.
+
+La definición $\vec{E}\times\vec{H}$ había dado lugar a una discusión prolongada sobre la interpretación local del flujo de energía. Entre los problemas examinados se encontraban la localización del flujo en sistemas estáticos o cuasiestáticos, el denominado ``momento oculto'', la paradoja del disco de Feynman y la posibilidad de construir otras expresiones compatibles con la misma ley de conservación. Estos aspectos habían sido reexaminados en el contexto de la ingeniería eléctrica moderna \cite{Moree2022}. El objetivo de este trabajo no fue resolver esa discusión, pero sí reconocer su existencia antes de utilizar el vector de Poynting como herramienta de balance energético.
+
+\section{Definición del vector de Poynting instantáneo}
+El vector de Poynting instantáneo se definió como el producto vectorial del campo eléctrico y el campo magnético en un punto y un instante dados:
+\begin{equation}
+    \vec{S}(\vec{r}, t) \equiv \vec{E}(\vec{r}, t)\times\vec{H}(\vec{r}, t)
+\end{equation}
+con unidades de W/m$^2$ en el Sistema Internacional. $\vec{S}$ representó la potencia electromagnética que atravesaba, por unidad de área, una superficie orientada perpendicularmente a $\vec{S}$ en ese punto. Su dirección indicó el sentido instantáneo del flujo de energía y, para una onda plana TEM, $\vec{S}$ apuntaba en la dirección de propagación $\hat{k}$.
+
+\section{Demostración completa del teorema de Poynting}
+Se partió de las ecuaciones de Maxwell rotacionales en un medio lineal, homogéneo e isótropo, de permitividad $\varepsilon$ y permeabilidad $\mu$, en presencia de una densidad de corriente total $\vec{J}$ (que podía incluir tanto corriente de conducción óhmica, $\sigma\vec{E}$, como una corriente impresa por una fuente externa, $\vec{J}_s$, de modo que $\vec{J}=\sigma\vec{E}+\vec{J}_s$):
+\begin{align}
+    \nabla\times\vec{E} &= -\mu\frac{\partial\vec{H}}{\partial t} \tag{I} \\
+    \nabla\times\vec{H} &= \vec{J} + \varepsilon\frac{\partial\vec{E}}{\partial t} \tag{II}
+\end{align}
+
+\textbf{Paso 1.} Se formó el producto escalar de (I) con $\vec{H}$ y de (II) con $\vec{E}$:
+\begin{equation}
+    \vec{H}\cdot(\nabla\times\vec{E}) = -\mu\, \vec{H}\cdot\frac{\partial\vec{H}}{\partial t} = -\frac{\partial}{\partial t}\left(\frac{1}{2}\mu|\vec{H}|^2\right)
+\end{equation}
+\begin{equation}
+    \vec{E}\cdot(\nabla\times\vec{H}) = \vec{E}\cdot\vec{J} + \varepsilon\, \vec{E}\cdot\frac{\partial\vec{E}}{\partial t} = \vec{E}\cdot\vec{J} + \frac{\partial}{\partial t}\left(\frac{1}{2}\varepsilon|\vec{E}|^2\right)
+\end{equation}
+donde se utilizó la identidad $\vec{A}\cdot\frac{\partial\vec{A}}{\partial t} = \frac{1}{2}\frac{\partial|\vec{A}|^2}{\partial t}$.
+
+\textbf{Paso 2.} Se restó la segunda ecuación de la primera:
+\begin{equation}
+    \vec{H}\cdot(\nabla\times\vec{E}) - \vec{E}\cdot(\nabla\times\vec{H}) = -\frac{\partial}{\partial t}\left(\frac{1}{2}\mu|\vec{H}|^2\right) - \vec{E}\cdot\vec{J} - \frac{\partial}{\partial t}\left(\frac{1}{2}\varepsilon|\vec{E}|^2\right)
+\end{equation}
+
+\textbf{Paso 3.} El lado izquierdo fue, por la identidad vectorial estándar $\nabla\cdot(\vec{A}\times\vec{B}) = \vec{B}\cdot(\nabla\times\vec{A}) - \vec{A}\cdot(\nabla\times\vec{B})$, exactamente $\nabla\cdot(\vec{E}\times\vec{H}) = \nabla\cdot\vec{S}$. Sustituyendo y reordenando, se obtuvo la forma diferencial (local) del teorema de Poynting:
+\begin{equation}
+    \boxed{-\nabla\cdot\vec{S} = \frac{\partial u}{\partial t} + \vec{E}\cdot\vec{J}}
+\end{equation}
+donde $u = \frac{1}{2}\varepsilon|\vec{E}|^2 + \frac{1}{2}\mu|\vec{H}|^2$ fue la densidad de energía electromagnética instantánea.
+
+\textbf{Paso 4.} Se integraron ambos lados sobre un volumen $V$ arbitrario, fijo en el espacio y delimitado por una superficie cerrada $\Sigma$. Al aplicar el teorema de la divergencia al lado izquierdo se obtuvo:
+\begin{equation}
+    \boxed{-\oint_\Sigma \vec{S}\cdot d\vec{A} = \frac{d}{dt}\int_V u\, dV + \int_V \vec{E}\cdot\vec{J}\, dV}
+\end{equation}
+Esta expresión correspondió a la forma integral del teorema de Poynting y proporcionó la relación utilizada para construir el balance energético de esta tesis.
+
+\section{Interpretación física del teorema de Poynting}
+Cada término de la ecuación integral tuvo una interpretación física directa y correspondió a una parte del balance energético analizado en esta tesis:
+\begin{itemize}
+    \item $\oint_\Sigma \vec{S}\cdot d\vec{A}$ fue el flujo neto de energía electromagnética que salía a través de la superficie $\Sigma$ por unidad de tiempo; con el signo global de la ecuación, $-\oint_\Sigma\vec{S}\cdot d\vec{A}$ fue entonces la potencia que entraba netamente al volumen $V$.
+    \item $\frac{d}{dt}\int_V u\, dV$ fue la tasa de cambio de la energía electromagnética almacenada dentro de $V$ (en los campos, no en la materia).
+    \item $\int_V \vec{E}\cdot\vec{J}\, dV$ representó el trabajo realizado por el campo sobre las cargas en movimiento dentro de $V$, por unidad de tiempo. Aquí fue fundamental distinguir dos contribuciones, ya identificadas durante la derivación del teorema de Poynting:
+    \begin{itemize}
+        \item Si $\vec{J}=\sigma\vec{E}$ fue una corriente de conducción (la que existía dentro del concreto, el agua salada o el tejido muscular), entonces $\vec{E}\cdot\vec{J}=\sigma|\vec{E}|^2\geq 0$: el campo cedía energía a la materia, que se disipa irreversiblemente como calor por efecto Joule. Esta fue, precisamente, la potencia disipada que esta tesis buscó cuantificar en cada medio.
+        \item Si $\vec{J}=\vec{J}_s$ fue una corriente impresa por una fuente (el generador que alimenta la antena Marconi en su punto de alimentación), $\vec{E}\cdot\vec{J}_s$ fue típicamente negativo: la fuente realizaba trabajo sobre el campo e inyectaba energía. Es convencional definir la potencia entregada por el generador como $P_{\text{gen}} \equiv -\int_V \vec{E}\cdot\vec{J}_s\, dV \geq 0$.
+    \end{itemize}
+\end{itemize}
+
+Para un volumen que contuviera tanto la fuente (el punto de alimentación de la antena) como una región con pérdidas (el medio circundante), y tomando $\Sigma$ como una superficie situada suficientemente lejos de la fuente, el teorema de Poynting se reescribió como el balance de potencias utilizado como objetivo numérico de esta tesis:
+\begin{equation}
+    P_{\text{gen}} = \underbrace{\oint_\Sigma \vec{S}\cdot d\vec{A}}_{P_{\text{rad}}} + \underbrace{\int_V \sigma|\vec{E}|^2\, dV}_{P_{\text{diss}}} + \frac{d}{dt}\int_V u\, dV
+\end{equation}
+es decir: la potencia entregada por el generador se distribuía, en cada instante, entre la potencia que escapaba del volumen, la que se disipaba como calor dentro del medio y la variación de la energía almacenada en el campo cercano.
+
+\section{El vector de Poynting complejo y su teorema en régimen armónico}
+En régimen permanente sinusoidal, el caso relevante para una antena excitada a una frecuencia fija, fue más conveniente trabajar con fasores. Definiendo $\vec{E}(\vec{r}, t)=\text{Re}[\vec{E}(\vec{r})e^{-i\omega t}]$ y análogamente para $\vec{H}$, se definió el vector de Poynting complejo:
+\begin{equation}
+    \vec{S}_c(\vec{r}) \equiv \frac{1}{2}\vec{E}(\vec{r})\times\vec{H}^*(\vec{r})
+\end{equation}
+cuya parte real fue el vector de Poynting promediado en un periodo, $\langle\vec{S}(\vec{r}, t)\rangle = \text{Re}[\vec{S}_c(\vec{r})]$, mientras que la parte imaginaria describió la potencia reactiva: energía que oscilaba entre las contribuciones eléctrica y magnética sin producir un transporte neto. Esta componente se relacionó con la reactancia de entrada de una antena, retomada posteriormente al analizar la impedancia de entrada de la antena.
+
+Repitiendo el procedimiento utilizado para derivar el teorema de Poynting con las ecuaciones de Maxwell fasoriales, $\nabla\times\vec{E}=i\omega\mu\vec{H}$, $\nabla\times\vec{H}=\vec{J}_s-i\omega\varepsilon\vec{E}$ en un medio con corriente de conducción absorbida en $\varepsilon\to\varepsilon+i\sigma/\omega$, se obtuvo, tras álgebra directa \cite{Balanis2016, Jackson1998}, el teorema de Poynting complejo:
+\begin{equation}
+    \nabla\cdot\vec{S}_c + \frac{1}{2}\sigma|\vec{E}|^2 + \frac{1}{2}\vec{E}\cdot\vec{J}_s^* = 2i\omega\left(\langle u_H\rangle - \langle u_E\rangle\right)
+\end{equation}
+donde $\langle u_E\rangle=\frac{1}{4}\varepsilon|\vec{E}|^2$ y $\langle u_H\rangle=\frac{1}{4}\mu|\vec{H}|^2$ fueron las densidades de energía eléctrica y magnética promediadas en el tiempo. Integrando sobre un volumen y tomando la parte real de la ecuación resultante, dado que el lado derecho fue puramente imaginario, se recuperó el balance de potencias promedio de la interpretación física del balance energético:
+\begin{equation}
+    \text{Re}\left[\oint_\Sigma \vec{S}_c\cdot d\vec{A}\right] + \int_V\frac{1}{2}\sigma|\vec{E}|^2\, dV = P_{\text{gen}}
+\end{equation}
+\begin{equation}
+    P_{\text{gen}} = P_{\text{rad}} + P_{\text{diss}}
+\end{equation}
+sin término de energía almacenada, pues, en régimen armónico estacionario, la energía promediada en un ciclo completo no cambió con el tiempo. La parte imaginaria de la misma ecuación relacionó el desbalance entre la energía eléctrica y magnética almacenadas con la potencia reactiva neta, relación que posteriormente se vinculó con la impedancia de entrada de la antena al analizar el comportamiento de la antena.
+
+\section{Sobre la no unicidad del vector de Poynting}
+Como ya adelantó Heaviside en 1885, fue matemáticamente posible sumar al vector de Poynting el rotacional de cualquier campo vectorial suficientemente regular, $\vec{S}' = \vec{S} + \nabla\times\vec{F}$, sin alterar el teorema de conservación de energía: dado que $\nabla\cdot(\nabla\times\vec{F})\equiv 0$ para cualquier $\vec{F}$, la forma diferencial del teorema permanecía exactamente igual. Esto significó, en sentido estricto, que $\vec{E}\times\vec{H}$ no fue la única expresión matemáticamente consistente con la conservación local de energía; fue, sin embargo, la elección estándar, y la físicamente preferida, porque se anulaba correctamente en los casos límite conocidos (por ejemplo, en el campo estático de una carga puntual sin corriente) y porque coincidía con la definición operativa de potencia utilizada universalmente en ingeniería de radiofrecuencia \cite{Moree2022}.
+
+Esta discusión, aunque podía parecer una digresión puramente formal, tenía una consecuencia práctica que sí afectaba a esta tesis: para el flujo neto de potencia a través de una superficie cerrada que encerraba por completo a la antena y a toda fuente o corriente relevante, un caso general distinto del anillo sin fuentes empleado en la campaña adicional, el término adicional $\oint_\Sigma(\nabla\times\vec{F})\cdot d\vec{A}$ se anulaba de forma idéntica por el teorema de la divergencia aplicado a un rotacional, de modo que la ambigüedad de $\vec{S}$ no afectaba al cálculo de la potencia radiada o disipada total, que fue precisamente la cantidad de interés en este trabajo. La ambigüedad solo podría manifestarse en la interpretación local, punto a punto, del flujo de energía dentro del volumen, una cuestión que quedó fuera del alcance de esta tesis, centrada en los balances integrales de potencia.
+
+\section{Balance energético completo}
+Para un volumen que incluyera una fuente en régimen armónico se escribió
+\begin{equation}
+P_{\text{gen}}=P_{\text{sal}}+P_{\text{diss}},\qquad
+P_{\text{gen}}=-\frac12\Re\int_V\vec E\cdot\vec J_s^*\,dV.
+\end{equation}
+Esta relación delimitó la diferencia entre un balance global de la antena y el balance local analizado. En la campaña se seleccionó un anillo sin fuente, para el cual la entrada provino del flujo por sus caras. No se midió la potencia entregada por el generador ni una eficiencia global de radiación. La potencia saliente se asoció al contorno elegido; en un material disipativo continuó disminuyendo al propagarse fuera de él.
+
+\section{Aplicaciones en la propagación: medios dieléctricos y conductores}
+El teorema de Poynting permitió recuperar, de manera consistente, la ley de atenuación exponencial obtenida previamente por un camino independiente, una verificación cruzada útil para validar la implementación numérica de la formulación FDTD. Se consideró una onda plana que se propagaba en $+\hat{z}$ dentro de un medio con conductividad $\sigma$, sin fuentes dentro del volumen de interés. En estado estacionario, la forma diferencial del teorema de Poynting se redujo a $-\nabla\cdot\Re\vec{S}_c=\frac{1}{2}\sigma|\vec{E}|^2$ (sin término de energía almacenada, por ser régimen armónico). Para una onda que solo dependió de $z$, esto se redujo a una ecuación unidimensional, $-d\langle S_z\rangle/dz = \frac{1}{2}\sigma|E(z)|^2$. Usando el resultado obtenido para la propagación en medios con pérdidas, $\langle S_z(z)\rangle = \langle S_z(0)\rangle e^{-2\alpha z}$, se comprobó directamente que:
+\begin{equation}
+    -\frac{d}{dz}\left[\langle S_z(0)\rangle e^{-2\alpha z}\right] = 2\alpha\langle S_z(0)\rangle e^{-2\alpha z} = \frac{1}{2}\sigma|E(z)|^2
+\end{equation}
+es decir, la tasa a la que el flujo de Poynting decaía espacialmente fue exactamente igual a la densidad volumétrica de potencia disipada por efecto Joule en cada punto, una comprobación directa de la autoconsistencia entre el teorema y la solución de onda con pérdidas. Esta identidad fue, en esencia, la que permitió calcular la potencia total disipada dentro de un medio de dos maneras independientes y numéricamente equivalentes: (a) integrando $\frac{1}{2}\sigma|E|^2$ en todo el volumen del medio, o (b) restando el flujo de Poynting saliente del entrante a través de las caras de una caja que rodeara al medio. Esta doble vía de cálculo coincidió con la estrategia utilizada por MEEP para verificar la conservación de energía en sus simulaciones.
+
+En un medio predominantemente dieléctrico con pérdidas pequeñas ($\tan\delta\ll1$), la disipación por unidad de volumen fue proporcional a la parte imaginaria de la permitividad, $\frac{1}{2}\omega\varepsilon''|E|^2$, y se concentraba de manera relativamente uniforme en todo el volumen atravesado por el campo. En un medio predominantemente conductor ($\tan\delta\gg1$, como el agua salada a bajas frecuencias), la disipación se concentraba intensamente en una capa delgada cercana a la superficie de mayor campo, de espesor comparable a la profundidad de penetración $\delta_p=1/\alpha$, el fenómeno de efecto pelicular (``skin effect''), lo cual tenía una consecuencia práctica directa para el diseño de la malla FDTD: la resolución espacial en las proximidades de una interfaz con un buen conductor debía ser suficientemente fina para resolver $\delta_p$, que podía ser de solo unos pocos centímetros o menos en agua de mar a frecuencias de UHF.
+
+\section{Aplicaciones en antenas: flujo de potencia y líneas de corriente de Poynting}
+Una de las aplicaciones más intuitivas y pedagógicamente reveladoras del vector de Poynting fue la visualización de las líneas de corriente (``streamlines'') del campo $\vec{S}_c$ en las proximidades de una antena. Trabajos recientes habían mostrado que, trazando estas líneas alrededor de un dipolo, fue posible observar directamente cómo la potencia entregada en el punto de alimentación ``salía'' progresivamente a lo largo de los brazos de la antena hasta desprenderse por completo como radiación en la zona de campo lejano, y que este método permitió además representar geométricamente magnitudes como el área efectiva, la eficiencia de acoplamiento de impedancia, la pérdida óhmica de la antena y el desacoplamiento de polarización, unificando en una sola imagen conceptos que tradicionalmente se trataban por separado en la teoría de antenas \cite{Diao2023}.
+
+La visualización mediante líneas de flujo se consideró una posibilidad de análisis. No se dispuso de mapas vectoriales archivados en la campaña; las figuras de resultados correspondieron a perfiles radiales y residuos de ajuste.
+
+\section{Relación con la tasa de absorción específica}
+La densidad de disipación permitió definir la tasa de absorción específica mediante
+\begin{equation}
+\mathrm{SAR}(\vec r)=\frac{\sigma(\vec r)|\vec E(\vec r)|^2}{2\rho_m(\vec r)},
+\end{equation}
+con amplitudes de campo de pico y densidad másica $\rho_m$. Esta relación se utilizó en estudios de dosimetría \citep{Bhosale2024,Rashed2020}. En esta tesis no se calibró el campo en V/m ni se incorporó una densidad másica para producir SAR en W/kg. La disipación normalizada no se interpretó como una evaluación de seguridad o de temperatura.
+
+\section{El vector de Poynting en una simulación FDTD: el problema de la malla de Yee}
+El cálculo numérico del vector de Poynting dentro de una simulación FDTD no fue tan directo como podía sugerir la expresión $\vec{S}=\vec{E}\times\vec{H}$, por una razón que se desarrolló en detalle durante la formulación del método FDTD y del algoritmo de Yee pero que se adelantó en ese punto: en la malla escalonada de Yee, las componentes de $\vec{E}$ y de $\vec{H}$ no estuvieron definidas en los mismos puntos del espacio (estuvieron desplazadas media celda entre sí en cada dirección) ni en los mismos instantes de tiempo (estuvieron desplazadas medio paso temporal, por el esquema de actualización leapfrog). En consecuencia, para evaluar $\vec{S}$ en un punto y un instante determinados fue necesario interpolar, tanto espacial como temporalmente, los componentes de campo que no coincidían naturalmente en esa ubicación, típicamente mediante un promedio entre los dos valores de la malla más cercanos. Esta interpolación introdujo un error de discretización adicional, de orden consistente con la precisión de segundo orden del esquema de Yee en su conjunto, pero que exigió atención especial cuando se calcularon flujos de potencia cerca de interfaces entre materiales con contrastes de permitividad o conductividad abruptos, precisamente la situación en la superficie de un monopolo metálico rodeado de agua salada o de tejido muscular.
+
+La campaña de balance utilizó campos complejos interpolados en puntos declarados y sincronización temporal del campo magnético. El producto $\frac12\Re(\vec E\times\vec H^*)$ representó el promedio armónico bajo la hipótesis de régimen estacionario. Las dos muestras separadas por aproximadamente un período permitieron una comprobación temporal limitada, sin reemplazar una serie completa de convergencia.
+
+\section{Cálculo del flujo de potencia en Meep}
+Meep ofreció monitores de flujo basados en transformadas de Fourier y acceso directo a los campos \citep{MeepUI,MeepBasics}. Se distinguieron sus convenciones: una salida de monitor no requirió aplicar automáticamente otro factor de promedio temporal. La integración manual de campos complejos sí utilizó la expresión fasorial declarada.
+
+Los resultados de balance de esta tesis procedieron de \texttt{balance.py}, mediante \texttt{get\_field\_point} y \texttt{synchronized\_magnetic}. Se integraron las cuatro caras del anillo y la disipación de Joule en su interior. El factor geométrico $2\pi r$ se incorporó explícitamente en la cuadratura, porque se integraron valores puntuales y no un flujo ya integrado por Meep. La pérdida por conductividad se trató de acuerdo con el modelo constitutivo; la documentación distinguió esa contribución de la absorción debida a susceptibilidades dispersivas \citep{MeepMaterials,MeepIssue1276}.
+
+\section{Métodos Numéricos}
+
+En este apartado se desarrolló, con el rigor matemático necesario para su implementación, el método de diferencias finitas en el dominio del tiempo (FDTD, \textit{Finite Difference Time Domain}) y, específicamente, el algoritmo de Yee sobre el cual se había construido MEEP. Se estudiaron la discretización, el análisis de consistencia, estabilidad y convergencia, la malla escalonada de Yee, el criterio de estabilidad de Courant, Friedrichs y Lewy (CFL), la dispersión numérica, las condiciones de frontera absorbentes (PML y CPML) y, finalmente, una comparación con los otros grandes métodos del electromagnetismo computacional.
+
+\section{Discretización y diferencias finitas}
+La idea central de cualquier método de diferencias finitas fue reemplazar las derivadas continuas de una ecuación diferencial por aproximaciones algebraicas evaluadas en un conjunto discreto de puntos (la malla o \textit{grid}). Partiendo de la expansión en serie de Taylor de una función suave $f(x)$ alrededor de un punto $x_0$:
+\begin{align}
+    f(x_0+\Delta x) &= f(x_0) + \Delta x\, f'(x_0) + \frac{\Delta x^2}{2}f''(x_0) + \frac{\Delta x^3}{6}f'''(x_0) + \mathcal{O}(\Delta x^4) \\
+    f(x_0-\Delta x) &= f(x_0) - \Delta x\, f'(x_0) + \frac{\Delta x^2}{2}f''(x_0) - \frac{\Delta x^3}{6}f'''(x_0) + \mathcal{O}(\Delta x^4)
+\end{align}
+
+Restando ambas expresiones y despejando $f'(x_0)$ se obtuvo la \textbf{diferencia central}:
+\begin{equation}
+    f'(x_0) = \frac{f(x_0+\Delta x)-f(x_0-\Delta x)}{2\Delta x} + \mathcal{O}(\Delta x^2)
+\end{equation}
+cuyo error de truncamiento fue de segundo orden, $\mathcal{O}(\Delta x^2)$, muy superior a las diferencias progresiva o regresiva de un solo lado, que se obtuvieron truncando la serie tras el término lineal y fueron solo de primer orden, $\mathcal{O}(\Delta x)$. Esta fue la razón matemática precisa por la que el esquema de Yee, que se construyó enteramente sobre diferencias centrales, alcanzó segundo orden de precisión tanto en el espacio como en el tiempo con un costo computacional mínimo.
+
+\section{Consistencia, estabilidad y convergencia}
+Todo esquema numérico que aproximaba una ecuación diferencial debía evaluarse bajo tres criterios independientes, cuya distinción fue fundamental y con frecuencia se confundía en la literatura no especializada:
+\begin{itemize}
+    \item \textbf{Consistencia:} el esquema discreto debía converger, en el límite $\Delta x, \Delta t\to 0$, a la ecuación diferencial original. Se verificó sustituyendo la expansión de Taylor de cada diferencia finita y comprobando que el error de truncamiento tendía a cero.
+    \item \textbf{Estabilidad:} los errores numéricos (de redondeo o de truncamiento) introducidos en un paso de tiempo no debían amplificarse sin límite a medida que avanzaba la simulación. La herramienta estándar para analizarla fue el \textbf{análisis de estabilidad de von Neumann}, que se aplicó al estudiar la condición CFL: se sustituyó una onda plana discreta de prueba en el esquema y se exigió que su factor de amplificación por paso temporal tuviera módulo menor o igual a uno para todo número de onda representable en la malla.
+    \item \textbf{Convergencia:} la solución numérica debía tender a la solución exacta del problema continuo cuando $\Delta x, \Delta t\to0$.
+\end{itemize}
+
+El \textbf{teorema de equivalencia de Lax}, resultado central del análisis numérico de ecuaciones en derivadas parciales, aplicable a problemas lineales bien planteados, estableció que, para un esquema consistente, la estabilidad fue condición \textbf{necesaria y suficiente} para la convergencia. Este teorema mostró por qué la estabilidad debía demostrarse de forma explícita dentro del método FDTD: una vez establecida la consistencia del esquema de Yee (que fue inmediata, por construcción, a partir de las diferencias centrales descritas previamente) y su estabilidad bajo la condición CFL, la convergencia quedó garantizada automáticamente.
+
+\section{El método FDTD y el algoritmo de Yee}
+El método de diferencias finitas en el dominio del tiempo fue introducido por Kane S. Yee en 1966, en un artículo de seis páginas que posteriormente se convirtió en uno de los trabajos más influyentes en la historia del electromagnetismo computacional \cite{Yee1966}. La idea de Yee fue reemplazar directamente las ecuaciones de Maxwell rotacionales, no una ecuación de onda de segundo orden derivada de ellas, por un sistema de ecuaciones en diferencias finitas de primer orden, evaluando los campos $\vec{E}$ y $\vec{H}$ en posiciones espaciales y temporales entrelazadas de una manera particular que, como se demostró al describir la malla de Yee, resultó ser exactamente la elección que permitió calcular todas las diferencias centrales requeridas sin necesidad de interpolación. 
+
+Este acoplamiento explícito y local, el valor actualizado de cada campo dependió solo de valores vecinos ya conocidos, sin necesidad de resolver un sistema de ecuaciones simultáneas, fue la razón por la que el método FDTD fue, como resumió una referencia moderna sobre el tema, relativamente simple de implementar en comparación con otros métodos de electromagnetismo computacional, al punto de ser el único método de esta familia que una sola persona podía razonablemente programar desde cero \cite{Schneider2025}.
+
+\section{La malla escalonada de Yee}
+Se consideró la ley de Faraday en su forma integral sobre una cara cuadrada de la malla, digamos la cara perpendicular a $\hat{z}$ centrada en $(i+\frac{1}{2}, j+\frac{1}{2}, k)$: el teorema de Stokes relacionó la circulación de $\vec{E}$ alrededor del perímetro de esa cara con la derivada temporal del flujo de $\vec{B}$ \textit{a través} de esa misma cara. Para que esta relación se discretizara de forma natural y exacta, sin ninguna interpolación adicional, fue necesario que las cuatro componentes tangenciales de $\vec{E}$ que formaban el perímetro de la cara estuvieran ubicadas precisamente en los puntos medios de las cuatro aristas de esa cara, y que la componente de $\vec{B}$ (o $\vec{H}$) estuviera ubicada exactamente en el centro de la cara. Aplicando este razonamiento a las seis caras de un cubo elemental de la malla se obtuvo, de manera única, la disposición conocida como \textbf{celda de Yee}:
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{cc}
+        \hline
+        \textbf{Componente} & \textbf{Posición (en unidades de $\Delta x, \Delta y, \Delta z$)} \\
+        \hline
+        $E_x$ & $(i+\frac{1}{2}, \ j, \ k)$ \\
+        $E_y$ & $(i, \ j+\frac{1}{2}, \ k)$ \\
+        $E_z$ & $(i, \ j, \ k+\frac{1}{2})$ \\
+        $H_x$ & $(i, \ j+\frac{1}{2}, \ k+\frac{1}{2})$ \\
+        $H_y$ & $(i+\frac{1}{2}, \ j, \ k+\frac{1}{2})$ \\
+        $H_z$ & $(i+\frac{1}{2}, \ j+\frac{1}{2}, \ k)$ \\
+        \hline
+    \end{tabular}
+    \caption{Disposición espacial de las componentes de campo en la celda de Yee.}
+    \label{tab:celda_yee}
+\end{table}
+
+Es decir, cada componente de $\vec{E}$ se ubicó en el punto medio de una arista de la celda (paralela a su propia dirección), y cada componente de $\vec{H}$ se ubicó en el centro de la cara que dicha arista de $\vec{E}$ rodea \cite{Yee1966}. Esta fue la respuesta precisa a la pregunta, planteada explícitamente en el alcance de esta tesis, de \textbf{por qué} los campos $\vec{E}$ y $\vec{H}$ se calcularon en posiciones distintas: no fue una elección arbitraria ni una limitación del método, sino la condición matemática necesaria para que el rotacional discreto, una diferencia central de cuatro (en 2D) o dos (en la dirección normal, en 3D) valores de campo tangencial, quede automáticamente centrado, sin ninguna interpolación, exactamente en la posición donde se necesitaba evaluar la derivada temporal del campo normal a esa cara. La malla resultante se conoció como \textbf{retícula de Yee} (\textit{Yee lattice}), y fue intrínsecamente la misma retícula, generalizada a coordenadas cilíndricas $(r, \phi, z)$, que MEEP empleó cuando se activaba el modo axisimétrico.
+
+Temporalmente, la misma lógica de centrado exigió que $\vec{E}$ se evaluara en instantes enteros $n\Delta t$ y que $\vec{H}$ se evaluara en instantes semienteros $(n+\frac{1}{2})\Delta t$: como se mostró al describir el algoritmo leapfrog, esto fue lo que permitió que también la derivada temporal se aproximara mediante una diferencia central de segundo orden sin interpolación.
+
+\section{Derivación de las ecuaciones FDTD desde Maxwell}
+Partiendo de las ecuaciones de Maxwell rotacionales en un medio lineal con pérdidas, escritas explícitamente para permitir tanto conductividad eléctrica $\sigma$ como, por generalidad, relevante para el modelado de la PML, una conductividad magnética ficticia $\sigma^*$:
+\begin{equation}
+    \varepsilon\frac{\partial\vec{E}}{\partial t} + \sigma\vec{E} = \nabla\times\vec{H} \qquad\qquad \mu\frac{\partial\vec{H}}{\partial t} + \sigma^*\vec{H} = -\nabla\times\vec{E}
+\end{equation}
+
+Se tomó, como ejemplo representativo, la componente $x$ de la primera ecuación:
+\begin{equation}
+    \varepsilon\frac{\partial E_x}{\partial t} + \sigma E_x = \frac{\partial H_z}{\partial y} - \frac{\partial H_y}{\partial z}
+\end{equation}
+
+Al discretizar la derivada temporal como diferencia central entre los instantes $n$ y $n+1$ (con el término de pérdidas evaluado, por consistencia de segundo orden, en el promedio temporal $(E_x^{n+1}+E_x^n)/2$) y las derivadas espaciales como diferencias centrales entre los puntos de la malla de Yee inmediatamente adyacentes a la posición $(i+\frac{1}{2}, j, k)$ de $E_x$, se obtuvo, tras despejar $E_x^{n+1}$:
+\begin{equation}
+\begin{split}
+    E_x^{n+1}\Big|_{i+\frac{1}{2}, j, k} &= \underbrace{\left(\frac{1-\dfrac{\sigma\Delta t}{2\varepsilon}}{1+\dfrac{\sigma\Delta t}{2\varepsilon}}\right)}_{C_a} E_x^{n}\Big|_{i+\frac{1}{2}, j, k} \\
+    &\quad + \underbrace{\left(\frac{\Delta t/\varepsilon}{1+\dfrac{\sigma\Delta t}{2\varepsilon}}\right)}_{C_b} \left[ \frac{H_z^{n+\frac{1}{2}}\big|_{i+\frac{1}{2}, j+\frac{1}{2}, k} - H_z^{n+\frac{1}{2}}\big|_{i+\frac{1}{2}, j-\frac{1}{2}, k}}{\Delta y} \right. \\
+    &\quad \left. - \frac{H_y^{n+\frac{1}{2}}\big|_{i+\frac{1}{2}, j, k+\frac{1}{2}} - H_y^{n+\frac{1}{2}}\big|_{i+\frac{1}{2}, j, k-\frac{1}{2}}}{\Delta z} \right]
+\end{split}
+\end{equation}
+
+Esta fue la \textbf{ecuación de actualización FDTD} para $E_x$; las ecuaciones para $E_y$ y $E_z$ se obtuvieron por permutación cíclica de índices $(x, y, z)\to(y, z, x)\to(z, x, y)$. Los coeficientes $C_a$ y $C_b$, que dependieron únicamente de las propiedades del material ($\varepsilon$, $\sigma$) en cada punto de la malla y podían precalcularse una sola vez al inicio de la simulación, fueron, precisamente, el mecanismo por el cual FDTD incorporó de forma natural medios con pérdidas heterogéneos: bastaba con asignar a cada celda de la malla los valores de $\varepsilon$ y $\sigma$ correspondientes al concreto, al agua salada o al tejido muscular que ocupara esa región, sin ninguna modificación estructural del algoritmo. Un procedimiento idéntico, aplicado a la ecuación rotacional de $\vec{H}$, produjo:
+\begin{equation}
+\begin{split}
+    H_x^{n+\frac{3}{2}}\Big|_{i, j+\frac{1}{2}, k+\frac{1}{2}} &= D_a\, H_x^{n+\frac{1}{2}}\Big|_{i, j+\frac{1}{2}, k+\frac{1}{2}} \\
+    &\quad - D_b \left[ \frac{E_z^{n+1}\big|_{i, j+1, k+\frac{1}{2}} - E_z^{n+1}\big|_{i, j, k+\frac{1}{2}}}{\Delta y} \right. \\
+    &\quad \left. - \frac{E_y^{n+1}\big|_{i, j+\frac{1}{2}, k+1} - E_y^{n+1}\big|_{i, j+\frac{1}{2}, k}}{\Delta z} \right]
+\end{split}
+\end{equation}
+con $D_a$, $D_b$ análogos a $C_a$, $C_b$ pero en función de $\mu$ y $\sigma^*$. Este conjunto de seis ecuaciones, tres para $\vec{E}$, tres para $\vec{H}$, constituyó el algoritmo de Yee completo, y fue, literalmente, todo lo que un motor FDTD como MEEP calculó en cada paso temporal, celda por celda, en todo el dominio computacional.
+
+\section{El algoritmo Leapfrog}
+Se observó que, en las ecuaciones de actualización FDTD, $E_x^{n+1}$ se calculó enteramente a partir de $E_x^n$ (conocido) y de $H_y$, $H_z$ evaluados en el instante intermedio $n+\frac{1}{2}$ (también ya conocido, calculado en el paso anterior); recíprocamente, $H_x^{n+\frac{3}{2}}$ se calculó a partir de $H_x^{n+\frac{1}{2}}$ y de las componentes de $\vec{E}$ ya actualizadas a $n+1$. El algoritmo avanzó, por tanto, alternando actualizaciones de $\vec{E}$ y de $\vec{H}$ en instantes desfasados medio paso temporal, como los pies de una persona al caminar, de ahí el nombre \textbf{leapfrog} (``salto de rana''). Esta estructura tenía dos ventajas decisivas: (a) el esquema fue \textbf{explícito}: cada campo se actualizó mediante una fórmula cerrada, sin necesidad de resolver ningún sistema de ecuaciones lineales en cada paso, a diferencia de los métodos implícitos o del método de elementos finitos; y (b) fue, como ya se estableció al estudiar las diferencias finitas, de segundo orden de precisión tanto en el espacio como en el tiempo, a pesar de su extrema simplicidad.
+
+\section{El criterio de estabilidad de Courant, Friedrichs y Lewy (CFL)}
+Para determinar bajo qué condiciones el esquema de Yee fue estable, se aplicó el análisis de von Neumann mencionado en el análisis de consistencia, estabilidad y convergencia: se sustituyó en las ecuaciones de actualización (sin pérdidas, por simplicidad, $\sigma=\sigma^*=0$) una onda plana discreta de prueba,
+\begin{equation}
+    E_x^n\big|_{i, j, k} \propto e^{i(k_x i\Delta x + k_y j\Delta y + k_z k\Delta z - \omega n\Delta t)}
+\end{equation}
+y análogamente para las demás componentes. Al sustituir esta forma en el sistema de seis ecuaciones acopladas de la derivación de las ecuaciones de actualización FDTD y realizar el álgebra correspondiente (combinando las ecuaciones de $\vec{E}$ y $\vec{H}$ para eliminar $\vec{H}$, de forma análoga a como se combinaron las ecuaciones de Maxwell continuas al derivar la ecuación de onda), se obtuvo la \textbf{relación de dispersión numérica} del esquema de Yee en 3D:
+\begin{equation}
+    \boxed{\left[\frac{1}{c\, \Delta t}\sin\left(\frac{\omega\Delta t}{2}\right)\right]^2 = \left[\frac{1}{\Delta x}\sin\left(\frac{k_x\Delta x}{2}\right)\right]^2 + \left[\frac{1}{\Delta y}\sin\left(\frac{k_y\Delta y}{2}\right)\right]^2 + \left[\frac{1}{\Delta z}\sin\left(\frac{k_z\Delta z}{2}\right)\right]^2}
+\end{equation}
+\cite{Taflove2005, Schneider2025}. Se comprobó que, en el límite continuo $\Delta x, \Delta y, \Delta z, \Delta t\to0$, y usando $\sin\theta\approx\theta$ para argumento pequeño, esta expresión se redujo exactamente a la relación de dispersión ideal $\omega^2/c^2=k_x^2+k_y^2+k_z^2$ de la onda plana armónica, una verificación directa de la consistencia del esquema.
+
+Para que la simulación fuera \textbf{estable}, $\omega$ debía permanecer real para todo $(k_x, k_y, k_z)$ representable en la malla (de lo contrario, $\sin(\omega\Delta t/2)$ tendría que exceder la unidad en módulo, lo cual solo fue posible si $\omega$ adquiría una parte imaginaria, produciendo soluciones que crecían exponencialmente en el tiempo: la firma inequívoca de una inestabilidad numérica). Dado que el lado derecho de la relación de dispersión estuvo acotado por $\frac{1}{\Delta x^2}+\frac{1}{\Delta y^2}+\frac{1}{\Delta z^2}$ (el peor caso, cuando los tres senos espaciales alcanzaban su valor máximo de 1), la condición de estabilidad se obtuvo exigiendo que el lado izquierdo pudiera igualar ese máximo sin que $\omega\Delta t/2$ exceda $\pi/2$:
+\begin{equation}
+    \boxed{\Delta t \leq \frac{1}{c\sqrt{\dfrac{1}{\Delta x^2}+\dfrac{1}{\Delta y^2}+\dfrac{1}{\Delta z^2}}}}
+\end{equation}
+
+Esta fue la condición de \textbf{Courant, Friedrichs y Lewy (CFL)} para el esquema de Yee en 3D. Físicamente, expresó que, en un solo paso de tiempo, la ``onda numérica'' no debía poder viajar una distancia mayor que la que permitió la propia geometría de la malla, para cualquier dirección de propagación: si $\Delta t$ fue demasiado grande respecto de $\Delta x, \Delta y, \Delta z$, la simulación habría intentado propagar información más rápido de lo que la malla podía resolver, y los errores se amplificarían sin límite en pocos pasos. En una malla cúbica uniforme ($\Delta x=\Delta y=\Delta z=\Delta$), la condición se redujo a la forma frecuentemente citada $\Delta t\leq \Delta/(c\sqrt{3})$; en 2D, a $\Delta t\leq\Delta/(c\sqrt{2})$. En la práctica, los códigos FDTD, y MEEP no fue la excepción, fijaban $\Delta t$ como una fracción fija (típicamente 0.5) del límite CFL, para dejar un margen de seguridad frente a la reducción adicional del límite de estabilidad que introducían los medios con pérdidas y las capas absorbentes.
+
+\section{Dispersión numérica}
+La relación de dispersión numérica obtenida al estudiar la condición CFL reveló, además de la condición de estabilidad, una segunda consecuencia inevitable de la discretización: incluso cuando la simulación fue estable, la velocidad de fase numérica de una onda en la malla \textbf{no fue exactamente} $c$ (o $c/n$ en un medio material), sino que dependió de la longitud de onda relativa al tamaño de celda ($\lambda/\Delta x$) y de la dirección de propagación respecto de los ejes de la malla, un efecto conocido como \textbf{dispersión numérica} y, en su componente direccional, \textbf{anisotropía numérica}. 
+
+Cuanto más fina fue la discretización respecto de la longitud de onda (mayor número de celdas por longitud de onda), menor fue este error, ya que $\sin\theta\to\theta$ para $\theta$ pequeño; la regla práctica estándar en la literatura de FDTD fue emplear al menos 10 a 20 celdas por longitud de onda mínima presente en la simulación \cite{Taflove2005,Schneider2025}, un criterio que en esta tesis debía aplicarse a la longitud de onda \textit{más corta}, es decir, la que correspondió al medio de mayor índice de refracción entre el aire, el concreto, el agua salada y el tejido muscular, y que junto con el requisito de resolver la profundidad de penetración en medios muy conductores determinó la resolución espacial mínima admisible para la implementación en MEEP.
+
+\section{Condiciones de frontera absorbentes: de las ABC clásicas al PML y al CPML}
+Puesto que la memoria de una computadora fue finita, toda simulación FDTD debía truncar un dominio físicamente infinito (o simplemente muy grande) a un volumen computacional finito. Si la frontera de ese volumen se trataba simplemente como un límite reflectante (por ejemplo, un conductor eléctrico perfecto), las ondas salientes rebotarían de vuelta hacia la región de interés, contaminando la simulación con reflexiones espurias que no existían en el problema físico real, un problema crítico para esta tesis, donde fue precisamente el campo radiado hacia el infinito, el que debía cuantificarse.
+
+Las primeras soluciones a este problema, las condiciones de frontera absorbentes (ABC) clásicas, como la de Mur, basada en aproximaciones locales de la ecuación de onda unidireccional, reducían las reflexiones pero no las eliminaban, especialmente para ondas incidiendo en ángulos oblicuos. La solución que resultaría definitiva fue propuesta por Jean Pierre Bérenger en 1994: la \textbf{capa perfectamente adaptada} (\textit{Perfectly Matched Layer}, PML), un medio absorbente artificial, anisótropo, que, en la teoría continua exacta, tenía un coeficiente de reflexión rigurosamente nulo en su interfaz con el medio real, para \textbf{cualquier} ángulo de incidencia y \textbf{cualquier} frecuencia \cite{Berenger1994}.
+
+Matemáticamente, la construcción más elegante de la PML, adoptada, entre otros, en la reformulación de Roden y Gedney (2000) que se describió a continuación, fue el \textbf{estiramiento complejo de coordenadas}: dentro de la capa PML, cada derivada espacial se reemplazó según
+\begin{equation}
+    \frac{\partial}{\partial s} \;\longrightarrow\; \frac{1}{s_s}\frac{\partial}{\partial s}, \qquad s_s(\omega) = \kappa_s + \frac{\sigma_s}{\alpha_s+i\omega\varepsilon_0} \qquad (s=x, y, z)
+\end{equation}
+donde $\kappa_s\geq1$, $\sigma_s\geq0$ y $\alpha_s\geq0$ fueron parámetros de la capa, graduados suavemente (típicamente con un perfil polinomial) desde valores nulos (o $\kappa_s=1$) en la interfaz con el medio físico hasta un valor máximo en el borde exterior de la capa, donde finalmente se truncaba el dominio con una condición reflectante convencional. Se demostró que esta construcción produjo un coeficiente de reflexión teóricamente nulo en la interfaz, independientemente del ángulo de incidencia, precisamente porque el estiramiento afectaba únicamente a la propagación \textit{dentro} de la capa (introduciendo una atenuación exponencial adicional gobernada por $\sigma_s$) sin alterar en absoluto la impedancia de onda vista desde el medio físico.
+
+La implementación original de Bérenger, basada en la división de cada componente de campo en dos subcomponentes ficticios, resultaba costosa en memoria y difícil de combinar con medios dispersivos o con incidencia rasante (ángulos cercanos a 90°) y con ondas evanescentes, donde su desempeño se degradaba. La \textbf{PML convolucional (CPML)}, introducida por Roden y Gedney mediante la técnica de ``desplazamiento complejo de frecuencia'' (\textit{Complex Frequency Shifted}, CFS PML) y una implementación eficiente basada en \textbf{ecuaciones auxiliares con convolución recursiva}, resolvió estas limitaciones \cite{Roden2000}: en lugar de almacenar el historial completo de cada campo para calcular la convolución exacta correspondiente al estiramiento de coordenadas, se introdujo una variable de memoria $\psi$ por cada derivada espacial estirada, actualizada recursivamente en cada paso de tiempo mediante una relación del tipo
+\begin{equation}
+    \psi_s^{n+1} = b_s\, \psi_s^{n} + a_s\left(\delta_s f\right)^n
+\end{equation}
+donde $\delta_s f$ fue la diferencia finita espacial ordinaria del campo $f$ y $b_s$, $a_s$ fueron coeficientes que dependieron de $\kappa_s$, $\sigma_s$, $\alpha_s$ y de $\Delta t$, precalculados una sola vez. La derivada espacial efectivamente usada en la actualización FDTD dentro de la capa PML fue entonces $(1/\kappa_s)\, \delta_s f + \psi_s$: es decir, la actualización ordinaria de Yee, con dos modificaciones mínimas, un factor de escala $1/\kappa_s$ y la suma de la variable de memoria, y sin necesidad de almacenar el historial temporal completo del campo. Esta formulación fue, además, incondicionalmente estable y absorbía correctamente tanto ondas evanescentes como de incidencia rasante, razón por la cual era la condición de frontera absorbente estándar en prácticamente todo software FDTD moderno, MEEP incluido, y la que se utilizó en las simulaciones de esta tesis (la descripción de MEEP y el análisis numérico posterior), con particular atención a su desempeño en el borde $r=0$ de la malla cilíndrica axisimétrica, donde, como se describió al presentar la implementación numérica, MEEP empleó una variante PML cuasi radial.
+
+Cuando la geometría del problema fue periódica en alguna dirección (por ejemplo, un arreglo infinito de antenas, no el caso de esta tesis), se emplearon en su lugar \textbf{condiciones de frontera periódicas}, que relacionan directamente los campos en las caras opuestas del dominio mediante un desfase de Bloch, sin necesidad de ninguna capa absorbente en esa dirección.
+
+\section{Elección del método numérico}
+Se eligió FDTD por su actualización explícita de los campos y su implementación disponible en Meep \citep{Yee1966,Oskooi2010,Teixeira2023}. Los métodos de momentos y elementos finitos constituyeron alternativas válidas. No se realizó una comparación de rendimiento entre métodos, por lo que no se atribuyó superioridad general a FDTD. El cálculo se limitó a una excitación monocromática a 3 GHz.
+
+\section{Meep y la interfaz de Python}
+Python definió materiales, geometría, fuentes y procesamiento; el motor de Meep efectuó la evolución FDTD. No se desarrolló un segundo motor electromagnético independiente. La organización interna por bloques y la capacidad de paralelización formaron parte del software \citep{Oskooi2010,MeepParallel,Oskooi2020Machine}; la campaña de balance se ejecutó secuencialmente y con un hilo.
+
+Los materiales se describieron mediante permitividad real y conductividad efectiva a la frecuencia de trabajo. Meep admitió además respuestas dispersivas de la forma
+\begin{equation}
+\vec D=\varepsilon_\infty\vec E+\vec P,
+\end{equation}
+donde $\vec P$ representó una polarización con dinámica propia \citep{MeepMaterials}. Esta capacidad no implicó que se hubieran usado modelos de Debye o Lorentz en las corridas analizadas. La formulación empleada se documentó en la metodología y su validez se restringió a los parámetros adoptados.
+
+\section{Simetría y escala física}
+La invariancia azimutal permitió emplear coordenadas cilíndricas con modo $m=0$ \citep{MeepCylindrical,MeepSymmetry}. Se resolvió el plano $(r,z)$ y se recuperaron integrales tridimensionales mediante la simetría de revolución. Esta representación difirió de una simulación cartesiana 2D, cuyas potencias habitualmente se interpretaron por unidad de longitud. No se ejecutó una validación adicional en una malla cartesiana 3D.
+
+La longitud de referencia se fijó en 1 mm. Las unidades de tiempo, frecuencia, campos y potencia se relacionaron con el SI en la Sección~\ref{sec:unidades-campana}. El uso de valores normalizados conservó el significado de cocientes y porcentajes, aunque impidió asignar vatios sin una calibración de la amplitud.
+
+\section{Verificación y límites de interpretación}
+Se emplearon tres comprobaciones complementarias: comparación de la pendiente con la referencia de onda plana, sensibilidad a las mallas disponibles y balance local. La estabilidad temporal se examinó con las dos muestras guardadas en cada corrida de balance. Los resultados de estas comprobaciones se presentaron por magnitud, sin suponer que la conservación local garantizara la exactitud espacial del campo.
+
+La directividad de aproximadamente 5.15 dBi de un monopolo ideal de cuarto de onda sobre un plano conductor infinito constituyó una referencia teórica \citep{Balanis2016}. No se calculó un patrón angular completo para contrastarla. Tampoco se obtuvieron mapas SAR, impedancia de entrada, coeficiente de reflexión del puerto o eficiencia global. Se conservaron estas magnitudes como posibles extensiones, sin presentarlas como resultados de la campaña.
+
+En medios con pérdidas se distinguió la absorción material de la expansión geométrica. La primera se relacionó con $\alpha$ y con $\sigma|\vec E|^2/2$; la segunda redujo la densidad de potencia sin representar por sí misma disipación. La comparación de fracciones energéticas se refirió a anillos escalados por la longitud de onda. Sus tamaños físicos y la longitud de los monopolos cambiaron entre materiales, lo que limitó la atribución de todas las diferencias únicamente a la conductividad.

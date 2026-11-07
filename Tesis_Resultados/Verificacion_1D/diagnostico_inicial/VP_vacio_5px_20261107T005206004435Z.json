@@ -1,0 +1,63 @@
+{
+  "tipo": "verificacion_onda_plana_1D",
+  "medio": "vacio",
+  "px_mm": 5,
+  "epsr": 1.0,
+  "sigma_S_m": 0.0,
+  "frecuencia_Hz": 3000000000.0,
+  "longitud_referencia_mm": 1,
+  "lambda_mm": 99.93187923107207,
+  "sigmaD": 0.0,
+  "alpha_teoria_dB_mm": 0.0,
+  "error_absoluto_dB_mm": 5.2747447391636015e-05,
+  "error_relativo_porcentaje": null,
+  "dominio_z_mm": [
+    -599.5912753864325,
+    599.5912753864325
+  ],
+  "pml_espesor_mm": 199.86375846214415,
+  "fuente_z_mm": -299.79563769321624,
+  "ventana_z_mm": [
+    -99.93187923107207,
+    99.93187923107207
+  ],
+  "muestras": [
+    {
+      "t_M": 4397.0,
+      "alpha_dB_mm": -4.889190649095963e-05,
+      "IC95_bloques": [
+        -0.001132411455280953,
+        0.0012677041637074698
+      ],
+      "RMSE_dB": 1.1508276073093733,
+      "bloque": 6,
+      "replicas": 500,
+      "semilla": 0,
+      "condicion": "IC condicional al ajuste; no incertidumbre total"
+    },
+    {
+      "t_M": 4497.0,
+      "alpha_dB_mm": -5.2747447391636015e-05,
+      "IC95_bloques": [
+        -0.0012250224420863132,
+        0.0012931149454185747
+      ],
+      "RMSE_dB": 1.1327111910126,
+      "bloque": 6,
+      "replicas": 500,
+      "semilla": 0,
+      "condicion": "IC condicional al ajuste; no incertidumbre total"
+    }
+  ],
+  "cambio_temporal_alpha_dB_mm": 3.855540900676384e-06,
+  "cambio_temporal_flujo_max_rel": 0.6785020735922341,
+  "segundos": 1.7547819569999774,
+  "rss_max_proceso_KiB": 113260,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "script_sha256": "dba158a6f8ab52c20a503b5380ffe99e7ada26f329512ae6c35f1500ca38cc87",
+  "perfil": "VP_vacio_5px_20261107T005206004435Z.csv",
+  "fuente_calibrada": false
+}

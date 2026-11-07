@@ -1,0 +1,12 @@
+\section{Simulación electromagnética y medios con pérdidas}
+El método de Yee estableció la actualización escalonada de los campos que sustentó FDTD \citep{Yee1966}. Meep incorporó ese método en un motor de software libre con interfaces de programación, materiales con pérdidas y recursos de interpolación \citep{Oskooi2010}. Estos antecedentes fundamentaron la herramienta utilizada, sin sustituir las verificaciones de cada configuración.
+
+En un problema de imagen por microondas, \citet{Fajardo2017} estudiaron la sensibilidad de un sistema con monopolos a 1.3 GHz ante cambios en las propiedades de los tejidos que rodeaban el calcáneo. Ese trabajo mostró la importancia de especificar los parámetros constitutivos. Su geometría y frecuencia difirieron de las utilizadas aquí, por lo que no se tomó como validación cuantitativa de los resultados de esta tesis.
+
+\section{Caracterización de materiales y modelos de propagación}
+\citet{fichte2021} midieron propiedades dieléctricas del concreto entre 1 y 10 GHz y examinaron su relación con la humedad, el curado y la porosidad. \citet{wang2024} combinaron mediciones, simulaciones FDTD y regresión para estimar permitividad en concreto heterogéneo, con tratamiento de incertidumbre. Estos antecedentes respaldaron la necesidad de distinguir propiedades efectivas de un modelo y valores caracterizados para una muestra específica.
+
+Por otra parte, \citet{jones2026} ajustaron modelos de pérdida a gran escala a simulaciones de trazado de rayos a 5.855 GHz en un terreno lunar, y examinaron la dependencia respecto del patrón transmisor. Este ejemplo correspondió a un enlace y un entorno definidos. La pendiente radial de un monopolo inmerso, obtenida en esta tesis, no se consideró intercambiable con esos parámetros sin una validación adicional.
+
+\section{Posición del estudio}
+Se reunieron una comparación de atenuación en cuatro medios, el análisis de las resoluciones disponibles y un balance local independiente. El aporte se situó en la trazabilidad y la interpretación conjunta de esas magnitudes. Las propiedades adoptadas no representaron una campaña experimental de caracterización, y los resultados se limitaron a una frecuencia, una familia geométrica axisimétrica y los volúmenes declarados.

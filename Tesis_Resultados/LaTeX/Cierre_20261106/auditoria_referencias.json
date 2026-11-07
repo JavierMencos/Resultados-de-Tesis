@@ -1,0 +1,983 @@
+[
+  {
+    "key": "Fumeron2020",
+    "doi": "10.1119/10.0001754",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "Hon2020",
+    "doi": "10.4324/9780429351013",
+    "title": [
+      "Reflections on the Practice of Physics"
+    ],
+    "authors": [
+      {
+        "given": "Giora",
+        "family": "Hon",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bernard R.",
+        "family": "Goldstein",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [],
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          24
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.4324/9780429351013",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Teixeira2023",
+    "doi": "10.1038/s43586-023-00257-4",
+    "title": [
+      "Finite-difference time-domain methods"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1562-1462",
+        "authenticated-orcid": false,
+        "given": "F. L.",
+        "family": "Teixeira",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4857-8330",
+        "authenticated-orcid": false,
+        "given": "C.",
+        "family": "Sarris",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6953-0216",
+        "authenticated-orcid": false,
+        "given": "Y.",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1920-9122",
+        "authenticated-orcid": false,
+        "given": "D.-Y.",
+        "family": "Na",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6882-7157",
+        "authenticated-orcid": false,
+        "given": "J.-P.",
+        "family": "Berenger",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1110-2822",
+        "authenticated-orcid": false,
+        "given": "Y.",
+        "family": "Su",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3103-9472",
+        "authenticated-orcid": false,
+        "given": "M.",
+        "family": "Okoniewski",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "W. C.",
+        "family": "Chew",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "V.",
+        "family": "Backman",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2725-4740",
+        "authenticated-orcid": false,
+        "given": "J. J.",
+        "family": "Simpson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Nature Reviews Methods Primers"
+    ],
+    "volume": "3",
+    "issue": "1",
+    "page": null,
+    "article": "75",
+    "date": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          5
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1038/s43586-023-00257-4",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Yee1966",
+    "doi": "10.1109/TAP.1966.1138693",
+    "title": [
+      "Numerical solution of initial boundary value problems involving maxwell's equations in isotropic media"
+    ],
+    "authors": [
+      {
+        "family": "Kane Yee",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of California, Livermore, CA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "IEEE Transactions on Antennas and Propagation"
+    ],
+    "volume": "14",
+    "issue": "3",
+    "page": "302-307",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          1966,
+          5
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1109/tap.1966.1138693",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Mohammadkhani2023",
+    "doi": "10.1155/2023/6619073",
+    "title": [
+      "Axial Ratio Improvement of Circularly Polarized Antenna Using Parasitic Elements for 5G Applications"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0002-1269-7266",
+        "authenticated-orcid": true,
+        "given": "Samira",
+        "family": "Mohammadkhani",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Electrical and Electronic Engineering Department, Shahed University, Tehran 1915713495, Iran"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1100-2875",
+        "authenticated-orcid": true,
+        "given": "Alireza",
+        "family": "Mallahzadeh",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Electrical and Electronic Engineering Department, Shahed University, Tehran 1915713495, Iran"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "International Journal of RF and Microwave Computer-Aided Engineering"
+    ],
+    "volume": "2023",
+    "issue": null,
+    "page": "1-14",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          3
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1155/2023/6619073",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Philbin2011",
+    "doi": "10.1103/PhysRevA.83.013823",
+    "title": [
+      "Electromagnetic energy momentum in dispersive media"
+    ],
+    "authors": [
+      {
+        "given": "T. G.",
+        "family": "Philbin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Physical Review A"
+    ],
+    "volume": "83",
+    "issue": "1",
+    "page": null,
+    "article": "013823",
+    "date": {
+      "date-parts": [
+        [
+          2011,
+          1,
+          26
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1103/physreva.83.013823",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Bhosale2024",
+    "doi": "10.1371/journal.pone.0305464",
+    "title": [
+      "Electric field and SAR reduction in high-impedance RF arrays by using high permittivity materials for 7T MR imaging"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-2796-1472",
+        "authenticated-orcid": true,
+        "given": "Aditya A.",
+        "family": "Bhosale",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-2859-4500",
+        "authenticated-orcid": true,
+        "given": "Yunkun",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9599-595X",
+        "authenticated-orcid": true,
+        "given": "Xiaoliang",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "PLOS ONE"
+    ],
+    "volume": "19",
+    "issue": "7",
+    "page": "e0305464",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          3
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1371/journal.pone.0305464",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Diao2023",
+    "doi": "10.1109/MAP.2023.3260637",
+    "title": [
+      "Receiving Dipole Antenna Analysis Using the Poynting Streamline Method: Providing new insights"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-5705-9036",
+        "authenticated-orcid": false,
+        "given": "Junming",
+        "family": "Diao",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Mississippi State University, Starkville, MS, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1027-7372",
+        "authenticated-orcid": false,
+        "given": "Lu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Engineering, Jimei University, Xiamen, Fujian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0387-6476",
+        "authenticated-orcid": false,
+        "given": "Karl F.",
+        "family": "Warnick",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Brigham Young University, Provo, UT, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "IEEE Antennas and Propagation Magazine"
+    ],
+    "volume": "66",
+    "issue": "1",
+    "page": "10-21",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2024,
+          2
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1109/map.2023.3260637",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Moree2022",
+    "doi": "10.1063/5.0101339",
+    "title": [
+      "Comparison of Poynting’s vector and the power flow used in electrical engineering"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-1027-8914",
+        "authenticated-orcid": false,
+        "given": "G.",
+        "family": "Mörée",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Division of Electricity, Uppsala University , Uppsala 752 37, Sweden"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "M.",
+        "family": "Leijon",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Division of Electricity, Uppsala University , Uppsala 752 37, Sweden"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "AIP Advances"
+    ],
+    "volume": "12",
+    "issue": "8",
+    "page": null,
+    "article": "085219",
+    "date": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          1
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1063/5.0101339",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Oskooi2010",
+    "doi": "10.1016/j.cpc.2009.11.008",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "Poynting1884",
+    "doi": "10.1098/rstl.1884.0016",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "Berenger1994",
+    "doi": "10.1006/jcph.1994.1159",
+    "title": [
+      "A perfectly matched layer for the absorption of electromagnetic waves"
+    ],
+    "authors": [
+      {
+        "given": "Jean-Pierre",
+        "family": "Berenger",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Journal of Computational Physics"
+    ],
+    "volume": "114",
+    "issue": "2",
+    "page": "185-200",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          1994,
+          10
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1006/jcph.1994.1159",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Roden2000",
+    "doi": "10.1002/1098-2760(20001205)27:5<334::AID-MOP14>3.0.CO;2-A",
+    "title": [
+      "Convolution PML (CPML): An efficient FDTD implementation of the CFS-PML for arbitrary media"
+    ],
+    "authors": [
+      {
+        "given": "J. Alan",
+        "family": "Roden",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Stephen D.",
+        "family": "Gedney",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Microwave and Optical Technology Letters"
+    ],
+    "volume": "27",
+    "issue": "5",
+    "page": "334-339",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1002/1098-2760(20001205)27:5<334::aid-mop14>3.0.co;2-a",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "Rashed2020",
+    "doi": "10.1088/1361-6560/ab6e53",
+    "status": "unresolved",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "key": "oskooi2023",
+    "doi": "10.48550/arXiv.2301.07694",
+    "status": "unresolved",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "fichte2021",
+    "doi": "10.1016/j.conbuildmat.2021.125234",
+    "title": [
+      "Dielectric material characterization of concrete in GHz range in dependence on pore volume and water content"
+    ],
+    "authors": [
+      {
+        "given": "Tin Trong",
+        "family": "Dinh",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sebastian",
+        "family": "Hegler",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Marco",
+        "family": "Liebscher",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Iñaki",
+        "family": "Navarro de Sosa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huanyu",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dirk",
+        "family": "Plettemeier",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Welf-Guntram",
+        "family": "Drossel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Viktor",
+        "family": "Mechtcherine",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Construction and Building Materials"
+    ],
+    "volume": "311",
+    "issue": null,
+    "page": "125234",
+    "article": "125234",
+    "date": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.1016/j.conbuildmat.2021.125234",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "wang2024",
+    "doi": "10.3390/ma18163766",
+    "title": [
+      "Permittivity Measurement in Multi-Phase Heterogeneous Concrete Using Evidential Regression Deep Network and High-Frequency Electromagnetic Waves"
+    ],
+    "authors": [
+      {
+        "given": "Zhaojun",
+        "family": "Hou",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Transportation, Southeast University, Nanjing 210018, China"
+          },
+          {
+            "name": "CCDI (Suzhou) Exploration & Design Consultant Co., Ltd., Suzhou 215007, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hui",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "China Railway 14th Bureau Large Shield Engineering Co., Ltd., Nanjing 211800, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jianchuan",
+        "family": "Cheng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Transportation, Southeast University, Nanjing 210018, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Qifeng",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "CCDI (Suzhou) Exploration & Design Consultant Co., Ltd., Suzhou 215007, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6894-3521",
+        "authenticated-orcid": false,
+        "given": "Zheng",
+        "family": "Tong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Transportation, Southeast University, Nanjing 210018, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Materials"
+    ],
+    "volume": "18",
+    "issue": "16",
+    "page": "3766",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          11
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.3390/ma18163766",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "jones2026",
+    "doi": "10.3390/telecom7010021",
+    "title": [
+      "Sub-6-GHz 5G Large-Scale Path Loss Model for Shoemaker Rim F: Sensitivity to Transmitter Antenna Pattern"
+    ],
+    "authors": [
+      {
+        "given": "Quadri R.",
+        "family": "Adebowale",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Electrical Engineering and Computer Science, Ohio University, Athens, OH 45701, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shawn",
+        "family": "Ostermann",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Electrical Engineering and Computer Science, Ohio University, Athens, OH 45701, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Telecom"
+    ],
+    "volume": "7",
+    "issue": "1",
+    "page": "21",
+    "article": null,
+    "date": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          10
+        ]
+      ]
+    },
+    "url": "https://doi.org/10.3390/telecom7010021",
+    "status": "metadata_verified"
+  },
+  {
+    "key": "hossain2026",
+    "doi": "10.3390/biophysica4010011",
+    "status": "unresolved",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

@@ -1,0 +1,9 @@
+Se estudió numéricamente la atenuación y el balance energético local de un monopolo inmerso en vacío, concreto, agua salada y tejido muscular a 3 GHz. Se empleó Meep mediante Python, con FDTD y simetría cilíndrica. Se analizaron diez configuraciones de atenuación y cinco corridas de balance. La comparación principal se efectuó a 5 px/mm; el refinamiento se examinó con las resoluciones adicionales disponibles.
+
+Las atenuaciones aparentes a 5 px/mm fueron 0.0380, 0.7012 y 0.4669 dB/mm en concreto, agua salada y músculo, con intervalos condicionales del 95\,\% de $[0.0380,0.0381]$, $[0.7005,0.7019]$ y $[0.4663,0.4674]$ dB/mm. Las discrepancias teóricas fueron 1.31\,\%, 4.29\,\% y 5.12\,\%, respectivamente. El ajuste en vacío incumplió el criterio de calidad. En agua salada, la discrepancia se redujo a aproximadamente 0.81\,\% a 40 px/mm; el cambio de modelo y del orden aparente limitó la extrapolación al continuo.
+
+En los anillos analizados a 5 px/mm se disipó el 81.17\,\% de la entrada en agua salada, el 74.53\,\% en músculo y el 30.38\,\% en concreto. La conductividad nula del vacío impuso una pérdida de Joule igual a cero. Los residuos finales fueron inferiores al 0.055\,\% de la entrada total. Al refinar agua salada a 10 px/mm, la fracción disipada varió un 0.4181\,\%, mientras las potencias absolutas cambiaron cerca del 30\,\%. Por ello, el cierre energético no se interpretó como convergencia de todas las magnitudes.
+
+Se documentó un procedimiento reproducible y se delimitó su utilidad para describir pérdidas radiales relativas. La predicción de transmisión a través de interfaces y su validación con datos independientes quedaron fuera de la evidencia obtenida.
+
+\noindent\textbf{Palabras clave:} FDTD, Meep, vector de Poynting, atenuación, balance energético, incertidumbre numérica.

@@ -9,3 +9,8 @@
 | Compilación LaTeX local | PDF final, fuentes actualizadas, registros de los intentos y hashes del código fuente. | [Archivo de compilaciones](LaTeX/README.md) |
 
 En los nombres, 5px indicó 5 px/mm. Los archivos de perfil sin extensión fueron CSV de texto. El identificador de fuente del cuadro de atenuación corresponde al nombre del perfil o al commit de la figura que contiene el informe estadístico. Los porcentajes de discrepancia con la teoría, los IC del ajuste y los cambios al refinar la malla se documentaron por separado. Las versiones de referencia fueron [datos de atenuación](https://github.com/JavierMencos/Resultados-de-Tesis/tree/e96d8776842d98bcb3e97faac9887df156888eac/Tesis_Resultados) y [simulador original](https://github.com/JavierMencos/Resultados-de-Tesis/blob/0dc64c175678ffb762755169c651f998836e8f8a/Tesis_programa.py).
+
+
+## Revisión de cierre
+
+La [revisión completa para el asesor](LaTeX/Cierre_20261106/README.md) contiene las fuentes, figuras, PDF y registros locales. La [verificación 1D](Verificacion_1D/README.md) añadió ocho casos con encendido suave y conservó ocho diagnósticos iniciales. Véase el [estado de cierre](LaTeX/Cierre_20261106/ESTADO_DE_CIERRE.md) para los límites científicos y formales. La carga de esta revisión a Overleaf quedó bloqueada por el permiso del navegador.
