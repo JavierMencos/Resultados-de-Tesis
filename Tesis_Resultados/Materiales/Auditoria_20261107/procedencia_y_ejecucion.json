@@ -1,0 +1,42 @@
+{
+  "fecha_UTC": "2026-11-07T15:27:09.706343+00:00",
+  "python": "3.12.3",
+  "segundos": 0.04890942600013659,
+  "eps0": 8.8541878128e-12,
+  "mu0": 1.25663706212e-06,
+  "itis": {
+    "url": "https://itis.swiss/assets/Downloads/TissueDb/Database-V5-0.zip",
+    "doi": "10.13099/VIP21000-05-0",
+    "file": "Thermal_dielectric_acoustic_MR properties_database_V5.0(ASCII).txt",
+    "archive_sha256": "531adceeca8a108b0c6ec0fdb276381cba4f3f0627990e3bb66aaa6673a063c0",
+    "data_sha256": "d139ae961db460112345b43cd929042920390a1f2db3d462a2278b3be931c7e2",
+    "tissue": "Muscle",
+    "coefficients": {
+      "ef": 4.0,
+      "del1": 50.0,
+      "tau1 (ps)": 7.234,
+      "alf1": 0.1,
+      "del2": 7000.0,
+      "tau2 (ns)": 353.678,
+      "alf2": 0.1,
+      "sig": 0.2,
+      "del3": 1200000.0,
+      "tau3 (µs)": 318.31,
+      "alf3": 0.1,
+      "del4": 25000000.0,
+      "tau4 (ms)": 2.274,
+      "alf4": 0.0
+    },
+    "model": "Gabriel; tabla principal, no Alternative Dielectrics"
+  },
+  "agua": {
+    "temperatura_C": 20,
+    "salinidad_g_kg": 35,
+    "sigma_ionica_S_m": 4.791266067182028,
+    "epsilon_perdida": 38.17979121084158,
+    "factor_redondeado_ec16": 18
+  },
+  "verificacion": "limite S=0 contra Debye puro; pasividad; vacio sin atenuacion",
+  "incertidumbre": "No estimada: son evaluaciones deterministas de modelos publicados.",
+  "nota": "Las constantes SI difieren ligeramente de las redondeadas en las corridas históricas; no sustituir sus referencias teóricas archivadas."
+}

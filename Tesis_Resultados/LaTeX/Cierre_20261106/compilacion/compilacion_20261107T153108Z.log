@@ -1,0 +1,888 @@
+Rc files read:
+  /etc/LatexMk
+Latexmk: This is Latexmk, John Collins, 31 Jan. 2024. Version 4.83.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  anexos_A.tex
+  bibliografia_manual.tex
+  capitulos.tex
+  conclusiones.tex
+  discusion.tex
+  resultados.tex
+Category 'changed_user':
+  anexos_A.tex
+  bibliografia_manual.tex
+  capitulos.tex
+  conclusiones.tex
+  discusion.tex
+  resultados.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder -output-directory="compilacion"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hang/hang.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(./datos_estudiante.tex) (./opciones_adicionales.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/bigints/bigints.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/overpic/overpic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty)
+(./paquetes_y_comandos_usuario.tex) (compilacion/main.aux)
+(compilacion/main.out) (compilacion/main.out)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty)))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plantilla/portadacit.j
+pg> <./plantilla/fondologo_grande.png> <./plantilla/logoUVGblanco-eps-converted
+-to.pdf>] [2] [1 <./plantilla/escudoUVGcolores-eps-converted-to.pdf>] [2]
+
+Package tesis Warning: Hoja firmada pendiente de incorporar on input line 256.
+
+[1] (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+(compilacion/main.toc (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd) [2] [3] [4])
+[5] (compilacion/main.lof) [6] (compilacion/main.lot) [7] (./resumen.tex)
+[8]
+Cap\'{\i }tulo 1.
+(./introduccion.tex) [1]
+Cap\'{\i }tulo 2.
+(./objetivos.tex (./alcance.tex)) [2]
+Cap\'{\i }tulo 3.
+(./justificacion.tex) [3]
+Cap\'{\i }tulo 4.
+(./marco_teorico.tex [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+[16] [17] [18] [19] [20]
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd) [21] [22] [23]
+[24] [25]
+Overfull \hbox (2.25664pt too wide) in paragraph at lines 581--583
+[]\T1/cmr/m/n/10 Taflove & Hag-ness[] ([]2005[]); []Sch-nei-der[] ([]2010[]). S
+e com-pro-bó que, en el lí-mi-te con-ti-nuo $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/1
+0 x; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 y; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10
+ z; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 !
+[26] [27] [28]) [29]
+Cap\'{\i }tulo 5.
+(./antecedentes.tex) [30] [31]
+Cap\'{\i }tulo 6.
+(./teoria.tex [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
+[44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+[59] [60]) [61] (./capitulos.tex
+Cap\'{\i }tulo 7.
+[62]
+
+LaTeX Warning: Reference `sec:contraste-materiales' on page 63 undefined on inp
+ut line 27.
+
+
+Package natbib Warning: Citation `itis2025materiales' on page 63 undefined on i
+nput line 27.
+
+
+Package natbib Warning: Citation `uit2040materiales' on page 63 undefined on in
+put line 27.
+
+
+Package natbib Warning: Citation `uit527materiales' on page 63 undefined on inp
+ut line 27.
+
+[63] [64] [65]) [66]
+Cap\'{\i }tulo 8.
+(./resultados.tex
+
+Package natbib Warning: Citation `itis2025materiales' on page 67 undefined on i
+nput line 5.
+
+
+Package natbib Warning: Citation `uit2040materiales' on page 67 undefined on in
+put line 5.
+
+
+Package natbib Warning: Citation `uit527materiales' on page 67 undefined on inp
+ut line 5.
+
+
+LaTeX Warning: Reference `tab:materiales-contraste' on page 67 undefined on inp
+ut line 18.
+
+
+LaTeX Warning: Reference `an:materiales-fuentes' on page 67 undefined on input 
+line 18.
+
+[67] [68] [69 <./figuras/Tesis_Resultado_vacio5px.png> <./figuras/Tesis_Resulta
+do_concreto5px.jpeg>] [70 <./figuras/Tesis_Resultado_agua_salada5px.jpeg> <./fi
+guras/Tesis_Resultados_Tejido_Muscular5px.jpeg>] [71] [72] [73] [74] [75]
+[76 <./figuras/verificacion_onda_plana.png>]) [77]
+Cap\'{\i }tulo 9.
+(./discusion.tex
+
+LaTeX Warning: Reference `tab:materiales-contraste' on page 78 undefined on inp
+ut line 2.
+
+[78] [79] [80] [81]) [82]
+Cap\'{\i }tulo 10.
+(./conclusiones.tex [83]) [84]
+Cap\'{\i }tulo 11.
+(./recomendaciones.tex) [85]
+Cap\'{\i }tulo 12.
+(./bibliografia_manual.tex [86]
+Underfull \hbox (badness 1325) in paragraph at lines 78--79
+[]\T1/cmr/m/n/10 MEEP Do-cu-men-ta-tion. (s.f.). \T1/cmr/m/it/10 Ex-ploi-ting S
+ym-metry\T1/cmr/m/n/10 . Re-cu-pe-ra-do en 2026, de []$https : / / meep .
+[87]) [88] (./anexos_A.tex
+Cap\'{\i }tulo 13.
+[89] [90]) (./anexos_B.tex [91]
+Cap\'{\i }tulo 14.
+)
+
+Package natbib Warning: There were undefined citations.
+
+[92] [93 <./figuras/Tesis_Resultado_agua_salada10px.jpeg> <./figuras/Tesis_Resu
+ltado_agua_salada20px.jpeg>] [94 <./figuras/Tesis_Resultado_agua_salada40px.png
+> <./figuras/Tesis_Resultado_concreto10px.png>] [95 <./figuras/Tesi_Resultados_
+tejido_mucular10px.png> <./figuras/Tesis_Resultado_tejido_muscular20px.png>]
+(compilacion/main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{equation.426} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.425} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.474} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.436} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.432} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.428} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.423} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.418} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.486} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.484} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.482} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.441} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.413} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.479} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.478} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.475} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.471} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.467} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.466} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.465} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.459} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.452} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.445} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.444} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.443} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.442} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.437} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.434} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.433} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.429} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.421} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.420} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.419} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.416} has been referenced but does not exist
+, replaced by a fixed one
+
+ </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600p
+k> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.60
+0pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.
+600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm050
+0.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1
+000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
+m0700.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cti1000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecbx1200.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecbx1440.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecss2488.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/eccc1000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecxc1000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecbx1000.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecss1440.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecrm1200.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecrm1440.600pk> </home/javier/.texlive2023/texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbx1728.600pk> </home/javier/.texlive2023/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/javier/.texlive2023/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm2488.600pk></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on compilacion/main.pdf (107 pages, 3941491 bytes).
+Transcript written on compilacion/main.log.
+Latexmk: Getting log file 'compilacion/main.log'
+Latexmk: Examining 'compilacion/main.fls'
+Latexmk: Examining 'compilacion/main.log'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'compilacion/main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  compilacion/main.aux
+  compilacion/main.lof
+  compilacion/main.lot
+  compilacion/main.out
+  compilacion/main.toc
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder -output-directory="compilacion"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hang/hang.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(./datos_estudiante.tex) (./opciones_adicionales.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/bigints/bigints.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/overpic/overpic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty)
+(./paquetes_y_comandos_usuario.tex) (compilacion/main.aux)
+(compilacion/main.out) (compilacion/main.out)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty)))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plantilla/portadacit.j
+pg> <./plantilla/fondologo_grande.png> <./plantilla/logoUVGblanco-eps-converted
+-to.pdf>] [2] [1 <./plantilla/escudoUVGcolores-eps-converted-to.pdf>] [2]
+
+Package tesis Warning: Hoja firmada pendiente de incorporar on input line 256.
+
+[1] (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+(compilacion/main.toc (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd) [2] [3] [4])
+[5] (compilacion/main.lof) [6] (compilacion/main.lot) [7] (./resumen.tex)
+[8]
+Cap\'{\i }tulo 1.
+(./introduccion.tex) [1]
+Cap\'{\i }tulo 2.
+(./objetivos.tex (./alcance.tex)) [2]
+Cap\'{\i }tulo 3.
+(./justificacion.tex) [3]
+Cap\'{\i }tulo 4.
+(./marco_teorico.tex [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+[16] [17] [18] [19] [20]
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd) [21] [22] [23]
+[24] [25]
+Overfull \hbox (2.25664pt too wide) in paragraph at lines 581--583
+[]\T1/cmr/m/n/10 Taflove & Hag-ness[] ([]2005[]); []Sch-nei-der[] ([]2010[]). S
+e com-pro-bó que, en el lí-mi-te con-ti-nuo $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/1
+0 x; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 y; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10
+ z; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 !
+[26] [27] [28]) [29]
+Cap\'{\i }tulo 5.
+(./antecedentes.tex) [30] [31]
+Cap\'{\i }tulo 6.
+(./teoria.tex [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
+[44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+[59] [60]) [61] (./capitulos.tex
+Cap\'{\i }tulo 7.
+[62] [63] [64] [65]) [66]
+Cap\'{\i }tulo 8.
+(./resultados.tex [67] [68] [69] [70 <./figuras/Tesis_Resultado_vacio5px.png> <
+./figuras/Tesis_Resultado_concreto5px.jpeg>] [71 <./figuras/Tesis_Resultado_agu
+a_salada5px.jpeg> <./figuras/Tesis_Resultados_Tejido_Muscular5px.jpeg>]
+[72] [73] [74] [75] [76 <./figuras/verificacion_onda_plana.png>]) [77]
+Cap\'{\i }tulo 9.
+(./discusion.tex [78] [79] [80] [81]) [82]
+Cap\'{\i }tulo 10.
+(./conclusiones.tex [83]) [84]
+Cap\'{\i }tulo 11.
+(./recomendaciones.tex) [85]
+Cap\'{\i }tulo 12.
+(./bibliografia_manual.tex [86]
+Underfull \hbox (badness 1325) in paragraph at lines 78--79
+[]\T1/cmr/m/n/10 MEEP Do-cu-men-ta-tion. (s.f.). \T1/cmr/m/it/10 Ex-ploi-ting S
+ym-metry\T1/cmr/m/n/10 . Re-cu-pe-ra-do en 2026, de []$https : / / meep .
+[87]) [88] (./anexos_A.tex
+Cap\'{\i }tulo 13.
+[89] [90]) (./anexos_B.tex [91]
+Cap\'{\i }tulo 14.
+) [92] [93 <./figuras/Tesis_Resultado_agua_salada10px.jpeg> <./figuras/Tesis_Re
+sultado_agua_salada20px.jpeg>] [94 <./figuras/Tesis_Resultado_agua_salada40px.p
+ng> <./figuras/Tesis_Resultado_concreto10px.png>] [95 <./figuras/Tesi_Resultado
+s_tejido_mucular10px.png> <./figuras/Tesis_Resultado_tejido_muscular20px.png>]
+(compilacion/main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information) </home/javier/.texlive2023
+/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/javier/.texlive20
+23/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/javier/.texlive
+2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/javier/.texli
+ve2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </home/javier/.tex
+live2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/javier/.t
+exlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/javier/
+.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/javie
+r/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/jav
+ier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/j
+avier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss2488.600pk> </home
+/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk> </ho
+me/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </
+home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecxc1000.600pk> 
+</home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk
+> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600
+pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.6
+00pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440
+.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx17
+28.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1728.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+rm2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb>
+Output written on compilacion/main.pdf (107 pages, 3941829 bytes).
+Transcript written on compilacion/main.log.
+Latexmk: Getting log file 'compilacion/main.log'
+Latexmk: Examining 'compilacion/main.fls'
+Latexmk: Examining 'compilacion/main.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'compilacion/main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  compilacion/main.aux
+  compilacion/main.lof
+  compilacion/main.lot
+  compilacion/main.toc
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder -output-directory="compilacion"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hang/hang.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(./datos_estudiante.tex) (./opciones_adicionales.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/bigints/bigints.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/overpic/overpic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty)
+(./paquetes_y_comandos_usuario.tex) (compilacion/main.aux)
+(compilacion/main.out) (compilacion/main.out)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty)))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./plantilla/portadacit.j
+pg> <./plantilla/fondologo_grande.png> <./plantilla/logoUVGblanco-eps-converted
+-to.pdf>] [2] [1 <./plantilla/escudoUVGcolores-eps-converted-to.pdf>] [2]
+
+Package tesis Warning: Hoja firmada pendiente de incorporar on input line 256.
+
+[1] (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+(compilacion/main.toc (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd) [2] [3] [4])
+[5] (compilacion/main.lof) [6] (compilacion/main.lot) [7] (./resumen.tex)
+[8]
+Cap\'{\i }tulo 1.
+(./introduccion.tex) [1]
+Cap\'{\i }tulo 2.
+(./objetivos.tex (./alcance.tex)) [2]
+Cap\'{\i }tulo 3.
+(./justificacion.tex) [3]
+Cap\'{\i }tulo 4.
+(./marco_teorico.tex [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+[16] [17] [18] [19] [20]
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd) [21] [22] [23]
+[24] [25]
+Overfull \hbox (2.25664pt too wide) in paragraph at lines 581--583
+[]\T1/cmr/m/n/10 Taflove & Hag-ness[] ([]2005[]); []Sch-nei-der[] ([]2010[]). S
+e com-pro-bó que, en el lí-mi-te con-ti-nuo $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/1
+0 x; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 y; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10
+ z; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 !
+[26] [27] [28]) [29]
+Cap\'{\i }tulo 5.
+(./antecedentes.tex) [30] [31]
+Cap\'{\i }tulo 6.
+(./teoria.tex [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43]
+[44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+[59] [60]) [61] (./capitulos.tex
+Cap\'{\i }tulo 7.
+[62] [63] [64] [65]) [66]
+Cap\'{\i }tulo 8.
+(./resultados.tex [67] [68] [69] [70 <./figuras/Tesis_Resultado_vacio5px.png> <
+./figuras/Tesis_Resultado_concreto5px.jpeg>] [71 <./figuras/Tesis_Resultado_agu
+a_salada5px.jpeg> <./figuras/Tesis_Resultados_Tejido_Muscular5px.jpeg>]
+[72] [73] [74] [75] [76 <./figuras/verificacion_onda_plana.png>]) [77]
+Cap\'{\i }tulo 9.
+(./discusion.tex [78] [79] [80] [81]) [82]
+Cap\'{\i }tulo 10.
+(./conclusiones.tex [83]) [84]
+Cap\'{\i }tulo 11.
+(./recomendaciones.tex) [85]
+Cap\'{\i }tulo 12.
+(./bibliografia_manual.tex [86]
+Underfull \hbox (badness 1325) in paragraph at lines 78--79
+[]\T1/cmr/m/n/10 MEEP Do-cu-men-ta-tion. (s.f.). \T1/cmr/m/it/10 Ex-ploi-ting S
+ym-metry\T1/cmr/m/n/10 . Re-cu-pe-ra-do en 2026, de []$https : / / meep .
+[87]) [88] (./anexos_A.tex
+Cap\'{\i }tulo 13.
+[89] [90]) (./anexos_B.tex [91]
+Cap\'{\i }tulo 14.
+) [92] [93 <./figuras/Tesis_Resultado_agua_salada10px.jpeg> <./figuras/Tesis_Re
+sultado_agua_salada20px.jpeg>] [94 <./figuras/Tesis_Resultado_agua_salada40px.p
+ng> <./figuras/Tesis_Resultado_concreto10px.png>] [95 <./figuras/Tesi_Resultado
+s_tejido_mucular10px.png> <./figuras/Tesis_Resultado_tejido_muscular20px.png>]
+(compilacion/main.aux) )
+(see the transcript file for additional information) </home/javier/.texlive2023
+/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/javier/.texlive20
+23/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/javier/.texlive
+2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/javier/.texli
+ve2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </home/javier/.tex
+live2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/javier/.t
+exlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/javier/
+.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/javie
+r/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/jav
+ier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/j
+avier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss2488.600pk> </home
+/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk> </ho
+me/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </
+home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecxc1000.600pk> 
+</home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk
+> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600
+pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.6
+00pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440
+.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx17
+28.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1728.600pk> </home/javier/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+rm2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb>
+Output written on compilacion/main.pdf (107 pages, 3941839 bytes).
+Transcript written on compilacion/main.log.
+Latexmk: Getting log file 'compilacion/main.log'
+Latexmk: Examining 'compilacion/main.fls'
+Latexmk: Examining 'compilacion/main.log'
+Latexmk: Log file says output to 'compilacion/main.pdf'
+Latexmk: All targets (compilacion/main.pdf) are up-to-date
+

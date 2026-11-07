@@ -1,0 +1,5 @@
+medio,f_Hz,eps_historica,sigma_historica_S_m,eps_referencia,sigma_equivalente_referencia_S_m,alpha_historica_teorica_dB_mm,alpha_referencia_teorica_dB_mm,cambio_alpha_pct,fuente
+vacio,3000000000.0,1.0,0.0,1.0,0.0,0.0,0.0,,Definicion del vacio ideal
+concreto,3000000000.0,4.5,0.05,5.24,0.10910539375856032,0.03854237007740592,0.07783150136637486,101.93750724219414,"UIT-R P.2040-4, cuadro 3; 1-100 GHz"
+agua_salada,3000000000.0,78.0,4.0,70.31403283336333,6.37211202115965,0.7326131227493777,1.2025347322598356,64.14321487266275,"UIT-R P.527-6; 20 C, 35 g/kg; condiciones de referencia elegidas"
+tejido_muscular,3000000000.0,52.7,2.2,52.05799768655297,2.142139799739875,0.4920541240688878,0.48216061333443666,-2.010654976863091,ITIS V5.0; dispersion Gabriel; Muscle

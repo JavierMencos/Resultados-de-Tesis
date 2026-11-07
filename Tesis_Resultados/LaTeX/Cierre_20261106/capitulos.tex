@@ -20,9 +20,11 @@ Concreto & 4.5 & 0.05 \\ \hline
 Agua salada & 78.0 & 4.0 \\ \hline
 Tejido muscular & 52.7 & 2.2 \\ \hline
 \end{tabular}
-\caption{Propiedades electromagnéticas utilizadas para definir los medios simulados a la frecuencia de trabajo.}
+\caption{Parámetros nominales del programa histórico a 3 GHz. Se reprodujeron como entradas del modelo; no se identificaron como mediciones de muestras reales.}
 \label{tab:materiales_metodologia}
 \end{table}
+
+Se conservaron los valores del código para mantener la trazabilidad de las corridas. En particular, se utilizó $\varepsilon_r=78$ para el agua salada; el valor 70 de una tabla de trabajo posterior no correspondió a las simulaciones archivadas. No se verificó una fuente que respaldara exactamente los tres pares de parámetros materiales a 3 GHz. Por ello, se interpretaron como medios homogéneos idealizados y se efectuó un contraste documental independiente (Sección~\ref{sec:contraste-materiales}). Para ese contraste se emplearon el modelo de tejido muscular de IT'IS/Gabriel y las recomendaciones de la UIT para concreto y agua marina \citep{itis2025materiales,uit2040materiales,uit527materiales}.
 
 Cada material fue simulado por separado. El medio activo se seleccionó mediante la variable \texttt{nombre\_medio}. A partir de esta selección, el programa recuperó automáticamente los valores de $\varepsilon_r$ y $\sigma$.
 

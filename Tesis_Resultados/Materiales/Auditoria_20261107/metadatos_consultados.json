@@ -1,0 +1,694 @@
+[
+  {
+    "key": "hossain2026",
+    "query": "A Simulation-Based Computational Study on the Dielectric Response of Human Hand Tissues to Radiofrequency Radiation from Mobile Devices",
+    "url": "https://api.crossref.org/works?query.title=A+Simulation-Based+Computational+Study+on+the+Dielectric+Response+of+Human+Hand+Tissues+to+Radiofrequency+Radiation+from+Mobile+Devices&rows=3",
+    "retrieved": "2026-11-07T15:18:26.487967+00:00",
+    "candidates": [
+      {
+        "title": [
+          "A Simulation-Based Computational Study on the Dielectric Response of Human Hand Tissues to Radiofrequency Radiation from Mobile Devices"
+        ],
+        "author": [
+          {
+            "given": "Agaku Raymond",
+            "family": "Msughter",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Physics, Faculty of Science, Benue State University, Makurdi 102119, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jonathan Terseer",
+            "family": "Ikyumbur",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Physics, Faculty of Science, Benue State University, Makurdi 102119, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Matthew Inalegwu",
+            "family": "Amanyi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Physics, Federal University of Health Sciences, Otukpo 972261, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-9044-9715",
+            "authenticated-orcid": false,
+            "given": "Eghwubare",
+            "family": "Akpoguma",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Nuclear Technology Center, Nigeria Atomic Energy, Federal Capital Territory, Abuja 900231, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ember Favour",
+            "family": "Waghbo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Physics, Faculty of Science, Benue State University, Makurdi 102119, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Patience Uneojo",
+            "family": "Amaje",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Physics, Nasarawa State University, Keffi PMB1022, Nigeria"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.3390/ndt4010011",
+        "container-title": [
+          "NDT"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              13
+            ]
+          ]
+        },
+        "volume": "4",
+        "issue": "1",
+        "page": "11",
+        "article-number": null
+      },
+      {
+        "title": [
+          "Silhouette-based hand recognition on mobile devices"
+        ],
+        "author": [
+          {
+            "given": "Alberto",
+            "family": "de Santos Sierra",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Javier Guerra",
+            "family": "Casanova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Carmen Sanchez",
+            "family": "Avila",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vicente Jara",
+            "family": "Vera",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1109/ccst.2009.5335548",
+        "container-title": [
+          "43rd Annual 2009 International Carnahan Conference on Security Technology"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2009,
+              10
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "160-166",
+        "article-number": null
+      },
+      {
+        "title": [
+          "A Pilot Study Examining the Dielectric Response of Human Forearm Tissues"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7673-8090",
+            "authenticated-orcid": false,
+            "given": "Yang",
+            "family": "Yu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Institute of Biomedical Technologies, Auckland University of Technology, Auckland 1010, New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anubha Manju",
+            "family": "Kalra",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute of Biomedical Technologies, Auckland University of Technology, Auckland 1010, New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3388-1225",
+            "authenticated-orcid": false,
+            "given": "Gautam",
+            "family": "Anand",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute of Biomedical Technologies, Auckland University of Technology, Auckland 1010, New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0612-1036",
+            "authenticated-orcid": false,
+            "given": "Andrew",
+            "family": "Lowe",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute of Biomedical Technologies, Auckland University of Technology, Auckland 1010, New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.3390/bios13110961",
+        "container-title": [
+          "Biosensors"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              29
+            ]
+          ]
+        },
+        "volume": "13",
+        "issue": "11",
+        "page": "961",
+        "article-number": null
+      }
+    ]
+  },
+  {
+    "key": "martinez2022",
+    "query": "Energy balance and radiation efficiency of dipole antennas in saltwater environments",
+    "url": "https://api.crossref.org/works?query.title=Energy+balance+and+radiation+efficiency+of+dipole+antennas+in+saltwater+environments&rows=3",
+    "retrieved": "2026-11-07T15:18:26.937121+00:00",
+    "candidates": [
+      {
+        "title": [
+          "Radiation of pulsed dipole antennas"
+        ],
+        "author": [
+          {
+            "given": "Pierre",
+            "family": "Hillion",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1108/03321649710368052",
+        "container-title": [
+          "COMPEL - The international journal for computation and mathematics in electrical and electronic engineering"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1997,
+              12,
+              1
+            ]
+          ]
+        },
+        "volume": "16",
+        "issue": "4",
+        "page": "227-240",
+        "article-number": null
+      },
+      {
+        "title": [
+          "Radiation Efficiency Measurement Method for Passive UHF RFID Dipole Tag Antennas"
+        ],
+        "author": [
+          {
+            "given": "Eveliina",
+            "family": "Koski",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Toni",
+            "family": "Bjorninen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Leena",
+            "family": "Ukkonen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lauri",
+            "family": "Sydanheimo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1109/tap.2013.2261448",
+        "container-title": [
+          "IEEE Transactions on Antennas and Propagation"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              8
+            ]
+          ]
+        },
+        "volume": "61",
+        "issue": "8",
+        "page": "4026-4035",
+        "article-number": null
+      },
+      {
+        "title": [
+          "Quadrupole radiation from terahertz dipole antennas"
+        ],
+        "author": [
+          {
+            "given": "J. V.",
+            "family": "Rudd",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jon L.",
+            "family": "Johnson",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel M.",
+            "family": "Mittleman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1364/ol.25.001556",
+        "container-title": [
+          "Optics Letters"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2000,
+              10,
+              15
+            ]
+          ]
+        },
+        "volume": "25",
+        "issue": "20",
+        "page": "1556",
+        "article-number": null
+      }
+    ]
+  },
+  {
+    "key": "kim2025",
+    "query": "Complex permittivity measurements of standard building materials at sub-6 GHz bands for 5G indoor planning",
+    "url": "https://api.crossref.org/works?query.title=Complex+permittivity+measurements+of+standard+building+materials+at+sub-6+GHz+bands+for+5G+indoor+planning&rows=3",
+    "retrieved": "2026-11-07T15:18:27.387991+00:00",
+    "candidates": [
+      {
+        "title": [
+          "4-40 GHz Permittivity Measurements of Indoor Building Materials"
+        ],
+        "author": [
+          {
+            "given": "Jonathan R.",
+            "family": "Abel",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jon W.",
+            "family": "Wallace",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1109/apusncursinrsm.2019.8888911",
+        "container-title": [
+          "2019 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              7
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "105-106",
+        "article-number": null
+      },
+      {
+        "title": [
+          "Permittivity and Conductivity Measurements of Building Materials at 5.8 GHz and 41.5 GHz"
+        ],
+        "author": [
+          {
+            "given": "Iñigo",
+            "family": "Cuiñas",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Manuel García",
+            "family": "Sánchez",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1023/a:1013886209664",
+        "container-title": [
+          "Wireless Personal Communications"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2002,
+              1
+            ]
+          ]
+        },
+        "volume": "20",
+        "issue": "1",
+        "page": "93-100",
+        "article-number": null
+      },
+      {
+        "title": [
+          "Complex Permittivity Extraction of Building Materials from Transmission/Reflection Measurements at Sub-THz Band"
+        ],
+        "author": [
+          {
+            "given": "Yang",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China,400065"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yueyang",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China,400065"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xi",
+            "family": "Liao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China,400065"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ziming",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huawei Technologies Co., Ltd,Chengdu,China,611731"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Guangjian",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huawei Technologies Co., Ltd,Chengdu,China,611731"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jie",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China,400065"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1109/gcwkshps58843.2023.10464500",
+        "container-title": [
+          "2023 IEEE Globecom Workshops (GC Wkshps)"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              4
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "1934-1939",
+        "article-number": null
+      }
+    ]
+  }
+]

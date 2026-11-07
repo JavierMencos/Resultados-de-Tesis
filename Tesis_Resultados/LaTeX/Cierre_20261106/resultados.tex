@@ -1,6 +1,24 @@
 \renewcommand{\tablename}{Cuadro}
 Los resultados correspondieron a simulaciones a 3 GHz en cuatro medios. Se compararon primero las corridas a 5 px/mm y se utilizaron las resoluciones adicionales para examinar el efecto del refinamiento. Los perfiles radiales, las figuras y los informes de ajuste se consultaron en el material documentado en el \hyperref[an:fdtd-fuentes]{Anexo A}. El sufijo numérico de cada archivo indicó la resolución en píxeles por milímetro. Para las corridas que sólo contaron con una figura, se recuperaron los intervalos del informe asociado a la versión de la imagen.
 
+\section{Contraste de los parámetros materiales}\label{sec:contraste-materiales}
+Se evaluaron tres modelos publicados a 3 GHz y se compararon con las entradas históricas. Para músculo se utilizó la tabla principal de IT'IS V5.0 basada en las relaciones de dispersión de Gabriel \citep{itis2025materiales}. Para concreto se evaluó la rama de 1 a 100 GHz del Cuadro 3 de la recomendación UIT-R P.2040-4 \citep{uit2040materiales}. Para agua marina se eligieron 20~$^\circ$C y 35 g/kg como condiciones de referencia de UIT-R P.527-6; esas condiciones no se dedujeron de las corridas originales \citep{uit527materiales}.
+
+\begin{table}[htbp]\centering\small
+\caption{Contraste documental a 3 GHz. La conductividad de referencia fue equivalente e incluyó las pérdidas representadas por la parte imaginaria de la permitividad. Los valores fueron calculados, sin incertidumbre material estimada.}\label{tab:materiales-contraste}
+\begin{tabular}{lrrrr}\hline
+& \multicolumn{2}{c}{Programa histórico} & \multicolumn{2}{c}{Modelo de referencia} \\
+Medio & $\varepsilon_r$ & $\sigma$ (S/m) & $\varepsilon_r'$ & $\sigma_{\rm eq}$ (S/m) \\ \hline
+Vacío & 1 & 0 & 1 & 0 \\
+Concreto & 4.5 & 0.05 & 5.24 & 0.1091 \\
+Agua salada & 78 & 4 & 70.314 & 6.3721 \\
+Tejido muscular & 52.7 & 2.2 & 52.058 & 2.1421 \\ \hline
+\end{tabular}\end{table}
+
+En agua marina, el modelo produjo una conductividad iónica de 4.7913 S/m. Al incluir la relajación dieléctrica mediante $\sigma_{\rm eq}=2\pi f\varepsilon_0\varepsilon_r''$, se obtuvo el valor del Cuadro~\ref{tab:materiales-contraste}. Se mantuvo el factor redondeado 18 de la ecuación 16 de la recomendación. El código y las condiciones quedaron documentados en el Anexo~\ref{an:materiales-fuentes}.
+
+Al evaluar ambos conjuntos con las mismas constantes SI, la atenuación analítica cambió en $+101.94$\,\% para concreto, $+64.14$\,\% para agua y $-2.01$\,\% para músculo, respecto del conjunto histórico. Estas diferencias cuantificaron un cambio de modelo material; no representaron errores de discretización ni intervalos estadísticos. Se conservaron las referencias teóricas originales en los cuadros de las corridas. La sustitución aislada de 78 por 70, manteniendo 4 S/m y las constantes originales, elevó la predicción de agua de 0.73262 a 0.77131 dB/mm, un 5.28\,\%. Este cálculo no correspondió a una nueva simulación FDTD.
+
 \section{Incertidumbre de la atenuación y comparación entre medios}
 Se estimó la atenuación aparente, $\alpha_{\mathrm{app}}$, a partir del perfil radial del flujo compensado por $r^2$. El programa de extracción documentado en el \hyperref[an:fdtd-fuentes]{Anexo A} calculó la componente radial a partir de $E_z$ y $H_\phi$ en la línea $z=0$. Se ajustó en decibelios el perfil de $|S_r|$ compensado por $r^2$. Se seleccionaron los puntos por encima de $-80$ dB entre $1.5\lambda$ y $4\lambda$ en vacío y concreto, y entre $2\lambda$ y $4\lambda$ en agua salada y músculo. Se exigieron $R^2>0.85$ y un RMSE inferior a $0.5$ dB para considerar utilizable el ajuste. Se intentaron 1500 reajustes por bloques de residuos con semilla cero y se tomaron los percentiles 2.5 y 97.5 de las estimaciones convergentes. Se reportó el intervalo de confianza (IC) del 95\,\% obtenido por remuestreo de bloques de residuos de cada ajuste. Este intervalo caracterizó la variabilidad de la pendiente dentro de la ventana radial utilizada. La discrepancia con la teoría se calculó por separado mediante $100|\alpha_{\mathrm{app}}-\alpha_{\mathrm{teo}}|/|\alpha_{\mathrm{teo}}|$ para los medios con pérdidas. En vacío se empleó la diferencia absoluta porque la referencia fue cero.
 

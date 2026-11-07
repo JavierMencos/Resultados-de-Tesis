@@ -1,0 +1,39 @@
+{
+  "fecha_UTC": "20261107T153108Z",
+  "comando": [
+    "latexmk",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-outdir=compilacion",
+    "main.tex"
+  ],
+  "salida": 0,
+  "segundos": 17.077008115999888,
+  "fuentes_sha256": {
+    "alcance.tex": "c5477205191441ca6401ecce4c0aa80f3d170f849ce0bafb99184f75017ab05e",
+    "anexos_A.tex": "91859242151fc957e07c2f70a365cf448aaa5e13cb1555115aca5298535d015e",
+    "anexos_B.tex": "bf63c32dd55a224758bfb93098c41bb463b9bfe83174aeaf6c6540e369bdcfc2",
+    "antecedentes.tex": "4bcb6935bc04c4c586da2b49c8d97472aa2bbe5592d02f9826b32b05d5b7ee39",
+    "bibliografia_manual.tex": "2a8a1b65a52bc9c06a6d08bd4faebda085149a52fec587094520d3b1c2e1e66e",
+    "capitulos.tex": "4d80ad2632312264bb0ba59f8e3eb074b7946215cb13164dfcf9d3f65dfd4976",
+    "conclusiones.tex": "cb554ed2108ebce8ef0e14f76cd0710f3b22a4d39f33c86222197227f39412d3",
+    "datos_estudiante.tex": "fd1a5b97194acffda9ee8b781bbcc10beb174ed4135474751c149c110e7964d5",
+    "discusion.tex": "489f858bdb696012456a5360048433a06afddb541f122bce7e2b227cf20b31e9",
+    "glosario.tex": "ec158dbc3dd718cf9fc6b42af2b500df260c91c4145376e075a033e86d919e46",
+    "introduccion.tex": "b45f9546309f04ea6c7ead99ac180714839219016274a562e82ddddee3d7e830",
+    "justificacion.tex": "fc27d60b617ae54150eee0f4a6a469e2c815bc58e58812181e81cf11b1ce0e83",
+    "main.tex": "47dc1485874c3d860576c465d49b3d57ce8e0a90b81c7fae38843e3f6550224b",
+    "marco_teorico.tex": "2357ba9ce72e4935b29badc8f97c86c25794fbe19a3c7cacea447a9cc8b0e13a",
+    "objetivos.tex": "ff895242d789053ceaf1d53100fcfde1837dd94368113ff1a83e7b9df60c1305",
+    "opciones_adicionales.tex": "018ed5ac8dad17a7860c4c9263825f8ad3ed5973250348de72d1287c52fc31fd",
+    "paquetes_y_comandos_usuario.tex": "1b2b1425ad32c59afe1631b8dc306aa0220cde68b873bb85fe08092c79422c34",
+    "prefacio.tex": "60d081496e5c538cab9461874c0352d497ae8e548d4a448023687d556edf83e5",
+    "recomendaciones.tex": "9a4e4b72306966d656601f55bb110f44bddfeccb1e886d57e404307dfae28ba8",
+    "resultados.tex": "81eac5418426259082e1f1582c58cb1f2c14a63bf179476d587f348d8e57ee6b",
+    "resumen.tex": "8de4339c8ae76f75b18417c5a9cf71876cf8aec29757f47db48bd67218e5cb8e",
+    "simbolos.tex": "b7617b0b43653bd5e0ec10934dd909c27548e6b953b86967825448b338d36728",
+    "teoria.tex": "aa57359fa164a28c35b0defe2b88882e34140756c59dcbc63969631d65e7ceb3"
+  }
+}

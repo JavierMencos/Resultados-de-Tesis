@@ -21,3 +21,6 @@ La versión entregada permite revisar las conclusiones dentro del alcance declar
 
 ## Verificación adicional
 Se ejecutaron 16 pruebas 1D: ocho diagnósticas con activación abrupta y ocho con encendido suave. La serie final requirió 17.9 s y 111.2 MiB de RSS máxima acumulativa. Se incorporaron tabla, figura, método y discusión. No se reinterpretaron estas pruebas como convergencia de potencias del monopolo.
+
+## Actualización 2026-11-07: procedencia material
+Se completó el contraste con IT’IS V5.0, UIT-R P.2040-4 y P.527-6. No se verificaron los pares exactos históricos a 3 GHz. Se conservaron como medios idealizados y se documentó por separado un conjunto de referencia. PDF de 107 páginas, compilación local 20261107T153108Z, retorno 0. Sin nuevas simulaciones FDTD en esta actualización. La extensión a materiales trazables e interfaces continuó pendiente.
