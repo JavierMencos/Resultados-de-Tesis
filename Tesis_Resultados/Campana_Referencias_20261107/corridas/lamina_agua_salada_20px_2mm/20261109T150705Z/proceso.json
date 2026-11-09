@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "lamina",
+    "agua_salada",
+    "--res",
+    "20",
+    "--d",
+    "2",
+    "--pml",
+    "2",
+    "--id",
+    "lamina_agua_salada_20px_2mm",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/lamina_agua_salada_20px_2mm/20261109T150705Z"
+  ],
+  "retorno": 0,
+  "segundos": 39.476509919999444,
+  "rss_observada_max_MiB": 112.1328125,
+  "error": null
+}

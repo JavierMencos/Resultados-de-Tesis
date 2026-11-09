@@ -1,0 +1,24 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "lamina",
+    "concreto",
+    "--res",
+    "10",
+    "--d",
+    "30",
+    "--pml",
+    "2",
+    "--id",
+    "lamina_concreto_10px_30mm",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/lamina_concreto_10px_30mm/20261107T161747Z",
+    "--validacion"
+  ],
+  "retorno": 0,
+  "segundos": 11.465610491999541,
+  "rss_observada_max_MiB": 111.24609375,
+  "error": null
+}

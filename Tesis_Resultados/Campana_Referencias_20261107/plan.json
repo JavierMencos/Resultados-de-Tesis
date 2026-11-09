@@ -1,0 +1,560 @@
+[
+  {
+    "id": "plana_vacio_5px",
+    "tipo": "plana",
+    "medio": "vacio",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_vacio_10px",
+    "tipo": "plana",
+    "medio": "vacio",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_concreto_5px",
+    "tipo": "plana",
+    "medio": "concreto",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_concreto_10px",
+    "tipo": "plana",
+    "medio": "concreto",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_agua_salada_5px",
+    "tipo": "plana",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_agua_salada_10px",
+    "tipo": "plana",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_tejido_muscular_5px",
+    "tipo": "plana",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "plana_tejido_muscular_10px",
+    "tipo": "plana",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_5px_10mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 5,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_10px_10mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 10,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_20px_10mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 20,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_5px_20mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 5,
+    "d": 20,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_10px_20mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 10,
+    "d": 20,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_20px_20mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 20,
+    "d": 20,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_5px_40mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 5,
+    "d": 40,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_10px_40mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 10,
+    "d": 40,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_20px_40mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 20,
+    "d": 40,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_concreto_5px_30mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 5,
+    "d": 30,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_concreto_10px_30mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 10,
+    "d": 30,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_concreto_20px_30mm",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 20,
+    "d": 30,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_concreto_10px_20mm_pml3",
+    "tipo": "lamina",
+    "medio": "concreto",
+    "res": 10,
+    "d": 20,
+    "pml": 3,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_5px_2mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_10px_2mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_20px_2mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 20,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_5px_5mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_10px_5mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_20px_5mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 20,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_5px_10mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_10px_10mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_20px_10mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 20,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_agua_salada_5px_7mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_7mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_agua_salada_20px_7mm",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 20,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_5mm_pml3",
+    "tipo": "lamina",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 5,
+    "pml": 3,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_2mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_2mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_2mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 20,
+    "d": 2,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_5mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_5mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_5mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 20,
+    "d": 5,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_10mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_10mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_10mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 20,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_7mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_7mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_7mm",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 20,
+    "d": 7,
+    "pml": 2,
+    "validacion": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_5mm_pml3",
+    "tipo": "lamina",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 5,
+    "pml": 3,
+    "validacion": false
+  },
+  {
+    "id": "lamina_vacio_5px_10mm",
+    "tipo": "lamina",
+    "medio": "vacio",
+    "res": 5,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "lamina_vacio_10px_10mm",
+    "tipo": "lamina",
+    "medio": "vacio",
+    "res": 10,
+    "d": 10,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_agua_salada_5px",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_tejido_muscular_5px",
+    "tipo": "antena",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_concreto_5px",
+    "tipo": "antena",
+    "medio": "concreto",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_vacio_5px",
+    "tipo": "antena",
+    "medio": "vacio",
+    "res": 5,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_agua_salada_10px",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_agua_salada_20px",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 20,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_agua_salada_40px",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 40,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_tejido_muscular_10px",
+    "tipo": "antena",
+    "medio": "tejido_muscular",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_tejido_muscular_20px",
+    "tipo": "antena",
+    "medio": "tejido_muscular",
+    "res": 20,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_concreto_10px",
+    "tipo": "antena",
+    "medio": "concreto",
+    "res": 10,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
+    "id": "antena_agua_salada_5px_pml3",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 5,
+    "d": 0,
+    "pml": 3,
+    "validacion": false
+  },
+  {
+    "id": "antena_tejido_muscular_5px_pml3",
+    "tipo": "antena",
+    "medio": "tejido_muscular",
+    "res": 5,
+    "d": 0,
+    "pml": 3,
+    "validacion": false
+  },
+  {
+    "id": "antena_concreto_5px_pml3",
+    "tipo": "antena",
+    "medio": "concreto",
+    "res": 5,
+    "d": 0,
+    "pml": 3,
+    "validacion": false
+  }
+]

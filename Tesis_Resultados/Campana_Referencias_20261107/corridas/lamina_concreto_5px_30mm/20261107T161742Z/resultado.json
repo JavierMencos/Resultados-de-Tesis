@@ -1,0 +1,83 @@
+{
+  "espesor_mm": 30.0,
+  "R": 0.2939329409739059,
+  "T": 0.361726496633414,
+  "A_integral": 0.3438876199956676,
+  "residuo_balance": 0.0004529423970125457,
+  "teoria_RTA": [
+    0.2940126804155258,
+    0.3619832896130737,
+    0.34400402997140045
+  ],
+  "error_RTA_absoluto": [
+    7.973944161993041e-05,
+    0.0002567929796596924,
+    0.00011640997573286738
+  ],
+  "perdida_insercion_dB": 4.416196778012463,
+  "perdida_absorcion_bulk_dB": 2.3349450409912964,
+  "incidente": 0.12499538698610066,
+  "monitores_z_mm": [
+    -64.96540966666666,
+    64.96540966666666
+  ],
+  "calibracion": [
+    0.12499538698610066,
+    0.12499537568575149
+  ],
+  "campos_monitores_objeto": [
+    [
+      0.042228302428704734,
+      -0.2327870444849225
+    ],
+    [
+      -0.2807003005650788,
+      0.10787316731209107
+    ],
+    [
+      -0.049170648530971764,
+      -0.7671674492540896
+    ],
+    [
+      -0.28069721498555755,
+      0.10787199945420725
+    ]
+  ],
+  "cambio_temporal": [
+    1.4527146441211972e-07,
+    1.5071205592348386e-07
+  ],
+  "cambio_temporal_referencia": [
+    2.0502864128813395e-07,
+    1.6059213593138544e-07
+  ],
+  "estacionario": true,
+  "validacion_independiente": true,
+  "id": "lamina_concreto_5px_30mm",
+  "tipo": "lamina",
+  "medio": "concreto",
+  "resolucion_px_mm": 5,
+  "epsr": 5.24,
+  "sigma_eq_S_m": 0.10910539375856032,
+  "sigma_D_M": 0.007844142979658353,
+  "frecuencia_Hz": 3000000000.0,
+  "epsilon0": 8.8541878128e-12,
+  "mu0": 1.2566370621200546e-06,
+  "c": 299792458.0,
+  "alpha_teoria_dB_mm": 0.07783150136637655,
+  "lambda_mm": 43.570621693880746,
+  "pml_factor": 2.0,
+  "fuente": "CW suave, width=2T, slowness=6, compleja",
+  "Courant": 0.5,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "inicio_UTC": "2026-11-07T16:17:43.636988+00:00",
+  "script_sha256": "4946612ab46e57049176250179d6360219a149acb63df19de33ef76f8559dfff",
+  "materiales_sha256": "43fb85b7e024c5f06faa6d7c4d6b40612ea983af67506652dae2b5b83adb1ecc",
+  "segundos": 3.350695422001081,
+  "rss_max_KiB": 113724,
+  "fin_UTC": "2026-11-07T16:17:46.486054+00:00",
+  "completo": true
+}

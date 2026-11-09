@@ -1,0 +1,4 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+{"id": "plana_agua_salada_5px", "segundos": 0.9032560830000875, "estacionario": true}
+
+Elapsed run time = 0.9052 s

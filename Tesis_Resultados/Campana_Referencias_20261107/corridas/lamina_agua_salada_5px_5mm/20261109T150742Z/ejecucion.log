@@ -1,0 +1,5 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+{"id": "lamina_agua_salada_5px_5mm", "segundos": 3.187088708000374, "estacionario": true}
+
+Elapsed run time = 3.1892 s

@@ -1,0 +1,5 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+{"id": "lamina_concreto_5px_20mm", "segundos": 3.186428621998857, "estacionario": true}
+
+Elapsed run time = 3.1880 s

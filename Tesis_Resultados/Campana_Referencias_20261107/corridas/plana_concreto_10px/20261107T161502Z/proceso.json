@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "plana",
+    "concreto",
+    "--res",
+    "10",
+    "--d",
+    "0",
+    "--pml",
+    "2",
+    "--id",
+    "plana_concreto_10px",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/plana_concreto_10px/20261107T161502Z"
+  ],
+  "retorno": 0,
+  "segundos": 5.093455254998844,
+  "rss_observada_max_MiB": 110.921875,
+  "error": null
+}
