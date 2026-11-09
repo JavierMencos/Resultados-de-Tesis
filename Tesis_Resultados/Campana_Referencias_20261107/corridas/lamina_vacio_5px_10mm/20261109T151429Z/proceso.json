@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "lamina",
+    "vacio",
+    "--res",
+    "5",
+    "--d",
+    "10",
+    "--pml",
+    "2",
+    "--id",
+    "lamina_vacio_5px_10mm",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/lamina_vacio_5px_10mm/20261109T151429Z"
+  ],
+  "retorno": 0,
+  "segundos": 6.062043560999882,
+  "rss_observada_max_MiB": 110.48828125,
+  "error": null
+}

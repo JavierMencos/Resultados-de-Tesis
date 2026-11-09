@@ -1,0 +1,83 @@
+{
+  "espesor_mm": 7.0,
+  "R": 0.3159358288810931,
+  "T": 0.15064081074150784,
+  "A_integral": 0.5331598153644441,
+  "residuo_balance": 0.0002635450129548911,
+  "teoria_RTA": [
+    0.3157731692324526,
+    0.1507660179696305,
+    0.5334608127979169
+  ],
+  "error_RTA_absoluto": [
+    0.0001626596486405396,
+    0.00012520722812264795,
+    0.00030099743347278274
+  ],
+  "perdida_insercion_dB": 8.220573556333486,
+  "perdida_absorcion_bulk_dB": 3.37512429334113,
+  "incidente": 0.12499995053051802,
+  "monitores_z_mm": [
+    -53.465409666666666,
+    53.465409666666666
+  ],
+  "calibracion": [
+    0.12499995053051802,
+    0.12499992375105072
+  ],
+  "campos_monitores_objeto": [
+    [
+      -0.21678701982133208,
+      0.030770197323043806
+    ],
+    [
+      0.19294806565962302,
+      -0.020765463733973345
+    ],
+    [
+      -0.7735836653021568,
+      0.10766982293912576
+    ],
+    [
+      0.19294820515769084,
+      -0.02076548007705671
+    ]
+  ],
+  "cambio_temporal": [
+    1.6729076992170371e-07,
+    2.1680762772472158e-08
+  ],
+  "cambio_temporal_referencia": [
+    3.830229508424826e-07,
+    4.6106465539698674e-07
+  ],
+  "estacionario": true,
+  "validacion_independiente": true,
+  "id": "lamina_tejido_muscular_10px_7mm",
+  "tipo": "lamina",
+  "medio": "tejido_muscular",
+  "resolucion_px_mm": 10,
+  "epsr": 52.05799768655297,
+  "sigma_eq_S_m": 2.142139799739875,
+  "sigma_D_M": 0.015502113691221476,
+  "frecuencia_Hz": 3000000000.0,
+  "epsilon0": 8.8541878128e-12,
+  "mu0": 1.2566370621200546e-06,
+  "c": 299792458.0,
+  "alpha_teoria_dB_mm": 0.48216061333444715,
+  "lambda_mm": 13.747650742374317,
+  "pml_factor": 2.0,
+  "fuente": "CW suave, width=2T, slowness=6, compleja",
+  "Courant": 0.5,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "inicio_UTC": "2026-11-09T15:13:26.499286+00:00",
+  "script_sha256": "4946612ab46e57049176250179d6360219a149acb63df19de33ef76f8559dfff",
+  "materiales_sha256": "43fb85b7e024c5f06faa6d7c4d6b40612ea983af67506652dae2b5b83adb1ecc",
+  "segundos": 10.482871297999736,
+  "rss_max_KiB": 113716,
+  "fin_UTC": "2026-11-09T15:13:36.979336+00:00",
+  "completo": true
+}

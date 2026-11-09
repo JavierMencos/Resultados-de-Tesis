@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "lamina",
+    "tejido_muscular",
+    "--res",
+    "5",
+    "--d",
+    "5",
+    "--pml",
+    "2",
+    "--id",
+    "lamina_tejido_muscular_5px_5mm",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/lamina_tejido_muscular_5px_5mm/20261109T151134Z"
+  ],
+  "retorno": 0,
+  "segundos": 5.035165739000149,
+  "rss_observada_max_MiB": 110.41015625,
+  "error": null
+}

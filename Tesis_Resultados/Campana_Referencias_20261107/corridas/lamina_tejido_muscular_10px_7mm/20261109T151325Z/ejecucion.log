@@ -1,0 +1,5 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+{"id": "lamina_tejido_muscular_10px_7mm", "segundos": 10.482871297999736, "estacionario": true}
+
+Elapsed run time = 10.4847 s

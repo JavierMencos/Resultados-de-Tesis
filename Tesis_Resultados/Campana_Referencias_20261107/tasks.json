@@ -1,0 +1,171 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Balance agua_salada 10 px_mm",
+      "type": "process",
+      "command": "/home/javier/miniforge3/envs/tesis/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "agua_salada",
+        "--resolucion",
+        "10"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance tejido_muscular 5 px_mm",
+      "type": "process",
+      "command": "/home/javier/miniforge3/envs/tesis/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "tejido_muscular",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance concreto 5 px_mm",
+      "type": "process",
+      "command": "/home/javier/miniforge3/envs/tesis/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "concreto",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Balance vacio 5 px_mm",
+      "type": "process",
+      "command": "/home/javier/miniforge3/envs/tesis/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/balance.py",
+        "vacio",
+        "--resolucion",
+        "5"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: ejecutar balances pendientes",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Balance agua_salada 10 px_mm",
+        "Balance tejido_muscular 5 px_mm",
+        "Balance concreto 5 px_mm",
+        "Balance vacio 5 px_mm"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: compilar documento LaTeX",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": [
+        "${workspaceFolder}/compilar_tesis.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: verificar onda plana 1D (un hilo)",
+      "type": "process",
+      "command": "/usr/bin/nice",
+      "args": [
+        "-n",
+        "10",
+        "/home/javier/miniforge3/envs/tesis/bin/python",
+        "-u",
+        "${workspaceFolder}/verificar_onda_plana.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: auditar materiales",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": [
+        "${workspaceFolder}/materiales_20261107/parametros_referencia.py"
+      ],
+      "options": {
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Tesis: campana con fuentes verificadas",
+      "type": "process",
+      "command": "/home/javier/miniforge3/envs/tesis/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/campana_referencias_20261107/ejecutar_campana.py",
+        "--solo",
+        "completa"
+      ],
+      "options": {
+        "env": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

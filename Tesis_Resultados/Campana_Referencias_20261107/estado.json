@@ -1,5 +1,5 @@
 {
-  "inicio_UTC": "2026-11-07T16:14:49.860648+00:00",
+  "inicio_UTC": "2026-11-09T15:19:38.273553+00:00",
   "estado": "en_curso",
   "completadas": [
     "plana_vacio_5px",
@@ -37,12 +37,25 @@
     "lamina_agua_salada_20px_7mm",
     "lamina_agua_salada_10px_5mm_pml3",
     "lamina_tejido_muscular_5px_2mm",
-    "lamina_tejido_muscular_10px_2mm"
+    "lamina_tejido_muscular_10px_2mm",
+    "lamina_tejido_muscular_20px_2mm",
+    "lamina_tejido_muscular_5px_5mm",
+    "lamina_tejido_muscular_10px_5mm",
+    "lamina_tejido_muscular_20px_5mm",
+    "lamina_tejido_muscular_5px_10mm",
+    "lamina_tejido_muscular_10px_10mm",
+    "lamina_tejido_muscular_20px_10mm",
+    "lamina_tejido_muscular_5px_7mm",
+    "lamina_tejido_muscular_10px_7mm",
+    "lamina_tejido_muscular_20px_7mm",
+    "lamina_tejido_muscular_10px_5mm_pml3",
+    "lamina_vacio_5px_10mm",
+    "lamina_vacio_10px_10mm"
   ],
   "total": 62,
-  "actual": "lamina_tejido_muscular_20px_2mm",
-  "pid": 14061,
-  "segundos_actual": 2.01632526100002,
-  "rss_MiB": 111.046875,
-  "actualizacion_UTC": "2026-11-09T15:10:58.000860+00:00"
+  "actual": "antena_agua_salada_5px",
+  "pid": 15326,
+  "segundos_actual": 30.00493619200097,
+  "rss_MiB": 167.67578125,
+  "actualizacion_UTC": "2026-11-09T15:20:06.914041+00:00"
 }
