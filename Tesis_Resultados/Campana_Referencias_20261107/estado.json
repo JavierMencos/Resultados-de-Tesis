@@ -50,12 +50,13 @@
     "lamina_tejido_muscular_20px_7mm",
     "lamina_tejido_muscular_10px_5mm_pml3",
     "lamina_vacio_5px_10mm",
-    "lamina_vacio_10px_10mm"
+    "lamina_vacio_10px_10mm",
+    "antena_agua_salada_5px"
   ],
   "total": 62,
-  "actual": "antena_agua_salada_5px",
-  "pid": 15326,
-  "segundos_actual": 30.00493619200097,
-  "rss_MiB": 167.67578125,
-  "actualizacion_UTC": "2026-11-09T15:20:06.914041+00:00"
+  "actual": "antena_tejido_muscular_5px",
+  "pid": 16048,
+  "segundos_actual": 120.11190686900045,
+  "rss_MiB": 191.62109375,
+  "actualizacion_UTC": "2026-11-09T15:27:22.154792+00:00"
 }

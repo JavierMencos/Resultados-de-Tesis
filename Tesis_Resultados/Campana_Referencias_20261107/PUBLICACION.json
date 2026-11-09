@@ -1,5 +1,6 @@
 {
-  "fecha_UTC": "2026-11-09T15:20:20.724233+00:00",
-  "casos_con_registro": 49,
+  "fecha_UTC": "2026-11-09T15:27:53.162399+00:00",
+  "casos_con_registro": 50,
+  "intentos_cerrados": 50,
   "nota": "Instantanea de casos completados; consultar estado.json. No implica campa\u00f1a terminada."
 }

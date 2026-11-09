@@ -58,7 +58,10 @@ def main():
         previous=[]
         for f in directory.glob('*/resultado.json'):
             r=json.loads(f.read_text())
-            if r.get('completo') and r.get('script_sha256')==expected and r.get('materiales_sha256')==materials:previous.append(f)
+            accepted=r.get('completo') and r.get('estacionario')
+            if job['tipo']=='plana' and r.get('alpha_teoria_dB_mm',0)>0:
+                accepted=accepted and abs(r.get('discrepancia_teoria_dB_mm',float('inf')))/r['alpha_teoria_dB_mm']<=.01
+            if accepted and r.get('script_sha256')==expected and r.get('materiales_sha256')==materials:previous.append(f)
         if previous:state['completadas'].append(job['id']);continue
         if memory()<1.2*1024**3:state.update(estado='pausa_memoria',pendiente=job['id']);break
         attempt=directory/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ');attempt.mkdir()
