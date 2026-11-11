@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "antena",
+    "tejido_muscular",
+    "--res",
+    "10",
+    "--d",
+    "0",
+    "--pml",
+    "2",
+    "--id",
+    "antena_tejido_muscular_10px",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/antena_tejido_muscular_10px/20261110T120359Z"
+  ],
+  "retorno": 0,
+  "segundos": 3331.2971290170026,
+  "rss_observada_max_MiB": 526.859375,
+  "error": null
+}

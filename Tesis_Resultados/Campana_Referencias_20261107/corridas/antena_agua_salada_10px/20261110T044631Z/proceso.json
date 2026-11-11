@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "antena",
+    "agua_salada",
+    "--res",
+    "10",
+    "--d",
+    "0",
+    "--pml",
+    "2",
+    "--id",
+    "antena_agua_salada_10px",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/antena_agua_salada_10px/20261110T044631Z"
+  ],
+  "retorno": 0,
+  "segundos": 2400.9886307060005,
+  "rss_observada_max_MiB": 403.33203125,
+  "error": null
+}

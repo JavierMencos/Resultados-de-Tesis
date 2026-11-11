@@ -33,8 +33,12 @@ def plan():
     for res in (5,10):add('lamina','vacio',res,10)
     # Agua/músculo primero: control de los casos cortos antes de las mallas costosas.
     for m in ('agua_salada','tejido_muscular','concreto','vacio'):add('antena',m,5)
-    for res in (10,20,40):add('antena','agua_salada',res)
-    for res in (10,20):add('antena','tejido_muscular',res)
+    # Cuatro mallas de agua (5 px/mm ya se añadió arriba). 15 y 20 px/mm
+    # permiten evaluar convergencia sin exceder la memoria disponible, como
+    # ocurriría con la corrida de 40 px/mm.
+    for res in (10,15,20):add('antena','agua_salada',res)
+    # Dos mallas son suficientes para la sensibilidad solicitada en músculo.
+    add('antena','tejido_muscular',10)
     add('antena','concreto',10)
     for m in ('agua_salada','tejido_muscular','concreto'):add('antena',m,5,pml=3)
     return jobs

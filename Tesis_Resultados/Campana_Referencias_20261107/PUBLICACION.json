@@ -1,6 +1,8 @@
 {
-  "fecha_UTC": "2026-11-09T15:27:53.162399+00:00",
-  "casos_con_registro": 50,
-  "intentos_cerrados": 50,
-  "nota": "Instantanea de casos completados; consultar estado.json. No implica campa\u00f1a terminada."
+  "fecha_fin_UTC": "2026-11-10T23:09:58.949318+00:00",
+  "casos": 61,
+  "intentos": 64,
+  "intentos_sin_resultado": 3,
+  "script_sha256": "4946612ab46e57049176250179d6360219a149acb63df19de33ef76f8559dfff",
+  "materiales_sha256": "43fb85b7e024c5f06faa6d7c4d6b40612ea983af67506652dae2b5b83adb1ecc"
 }

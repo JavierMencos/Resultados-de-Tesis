@@ -1,0 +1,4 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+{"id": "antena_concreto_5px", "segundos": 4414.903305860998, "estacionario": true}
+
+Elapsed run time = 4327.1032 s

@@ -1,0 +1,131 @@
+{
+  "ajuste": {
+    "alpha_dB_mm": 0.07744324166878029,
+    "IC95_ajuste_bloques": [
+      0.07740272025850357,
+      0.07748069047139165
+    ],
+    "RMSE_dB": 0.005165044881984223,
+    "R2": 0.9999955055674143,
+    "Durbin_Watson": 0.0003141790251981245,
+    "n": 545,
+    "bloque": 8,
+    "replicas": 1500,
+    "semilla": 0,
+    "modelo": "M0 lineal sin restriccion de signo",
+    "advertencia": "IC condicional al perfil; no incluye incertidumbre material ni discretizacion"
+  },
+  "ventanas": [
+    {
+      "inferior_lambda": 1.5,
+      "alpha_dB_mm": 0.07744324166878017
+    },
+    {
+      "inferior_lambda": 2,
+      "alpha_dB_mm": 0.07758048405481471
+    },
+    {
+      "inferior_lambda": 2.5,
+      "alpha_dB_mm": 0.07765582290806149
+    },
+    {
+      "inferior_lambda": 3,
+      "alpha_dB_mm": 0.07770203132604367
+    }
+  ],
+  "balance": [
+    {
+      "t_M": 3494.7000000000003,
+      "caras_salientes": [
+        -0.00016841114347984152,
+        7.812295518353267e-05,
+        -4.573051854146366e-05,
+        3.05917912769197e-05
+      ],
+      "entrada": 0.00021414166202130518,
+      "salida": 0.00010871474646045237,
+      "joule": 0.0001054186855929438,
+      "residuo_rel": 3.8432352823458384e-05,
+      "fraccion_disipada": 0.49228480155559634
+    },
+    {
+      "t_M": 3594.7000000000003,
+      "caras_salientes": [
+        -0.0001684111435462208,
+        7.812295526418983e-05,
+        -4.573051856418564e-05,
+        3.059179130383616e-05
+      ],
+      "entrada": 0.00021414166211040643,
+      "salida": 0.000108714746568026,
+      "joule": 0.00010541868565908126,
+      "residuo_rel": 3.8431957695952434e-05,
+      "fraccion_disipada": 0.4922848016596128
+    },
+    {
+      "t_M": 3694.7000000000003,
+      "caras_salientes": [
+        -0.00016841114357062561,
+        7.812295529383902e-05,
+        -4.573051857253873e-05,
+        3.0591791313730856e-05
+      ],
+      "entrada": 0.00021414166214316435,
+      "salida": 0.00010871474660756988,
+      "joule": 0.00010541868568339331,
+      "residuo_rel": 3.843181246841043e-05,
+      "fraccion_disipada": 0.49228480169783906
+    }
+  ],
+  "dominio_anillo_mm": [
+    43.570621693880746,
+    87.14124338776149,
+    10.892655423470186,
+    54.463277117350934
+  ],
+  "cambio_temporal": [
+    4.78930069420174e-10,
+    1.760524172905826e-10
+  ],
+  "cambio_temporal_perfil": 5.517608168378789e-11,
+  "estacionario": true,
+  "geometria": {
+    "rmax_mm": 217.85310846940374,
+    "zmax_mm": 457.49152778574785,
+    "brazo_mm": 10.692655423470187,
+    "radio_mm": 0.2,
+    "gap_mm": 0.4
+  },
+  "ventana_ajuste_lambda": [
+    1.5,
+    4
+  ],
+  "muestra_negativa_en_ventana": 0,
+  "id": "antena_concreto_5px_pml3",
+  "tipo": "antena",
+  "medio": "concreto",
+  "resolucion_px_mm": 5,
+  "epsr": 5.24,
+  "sigma_eq_S_m": 0.10910539375856032,
+  "sigma_D_M": 0.007844142979658353,
+  "frecuencia_Hz": 3000000000.0,
+  "epsilon0": 8.8541878128e-12,
+  "mu0": 1.2566370621200546e-06,
+  "c": 299792458.0,
+  "alpha_teoria_dB_mm": 0.07783150136637655,
+  "lambda_mm": 43.570621693880746,
+  "pml_factor": 3.0,
+  "fuente": "CW suave, width=2T, slowness=6, compleja",
+  "Courant": 0.5,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "inicio_UTC": "2026-11-10T21:36:33.672745+00:00",
+  "script_sha256": "4946612ab46e57049176250179d6360219a149acb63df19de33ef76f8559dfff",
+  "materiales_sha256": "43fb85b7e024c5f06faa6d7c4d6b40612ea983af67506652dae2b5b83adb1ecc",
+  "segundos": 5863.103720030995,
+  "rss_max_KiB": 1690088,
+  "fin_UTC": "2026-11-10T23:09:42.497624+00:00",
+  "completo": true
+}

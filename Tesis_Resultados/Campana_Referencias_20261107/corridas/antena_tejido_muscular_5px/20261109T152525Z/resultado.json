@@ -1,0 +1,131 @@
+{
+  "ajuste": {
+    "alpha_dB_mm": 0.45717582194231954,
+    "IC95_ajuste_bloques": [
+      0.45668414571240595,
+      0.457628126566264
+    ],
+    "RMSE_dB": 0.01043060287406133,
+    "R2": 0.9999917748102712,
+    "Durbin_Watson": 0.003315028424271881,
+    "n": 138,
+    "bloque": 5,
+    "replicas": 1500,
+    "semilla": 0,
+    "modelo": "M0 lineal sin restriccion de signo",
+    "advertencia": "IC condicional al perfil; no incluye incertidumbre material ni discretizacion"
+  },
+  "ventanas": [
+    {
+      "inferior_lambda": 1.5,
+      "alpha_dB_mm": 0.45548361399966264
+    },
+    {
+      "inferior_lambda": 2,
+      "alpha_dB_mm": 0.4571758219423193
+    },
+    {
+      "inferior_lambda": 2.5,
+      "alpha_dB_mm": 0.4584552520689212
+    },
+    {
+      "inferior_lambda": 3,
+      "alpha_dB_mm": 0.4595330740406017
+    }
+  ],
+  "balance": [
+    {
+      "t_M": 3486.5,
+      "caras_salientes": [
+        -2.991333327047378e-05,
+        6.929190003897287e-06,
+        -7.392317521542932e-06,
+        2.7505535928149607e-06
+      ],
+      "entrada": 3.730565079201671e-05,
+      "salida": 9.679743596712247e-06,
+      "joule": 2.76000321307168e-05,
+      "residuo_rel": 0.0006935963865613502,
+      "fraccion_disipada": 0.7398351602171518
+    },
+    {
+      "t_M": 3586.5,
+      "caras_salientes": [
+        -2.991333328633696e-05,
+        6.9291900137048065e-06,
+        -7.3923175266378046e-06,
+        2.750553595996633e-06
+      ],
+      "entrada": 3.730565081297476e-05,
+      "salida": 9.67974360970144e-06,
+      "joule": 2.7600032153187675e-05,
+      "residuo_rel": 0.0006935959974366482,
+      "fraccion_disipada": 0.7398351604038627
+    },
+    {
+      "t_M": 3686.5,
+      "caras_salientes": [
+        -2.9913333292167895e-05,
+        6.929190017309583e-06,
+        -7.392317528510809e-06,
+        2.7505535971661088e-06
+      ],
+      "entrada": 3.7305650820678704e-05,
+      "salida": 9.679743614475692e-06,
+      "joule": 2.7600032161447798e-05,
+      "residuo_rel": 0.0006935958544079316,
+      "fraccion_disipada": 0.7398351604724978
+    }
+  ],
+  "dominio_anillo_mm": [
+    13.747650742374317,
+    27.495301484748634,
+    3.436912685593579,
+    17.184563427967895
+  ],
+  "cambio_temporal": [
+    7.511993353651835e-10,
+    2.761351575573707e-10
+  ],
+  "cambio_temporal_perfil": 7.649630252230579e-11,
+  "estacionario": true,
+  "geometria": {
+    "rmax_mm": 68.73825371187158,
+    "zmax_mm": 116.85503131018169,
+    "brazo_mm": 3.236912685593579,
+    "radio_mm": 0.2,
+    "gap_mm": 0.4
+  },
+  "ventana_ajuste_lambda": [
+    2.0,
+    4
+  ],
+  "muestra_negativa_en_ventana": 0,
+  "id": "antena_tejido_muscular_5px",
+  "tipo": "antena",
+  "medio": "tejido_muscular",
+  "resolucion_px_mm": 5,
+  "epsr": 52.05799768655297,
+  "sigma_eq_S_m": 2.142139799739875,
+  "sigma_D_M": 0.015502113691221476,
+  "frecuencia_Hz": 3000000000.0,
+  "epsilon0": 8.8541878128e-12,
+  "mu0": 1.2566370621200546e-06,
+  "c": 299792458.0,
+  "alpha_teoria_dB_mm": 0.48216061333444715,
+  "lambda_mm": 13.747650742374317,
+  "pml_factor": 2.0,
+  "fuente": "CW suave, width=2T, slowness=6, compleja",
+  "Courant": 0.5,
+  "meep": "1.33.0-beta",
+  "python": "3.13.13",
+  "sistema": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "hilos": 1,
+  "inicio_UTC": "2026-11-09T15:25:26.518907+00:00",
+  "script_sha256": "4946612ab46e57049176250179d6360219a149acb63df19de33ef76f8559dfff",
+  "materiales_sha256": "43fb85b7e024c5f06faa6d7c4d6b40612ea983af67506652dae2b5b83adb1ecc",
+  "segundos": 460.9273581469988,
+  "rss_max_KiB": 221692,
+  "fin_UTC": "2026-11-09T15:32:54.483920+00:00",
+  "completo": true
+}

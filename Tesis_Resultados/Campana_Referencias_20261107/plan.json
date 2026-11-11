@@ -486,6 +486,15 @@
     "validacion": false
   },
   {
+    "id": "antena_agua_salada_15px",
+    "tipo": "antena",
+    "medio": "agua_salada",
+    "res": 15,
+    "d": 0,
+    "pml": 2,
+    "validacion": false
+  },
+  {
     "id": "antena_agua_salada_20px",
     "tipo": "antena",
     "medio": "agua_salada",
@@ -495,28 +504,10 @@
     "validacion": false
   },
   {
-    "id": "antena_agua_salada_40px",
-    "tipo": "antena",
-    "medio": "agua_salada",
-    "res": 40,
-    "d": 0,
-    "pml": 2,
-    "validacion": false
-  },
-  {
     "id": "antena_tejido_muscular_10px",
     "tipo": "antena",
     "medio": "tejido_muscular",
     "res": 10,
-    "d": 0,
-    "pml": 2,
-    "validacion": false
-  },
-  {
-    "id": "antena_tejido_muscular_20px",
-    "tipo": "antena",
-    "medio": "tejido_muscular",
-    "res": 20,
     "d": 0,
     "pml": 2,
     "validacion": false

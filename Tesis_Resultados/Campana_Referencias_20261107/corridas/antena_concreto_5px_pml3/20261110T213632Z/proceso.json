@@ -1,0 +1,23 @@
+{
+  "comando": [
+    "/home/javier/miniforge3/envs/tesis/bin/python",
+    "-u",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/simular.py",
+    "antena",
+    "concreto",
+    "--res",
+    "5",
+    "--d",
+    "0",
+    "--pml",
+    "3",
+    "--id",
+    "antena_concreto_5px_pml3",
+    "--destino",
+    "/home/javier/tesis_fdtd_reproducible/campana_referencias_20261107/corridas/antena_concreto_5px_pml3/20261110T213632Z"
+  ],
+  "retorno": 0,
+  "segundos": 5881.925343227005,
+  "rss_observada_max_MiB": 1649.2265625,
+  "error": null
+}

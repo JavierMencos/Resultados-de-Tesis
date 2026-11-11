@@ -1,5 +1,7 @@
 # Campaña de referencia a 3 GHz
 
+Cierre del 10 de noviembre de 2026: 61/61 casos. El [registro de verificación](analisis/README.md) describe el posproceso, las tablas reproducibles y los límites de interpretación. El [índice](indice_corridas.csv) enlaza cada resultado con su intento de ejecución.
+
 Campaña nueva, separada de los resultados históricos. Los valores son evaluaciones de modelos publicados; no mediciones propias de materiales reales.
 
 ## Parámetros y fuentes
@@ -15,7 +17,7 @@ Campaña nueva, separada de los resultados históricos. Los valores son evaluaci
 
 `ejecutar_campana.py` genera `plan.json` con todos los casos. Onda plana: cuatro medios a 5 y 10 px/mm. Lámina vacío–material–vacío: tres materiales, cuatro espesores y mallas 5/10/20 px/mm; 30 mm de concreto y 7 mm de agua/músculo se reservaron como casos de comprobación independiente, sin calibrar parámetros con ellos. Se incluyeron vacío y controles de espesor PML.
 
-Monopolo: comparación común 5 px/mm, agua 5/10/20/40, músculo 5/10/20, concreto 5/10. Los controles PML usan 3λ frente a 2λ. Cada corrida proporciona simultáneamente perfil y balance anular; así no se duplica una simulación para extraer otra magnitud. Se conservaron la geometría y el escalado con λ del programa previo. El arranque suave y los campos magnéticos sincronizados reducen contaminación transitoria y desfase temporal. La muestra radial se evaluó en coordenadas físicas explícitas.
+Monopolo: comparación común a 5 px/mm, agua a 5/10/15/20 px/mm, músculo a 5/10 px/mm y concreto a 5/10 px/mm. La malla de 40 px/mm se descartó antes de ejecutarla porque su proyección de memoria superaba el límite de 5 GiB. Los controles PML usan 3λ frente a 2λ. Cada corrida proporciona simultáneamente perfil y balance anular; así no se duplica una simulación para extraer otra magnitud. Se conservaron la geometría y el escalado con λ del programa previo. El arranque suave y los campos magnéticos sincronizados reducen contaminación transitoria y desfase temporal. La muestra radial se evaluó en coordenadas físicas explícitas.
 
 La fuente no se calibró en SI. Se guardaron campos complejos, flujo con signo, potencias normalizadas y tiempos. En lámina se calculó la reflexión sustrayendo los campos de una corrida de vacío idéntica, la transmisión con flujo saliente y la absorción con una integral independiente de Joule. Se contrastaron R, T y A con la solución analítica de una lámina plana. La absorción no se definió como 1−R−T.
 

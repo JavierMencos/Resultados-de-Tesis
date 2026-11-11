@@ -1,352 +1,514 @@
 [
   {
-    "id": "plana_tejido_muscular_10px",
-    "intento": "20261107T161514Z",
+    "id": "plana_vacio_5px",
+    "intento": "20261107T161449Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_10px_20mm_pml3",
-    "intento": "20261107T161834Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_5px_10mm",
-    "intento": "20261109T151227Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_20px_2mm",
-    "intento": "20261109T150705Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_10px_5mm",
-    "intento": "20261109T151138Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "antena_agua_salada_5px",
-    "intento": "20261109T151938Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_5px_20mm",
-    "intento": "20261107T161605Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "plana_tejido_muscular_5px",
-    "intento": "20261107T161512Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_5px_5mm",
-    "intento": "20261109T151134Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_5px_30mm",
-    "intento": "20261107T161742Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_20px_5mm",
-    "intento": "20261109T151150Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
     "id": "plana_vacio_10px",
     "intento": "20261107T161453Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_vacio_10px_10mm",
-    "intento": "20261109T151435Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_5px_7mm",
-    "intento": "20261109T151320Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_20px_10mm",
-    "intento": "20261109T150850Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_vacio_5px_10mm",
-    "intento": "20261109T151429Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "plana_agua_salada_5px",
-    "intento": "20261107T161507Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_20px_2mm",
-    "intento": "20261109T151055Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_5px_2mm",
-    "intento": "20261109T150625Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_5px_2mm",
-    "intento": "20261109T151037Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_20px_40mm",
-    "intento": "20261107T161709Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_10px_7mm",
-    "intento": "20261109T150932Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_10px_2mm",
-    "intento": "20261109T151043Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_20px_20mm",
-    "intento": "20261107T161620Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_10px_10mm",
-    "intento": "20261109T151232Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_5px_10mm",
-    "intento": "20261107T161517Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_20px_10mm",
-    "intento": "20261107T161533Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_20px_30mm",
-    "intento": "20261107T161757Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_20px_7mm",
-    "intento": "20261109T150945Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_10px_5mm_pml3",
-    "intento": "20261109T151023Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "plana_concreto_10px",
-    "intento": "20261107T161502Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_5px_5mm",
-    "intento": "20261109T150742Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_10px_2mm",
-    "intento": "20261109T150643Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_10px_10mm",
-    "intento": "20261107T161522Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_10px_5mm_pml3",
-    "intento": "20261109T151413Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_5px_7mm",
-    "intento": "20261109T150927Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_20px_7mm",
-    "intento": "20261109T151337Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
     "id": "plana_concreto_5px",
     "intento": "20261107T161459Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
-    "id": "lamina_agua_salada_10px_5mm",
-    "intento": "20261109T150747Z",
+    "id": "plana_concreto_10px",
+    "intento": "20261107T161502Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
-    "id": "plana_vacio_5px",
-    "intento": "20261107T161449Z",
+    "id": "plana_agua_salada_5px",
+    "intento": "20261107T161507Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_10px_30mm",
-    "intento": "20261107T161747Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_20px_10mm",
-    "intento": "20261109T151243Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_tejido_muscular_10px_7mm",
-    "intento": "20261109T151325Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_10px_20mm",
-    "intento": "20261107T161610Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_agua_salada_5px_10mm",
-    "intento": "20261109T150833Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_10px_40mm",
-    "intento": "20261107T161657Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
-  },
-  {
-    "id": "lamina_concreto_5px_40mm",
-    "intento": "20261107T161653Z",
-    "retorno": 0,
-    "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
     "id": "plana_agua_salada_10px",
     "intento": "20261107T161509Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
   },
   {
-    "id": "lamina_agua_salada_10px_10mm",
-    "intento": "20261109T150838Z",
+    "id": "plana_tejido_muscular_5px",
+    "intento": "20261107T161512Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "plana_tejido_muscular_10px",
+    "intento": "20261107T161514Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_5px_10mm",
+    "intento": "20261107T161517Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_10px_10mm",
+    "intento": "20261107T161522Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_20px_10mm",
+    "intento": "20261107T161533Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_5px_20mm",
+    "intento": "20261107T161605Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_10px_20mm",
+    "intento": "20261107T161610Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_20px_20mm",
+    "intento": "20261107T161620Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_5px_40mm",
+    "intento": "20261107T161653Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_10px_40mm",
+    "intento": "20261107T161657Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_20px_40mm",
+    "intento": "20261107T161709Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_5px_30mm",
+    "intento": "20261107T161742Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_10px_30mm",
+    "intento": "20261107T161747Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_20px_30mm",
+    "intento": "20261107T161757Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_concreto_10px_20mm_pml3",
+    "intento": "20261107T161834Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_5px_2mm",
+    "intento": "20261109T150625Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_2mm",
+    "intento": "20261109T150643Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_20px_2mm",
+    "intento": "20261109T150705Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_5px_5mm",
+    "intento": "20261109T150742Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_5mm",
+    "intento": "20261109T150747Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
   },
   {
     "id": "lamina_agua_salada_20px_5mm",
     "intento": "20261109T150759Z",
     "retorno": 0,
     "error": null,
-    "con_resultado": true
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_5px_10mm",
+    "intento": "20261109T150833Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_10mm",
+    "intento": "20261109T150838Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_20px_10mm",
+    "intento": "20261109T150850Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_5px_7mm",
+    "intento": "20261109T150927Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_7mm",
+    "intento": "20261109T150932Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_20px_7mm",
+    "intento": "20261109T150945Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_agua_salada_10px_5mm_pml3",
+    "intento": "20261109T151023Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_2mm",
+    "intento": "20261109T151037Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_2mm",
+    "intento": "20261109T151043Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_2mm",
+    "intento": "20261109T151055Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_5mm",
+    "intento": "20261109T151134Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_5mm",
+    "intento": "20261109T151138Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_5mm",
+    "intento": "20261109T151150Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_10mm",
+    "intento": "20261109T151227Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_10mm",
+    "intento": "20261109T151232Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_10mm",
+    "intento": "20261109T151243Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_5px_7mm",
+    "intento": "20261109T151320Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_7mm",
+    "intento": "20261109T151325Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_20px_7mm",
+    "intento": "20261109T151337Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_tejido_muscular_10px_5mm_pml3",
+    "intento": "20261109T151413Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_vacio_5px_10mm",
+    "intento": "20261109T151429Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "lamina_vacio_10px_10mm",
+    "intento": "20261109T151435Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_agua_salada_5px",
+    "intento": "20261109T151938Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_tejido_muscular_5px",
+    "intento": "20261109T152525Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_concreto_5px",
+    "intento": "20261109T153311Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_vacio_5px",
+    "intento": "20261109T164544Z",
+    "retorno": null,
+    "error": null,
+    "con_resultado": false,
+    "aceptado": false
+  },
+  {
+    "id": "antena_vacio_5px",
+    "intento": "20261109T175248Z",
+    "retorno": null,
+    "error": null,
+    "con_resultado": false,
+    "aceptado": false
+  },
+  {
+    "id": "antena_vacio_5px",
+    "intento": "20261109T233556Z",
+    "retorno": null,
+    "error": null,
+    "con_resultado": false,
+    "aceptado": false
+  },
+  {
+    "id": "antena_vacio_5px",
+    "intento": "20261109T234210Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_agua_salada_10px",
+    "intento": "20261110T044631Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_agua_salada_15px",
+    "intento": "20261110T052326Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_agua_salada_20px",
+    "intento": "20261110T072235Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_tejido_muscular_10px",
+    "intento": "20261110T120359Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_concreto_10px",
+    "intento": "20261110T125512Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_agua_salada_5px_pml3",
+    "intento": "20261110T212014Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_tejido_muscular_5px_pml3",
+    "intento": "20261110T212657Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
+  },
+  {
+    "id": "antena_concreto_5px_pml3",
+    "intento": "20261110T213632Z",
+    "retorno": 0,
+    "error": null,
+    "con_resultado": true,
+    "aceptado": true
   }
 ]
